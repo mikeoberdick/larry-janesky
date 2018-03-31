@@ -117,7 +117,7 @@
 			
 			<!-- LEFT SECTION -->
 			<div id = "thinkDailyLeftSection" class="col-md-6 homepageTextSection">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_logo_no_image.png);" class = "mb-4" alt="Think Daily" title = "Think Daily">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/todays_message.png);" class = "mb-4" alt="Think Daily" title = "Think Daily">
 				<p>Think Daily, and Think Daily for Businesspeople are daily messages from Larry meant to motivate, educate, inspire, and question - but most of all, to invite you to THINK about the issues that are important to you each day.</p>
 				<a href = '<?php echo bloginfo('url'); ?>/'><button role = 'button' class = 'btn btn-primary btn-lg mb-5'>View All Think Daily Messages</button></a>
 				<div>

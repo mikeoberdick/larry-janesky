@@ -39,6 +39,12 @@ body {
 	font-family: $body-font;
 }
 
+h2 {
+	color: $brand-secondary;
+    font-size: 39px;
+    font-weight: 700;
+}
+
 /*------------------------------------------------*/
 /*--------------------[LINKS]---------------------*/
 /*------------------------------------------------*/
@@ -57,7 +63,7 @@ body {
 	border: 1px solid $light-gold;
 	@include border-radius(21px);
 	color: $light-gold;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'LexiaDaMa', sans-serif;
 	padding: 6px 30px;
     font-size: 20px;
     display: inline-block;
@@ -88,8 +94,8 @@ body {
 		background-color: transparent;
 		
 		a {
-			color: #ffffff;
 			text-transform: uppercase;
+			color: $brand-secondary;
 		}
 	}
 
@@ -97,8 +103,24 @@ body {
 		position: absolute;
 
 		h5 {
-			color: #fff;
+			font-family: 'Gotham Bold', sans-serif;
 			text-transform: uppercase;
+			color: $brand-secondary;
+		}
+	}
+}
+
+.home {
+	nav {
+		a {
+			color: #fff;
+		}
+	}
+	.wrapper-navbar {
+		.navbar-brand {
+			h5 {
+				color: #fff;
+			}
 		}
 	}
 }
@@ -117,23 +139,29 @@ body {
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
 
+////////////////////////////////////////////////////
+// HOMEPAGE
+
 .home {
+
+	h2 {
+		font-family: 'Roboto', sans-serif;
+    	color: $brand-secondary;
+    	font-size: 30px;
+	}
+
+	h4 {
+		font-family: 'LexiaDaMa';
+	    color: $light-gold;
+	    font-style: italic;
+	    font-size: 18px;
+	}
 	
 	.wrapper {
 		padding-top: 0;
 	}
 
 	.homepageTextSection {
-		h2 {
-			font-family: 'Roboto', sans-serif;
-			color: $brand-secondary;
-		}
-
-		h4 {
-			font-family: 'Montserrat', sans-serif;
-			color: $light-gold;
-			font-style: italic;
-		}
 
 		p {
 			color:$brand-secondary;
@@ -415,9 +443,85 @@ body {
 
 }
 
+////////////////////////////////////////////////////
+// FAMILY
+
+#family {
+
+	#familyHeader {
+		margin: 150px 0 50px;
+	}
+
+	.card-img {
+		-webkit-filter: grayscale(100%);
+	    filter: grayscale(100%);
+	    transition: filter 1s;
+
+	    &:hover {
+	    	-webkit-filter: inherit;
+	    	filter: inherit;
+	    }
+	}
+
+	#familyForm {
+		margin-top: 100px;
+		text-align: center;
+
+		p {
+			color: #1453a5;
+		    font-family: 'Monserrat';
+		    font-size: 25px;
+		    text-align: center;
+		    margin-bottom: 30px;
+		    font-weight: bold;
+		    margin-top: 25px;
+		}
+
+		form {
+			justify-content: center;
+
+			input {
+				border-color: #ddd;
+	    		background-color: #f4f4f4;
+	    		color: #444;
+	    		font-size: 14px;
+	    		height: 50px;
+			    @include border-radius(30px);
+			}
+
+			#email {
+				min-width: 50%;
+			}
+
+			button {
+				margin-top: 0;
+			}
+		}
+
+		.privacy {
+		    color: #232e33; 
+		    font-family: 'Roboto', sans-serif;
+		    font-weight: 300;
+		    margin-top: 20px;
+		    font-size: 18px;
+		}
+	}
+}
+
+
+
+
+
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
 /*------------------------------------------------*/
+
+
+/*------------------------------------------------*/
+/*-----------------[IMAGE GALLERY]----------------*/
+/*------------------------------------------------*/
+
+
 
 /*------------------------------------------------*/
 /*----------------------[ACF]---------------------*/

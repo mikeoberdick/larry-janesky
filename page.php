@@ -25,6 +25,10 @@ get_header();
 					get_template_part( 'template-parts/content', 'home' );
 			}
 
+			elseif( is_page( 'family' )) {
+					get_template_part( 'template-parts/content', 'family' );
+			}
+
 			else {
 			   get_template_part( 'loop-templates/content', 'page' );
 			}

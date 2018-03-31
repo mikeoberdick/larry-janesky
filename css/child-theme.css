@@ -10529,6 +10529,11 @@ body {
   color: #b2b2b2;
   font-family: "Open Sans", sans-serif; }
 
+h2 {
+  color: #232e33;
+  font-size: 39px;
+  font-weight: 700; }
+
 /*------------------------------------------------*/
 /*--------------------[LINKS]---------------------*/
 /*------------------------------------------------*/
@@ -10542,7 +10547,7 @@ body {
   border: 1px solid #9e7d0b;
   border-radius: 21px;
   color: #9e7d0b;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'LexiaDaMa', sans-serif;
   padding: 6px 30px;
   font-size: 20px;
   display: inline-block;
@@ -10569,14 +10574,21 @@ body {
   width: 100%;
   background-color: transparent; }
   .wrapper-navbar nav a {
-    color: #ffffff;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #232e33; }
 
 .wrapper-navbar .navbar-brand {
   position: absolute; }
   .wrapper-navbar .navbar-brand h5 {
-    color: #fff;
-    text-transform: uppercase; }
+    font-family: 'Gotham Bold', sans-serif;
+    text-transform: uppercase;
+    color: #232e33; }
+
+.home nav a {
+  color: #fff; }
+
+.home .wrapper-navbar .navbar-brand h5 {
+  color: #fff; }
 
 /*------------------------------------------------*/
 /*-------------------[MENU]-----------------------*/
@@ -10587,17 +10599,19 @@ body {
 /*------------------------------------------------*/
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
+.home h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #232e33;
+  font-size: 30px; }
+
+.home h4 {
+  font-family: 'LexiaDaMa';
+  color: #9e7d0b;
+  font-style: italic;
+  font-size: 18px; }
+
 .home .wrapper {
   padding-top: 0; }
-
-.home .homepageTextSection h2 {
-  font-family: 'Roboto', sans-serif;
-  color: #232e33; }
-
-.home .homepageTextSection h4 {
-  font-family: 'Montserrat', sans-serif;
-  color: #9e7d0b;
-  font-style: italic; }
 
 .home .homepageTextSection p {
   color: #232e33;
@@ -10798,8 +10812,58 @@ body {
 .home #businessTimeline {
   margin-top: 150px; }
 
+#family #familyHeader {
+  margin: 150px 0 50px; }
+
+#family .card-img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s; }
+  #family .card-img:hover {
+    -webkit-filter: inherit;
+    filter: inherit; }
+
+#family #familyForm {
+  margin-top: 100px;
+  text-align: center; }
+  #family #familyForm p {
+    color: #1453a5;
+    font-family: 'Monserrat';
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    margin-top: 25px; }
+  #family #familyForm form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #family #familyForm form input {
+      border-color: #ddd;
+      background-color: #f4f4f4;
+      color: #444;
+      font-size: 14px;
+      height: 50px;
+      border-radius: 30px; }
+    #family #familyForm form #email {
+      min-width: 50%; }
+    #family #familyForm form button {
+      margin-top: 0; }
+  #family #familyForm .privacy {
+    color: #232e33;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 18px; }
+
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*-----------------[IMAGE GALLERY]----------------*/
 /*------------------------------------------------*/
 /*------------------------------------------------*/
 /*----------------------[ACF]---------------------*/

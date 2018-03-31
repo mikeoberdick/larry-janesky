@@ -47,7 +47,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
-<!-- CONDITIONAL CAROUSEL SCRIPT FOR HOMEPAGE -->
+<!-- FAMILY IMAGE GALLERY LIGHTBOX (CONDITIONAL) -->
+
+<?php if ( is_page('family') )  { ?>
+	
+<script type="text/javascript">;
+	( function( $ ) {
+		jQuery( '.swipebox' ).swipebox( {
+			hideBarsDelay : 10000, // delay before hiding bars on desktop
+			loopAtEnd: false // true will return to the first image after the last image is reached
+		} );
+
+} )( jQuery );
+</script>
+
+<?php } ?>
+
+<!-- HOMEPAGE VIDEO CAROUSEL (CONDITIONAL) -->
 <?php if ( is_page('homepage') )  { ?>
 	<script>
   		jQuery(document).ready(function(){

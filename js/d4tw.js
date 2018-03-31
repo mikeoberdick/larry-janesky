@@ -17,6 +17,3 @@ jQuery('.vid').hover(function toggleControls() {
     } else {
       this.setAttribute("controls", "controls")
    }})
-
-
-

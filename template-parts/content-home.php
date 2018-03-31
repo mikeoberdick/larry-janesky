@@ -15,7 +15,7 @@
 <!-- ABOUT LARRY SECTION -->
 <div id = "aboutLarry" class="container-fluid">
 	<div class="container">
-			<div class="col-md-8 offset-md-2 homepageTextSection">
+			<div class="col-md-8 offset-md-2">
       			<h2>About Larry</h2>
       			<h4>Business Leader & Trainer</h4>
       			<p>Larry Janesky is an authority on creating and growing businesses for the benefit of business owners, employees and customers.  Larry is a highly successful author of five books, acclaimed speaker, inventor with 29 patents, business leader wtih 31 years of real world accountability and success, and has big plans for the future.</p>
@@ -31,7 +31,7 @@
 		<div class="row">
 
 			<!-- LEFT SECTION -->
-			<div id = "communicatorLeftSection" class="col-md-6 homepageTextSection">
+			<div id = "communicatorLeftSection" class="col-md-6">
 				<h2>Expert Communicator</h2>
 				<h4>Public Speaking and Speeches</h4>
 				<p>Larry has presented at a number of high level organizations where he has given hes expert advice.  Subjects ranging from entrepreneurship, business ownership, leadership, slaes, and personal development.</p>
@@ -77,7 +77,7 @@
 		</div><!-- .col-md-5 -->
 
 		<!-- RIGHT SECTION -->
-		<div id = "bookRightSection" class="col-md-7 homepageTextSection">
+		<div id = "bookRightSection" class="col-md-7">
 			<h2>"The Highest Calling" Book</h2>
 			<p>You will laugh, you will cry, and you will learn.  The Highest Calling is more than an inspirational book.  For those that seek, it is a powerful entrepreneurial education; one that will improve the lives of millions for a lifetime.</p>
 			<div class="row">
@@ -95,7 +95,7 @@
 <!-- DEALER NETWORK SECTION -->
 <div id = "dealerNetwork" class="container-fluid" style = "background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/dealer_network.png);">
 	<div class="container">
-			<div class="col-md-6 offset-md-6 text-center homepageTextSection">
+			<div class="col-md-6 offset-md-6 text-center">
       			<h2>International Dealer Networks</h2>
       			<h4>Network of Companies that sell Larry's Products</h4>
       			<a href = '#'><button role = 'button' class = 'btn btn-primary'>View Larry's Businesses</button></a>
@@ -116,7 +116,7 @@
 		<div class="row">
 			
 			<!-- LEFT SECTION -->
-			<div id = "thinkDailyLeftSection" class="col-md-6 homepageTextSection">
+			<div id = "thinkDailyLeftSection" class="col-md-6">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/todays_message.png);" class = "mb-4" alt="Think Daily" title = "Think Daily">
 				<p>Think Daily, and Think Daily for Businesspeople are daily messages from Larry meant to motivate, educate, inspire, and question - but most of all, to invite you to THINK about the issues that are important to you each day.</p>
 				<a href = '<?php echo bloginfo('url'); ?>/'><button role = 'button' class = 'btn btn-primary btn-lg mb-5'>View All Think Daily Messages</button></a>
@@ -145,7 +145,7 @@
 			</div><!-- .col-md-6 -->
 
 			<!-- RIGHT SECTION -->
-			<div id = "recognitionRightSection" class="col-md-6 homepageTextSection">
+			<div id = "recognitionRightSection" class="col-md-6">
 				<h2>Recognition and Awards</h2>
 				<h4>Third Party Acknowledgment</h4>
 				<ul>
@@ -166,7 +166,7 @@
 <div id = "businessTimeline">
 	<div class = "container">
 		<div class="row">
-			<div class="col-sm-12 text-center homepageTextSection">
+			<div class="col-sm-12 text-center">
 				<h2>Larry's Business Timeline</h2>
 				<h4>The History of Larry's Business</h4>
 			</div>

@@ -29,6 +29,10 @@ get_header();
 					get_template_part( 'template-parts/content', 'family' );
 			}
 
+			elseif( is_page( 'public-speaking' )) {
+					get_template_part( 'template-parts/content', 'public_speaking' );
+			}
+
 			else {
 			   get_template_part( 'loop-templates/content', 'page' );
 			}

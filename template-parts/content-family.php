@@ -117,7 +117,7 @@
 	</div><!--.card-columns -->
 </div><!-- .container -->
 
-<div id = "familyForm" class="container">
+<div id = "thinkDailyForm" class="container">
 	<img src= "<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_logo.png" alt="Think Daily by Larry Janesky">
 	<p>Join the over 20,000 people who receive Larry's Daily Inspiring Messages</p>
 	<div>

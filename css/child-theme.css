@@ -10581,7 +10581,8 @@ h4 {
 .wrapper-navbar nav {
   position: absolute;
   width: 100%;
-  background-color: transparent; }
+  background-color: transparent;
+  z-index: 1; }
   .wrapper-navbar nav a {
     text-transform: uppercase;
     color: #232e33; }
@@ -10608,7 +10609,7 @@ h4 {
 /*------------------------------------------------*/
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
-.home .wrapper {
+.wrapper {
   padding-top: 0; }
 
 .home .heroSection {

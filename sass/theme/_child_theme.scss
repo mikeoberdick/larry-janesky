@@ -102,6 +102,7 @@ h4 {
 		position: absolute;
 		width: 100%;
 		background-color: transparent;
+		z-index: 1;
 		
 		a {
 			text-transform: uppercase;
@@ -149,14 +150,14 @@ h4 {
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
 
+.wrapper {
+	padding-top: 0;
+}
+
 ////////////////////////////////////////////////////
 // HOMEPAGE
 
 .home {
-	
-	.wrapper {
-		padding-top: 0;
-	}
 
 	.heroSection {
 		min-height: 100vh;

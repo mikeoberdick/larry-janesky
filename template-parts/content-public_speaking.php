@@ -1,18 +1,64 @@
 <div id = "publicSpeaking">
+  <div class="container-fluid">
+    <div class="row">
 
-<div class="container-fluid">
-  <div class="row">
-    <div id = "featuredVideo" class="col-sm-12">
-      <div>[ FEATURED VIDEO HERE ]</div>
-    </div><!-- .col-sm-12 -->
-    <div class="col-sm-12 col-md-6">
-      <div>[ VIDEO 2]</div>
-    </div><!-- .col-sm-12 col-md-6 -->
-    <div class="col-sm-12 col-md-6">
-      <div>[ VIDEO 3]</div>
-    </div><!-- .col-sm-12 col-md-6 -->
-  </div><!-- .row -->
-</div><!-- .container -->
+  <?php
+    $args = array(
+      'post_type' => 'speeches',
+      'posts_per_page' => '10'
+      );
+      
+      $wp_query = new WP_Query( $args );
+
+      // SET A VARIABLE TO KEEP TRACK OF THE POST NUMBER
+      $postCount = 1;
+      
+      // The Loop
+      while ( $wp_query->have_posts() ) : $wp_query->the_post();
+
+      // SET THE VARIABLES
+        $image = get_field('background_image');
+        $bgImage = $image['url'];
+        $title = get_field('speech_title');
+        $subtitle = get_field('speech_subtitle');
+        $location = get_field('speech_location');
+
+        //STYLE THE FIRST POST
+        if ( $postCount == 1 ): ?>
+
+        <div id = "featuredVideo" class="col-sm-12 speechVideo" style = "background-image: url('<?php echo $bgImage ?>');">
+            <h2><?php echo $title ?></h2>
+            <h4><?php echo $subtitle ?></h4>
+            <h5><?php echo $location ?></h5>
+            <a href = '#'>
+              <button role = 'button' class = 'btn btn-primary btn-lg'>Watch</button>
+            </a>
+        </div><!-- #featuredVideo -->
+        
+        <?php $postCount++;
+         // STYLE THE NEXT TWO POSTS DIFFERENTLY
+         else : ?>
+
+        <div class="col-sm-12 col-md-6 speechVideo" style = "background-image: url('<?php echo $bgImage ?>');">
+            <h2><?php echo $title ?></h2>
+            <h4><?php echo $subtitle ?></h4>
+            <h5><?php echo $location ?></h5>
+            <a href = '#'>
+              <button role = 'button' class = 'btn btn-primary btn-lg'>Watch</button>
+            </a>
+        </div><!-- .col-sm-12 col-md-6 -->
+
+        <?php $postCount++;
+        endif;
+        endwhile; ?>
+
+        <script>
+          var val = " <?php echo $postCount ?>"
+          console.log( val );
+        </script>
+
+</div>
+</div>
 
 <div class="container">
   <h2>Want Larry At Your Next Business Event?</h2>
@@ -22,6 +68,16 @@
     <a href = '<?php echo bloginfo('url'); ?>/'><button role = 'button' class = 'btn btn-primary btn-lg'>View Larry's Speaking Schedule</button></a>
   </div>
 </div><!-- .container -->
+
+
+
+
+
+
+
+
+
+
 
 <div class="container-fluid">
   <div class="row">

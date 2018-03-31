@@ -54,28 +54,56 @@ body {
 /*------------------------------------------------*/
 
 .btn-primary {
-	font-family: $body-font;
-	text-transform: uppercase;
-	color: #fff !important;
-	background-color: $brand-primary !important;
-	border-color: $brand-primary !important;
-	@include border-radius(5px);
-}
-			
-.btn-primary {
+	border: 1px solid $light-gold;
+	@include border-radius(21px);
+	color: $light-gold;
+	font-family: 'Montserrat', sans-serif;
+	padding: 6px 30px;
+    font-size: 20px;
+    display: inline-block;
+	font-weight: 300;
+	margin-top: 20px; text-decoration:none;
+	background-color: inherit;
+
 	&:hover {
-		background-color: lighten( $brand-primary, 10% ) !important;
-		border-color: $brand-primary !important;
-   	}
-  }
+		color: $brand-secondary;
+		border: 1px solid $light-gold;
+		text-decoration:none;
+		background-color: inherit;
+	}
+}
 
 /*------------------------------------------------*/
 /*--------------------[HEADER]--------------------*/
 /*------------------------------------------------*/
 
 #navbarNavDropdown {
-	justify-content: flex-end;
+	justify-content: center;
 }
+
+.wrapper-navbar {
+	nav {
+		position: absolute;
+		width: 100%;
+		background-color: transparent;
+		
+		a {
+			color: #ffffff;
+			text-transform: uppercase;
+		}
+	}
+
+	.navbar-brand {
+		position: absolute;
+
+		h5 {
+			color: #fff;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
 
 /*------------------------------------------------*/
 /*-------------------[MENU]-----------------------*/
@@ -89,6 +117,303 @@ body {
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
 
+.home {
+	
+	.wrapper {
+		padding-top: 0;
+	}
+
+	.homepageTextSection {
+		h2 {
+			font-family: 'Roboto', sans-serif;
+			color: $brand-secondary;
+		}
+
+		h4 {
+			font-family: 'Montserrat', sans-serif;
+			color: $light-gold;
+			font-style: italic;
+		}
+
+		p {
+			color:$brand-secondary;
+			font-size: 18px;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 300;
+		}
+	}
+
+	.heroSection {
+		min-height: 100vh;
+		background-attachment: fixed;
+		background-size: stretch;
+	    background-position: center top;
+	    background-repeat: no-repeat;
+
+	    .textContainer {
+	    	min-height: 100vh;
+	    	display: flex;
+	    	align-items: center;
+	    	justify-content: center;
+	    	text-align: center;
+	    
+		    h1 {
+				color: white;
+				font-size: 8vw;
+		    }
+		 }
+	}
+
+	#aboutLarry {
+		margin:80px 0px 0px;
+		text-align:center;
+		position: relative;
+
+		&:after {
+			content: '';
+			background: url('/wp-content/themes/wp-understrap/img/about_larry.png') no-repeat;
+			position: absolute;
+			height: 175%;
+			width: 36%;
+			top: 0;
+			left: 75px;
+			mix-blend-mode: multiply;
+		}
+	}
+
+	#expertCommunicator {
+		clip-path: polygon(100% 0%, 100% 80%, 0% 100%, 0% 20%);
+		background: #faf8f4;
+		padding-bottom: 250px;
+
+		h2 {
+			font-family: 'Roboto', sans-serif;
+			color: $brand-secondary;
+		}
+
+		h4 {
+			font-family: 'Montserrat', sans-serif;
+			color: $light-gold;
+			font-style: italic;
+		}
+
+		p {
+			color: $brand-secondary;
+			font-size: 17px;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 300;
+		}
+
+		#communicatorLeftSection {
+			padding-top: 450px;
+		}
+
+		#communicatorRightSection {
+			padding-top: 150px;
+
+			.bx-wrapper {
+				margin-bottom: 0;
+				box-shadow: none;
+				border: 0;
+				background: inherit;
+
+				.bx-viewport {
+					&:before {
+						content: "";
+						z-index: 999;
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 30%;
+						top: 0;
+					    background: -webkit-linear-gradient(#faf8f4, transparent) left repeat;
+					    background: -o-linear-gradient(#faf8f4, transparent) left repeat;
+					    background: linear-gradient(#faf8f4, transparent) left repeat;
+					}
+
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 30%;
+						bottom: 0;
+					    background: -webkit-linear-gradient(transparent, #faf8f4) left repeat;
+					    background: -o-linear-gradient(transparent, #faf8f4) left repeat;
+					    background: linear-gradient(transparent, #faf8f4) left repeat; 
+					}
+
+				.bxslider {
+					text-align: center;
+
+					video {
+						transition: width .5s;
+					}
+
+					.active-slide {
+						video {
+							width: 100%
+						}
+					}
+
+					.vid {
+						width: 75%;
+						height: 75%;
+						@include shadow;
+					}
+				}
+			}
+		}
+	}		
+}
+
+#highestCalling {
+	margin-bottom:100px;
+	font-family: 'Roboto', sans-serif;
+
+	.container {
+		border-top:15px solid $brand-primary;
+		-webkit-box-shadow: 4px 5px 12px 1px rgba(184,184,184,1);
+		-moz-box-shadow: 4px 5px 12px 1px rgba(184,184,184,1);
+		box-shadow: 4px 5px 12px 1px rgba(184,184,184,1);
+		padding-bottom: 75px;
+	}
+
+	img {
+		position: absolute;
+		top: -100px;
+	}
+
+	h2 {
+		color:$brand-secondary;
+	}
+
+	p {
+		color:$brand-secondary;
+		line-height: 30px;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	#bookRightSection {
+		padding-top: 30px;
+
+		.bookAward {
+			height: 65px;
+			font-weight: 500;
+			text-align: center;
+			background: url(../img/laurel.png) no-repeat;
+			font-size: 10px;
+			background-position: center center;
+			color: $brand-primary;
+		}
+
+		.buyBook {
+			display: flex;
+
+			a {
+				align-self: center;
+			}
+
+			button {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+#dealerNetwork {
+	margin-top: 200px;
+	min-height: 800px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: -115px;
+
+    #dealerNetworkCarousel {
+    	margin-top: 25px;
+    	border-top: solid 1px #e9ecef;
+    	border-bottom: solid 1px #e9ecef;
+    	padding: 100px 0;
+    }
+
+    #carouselCaption {
+    	text-align: center;
+    	display: inline-block;
+	    background-color: white;
+	    position: relative;
+	    top: -50px;
+
+    	h2 {
+    		font-family: 'Roboto', sans-serif;
+    		margin-top: 0px;
+    	}
+    	
+    	h4{
+			color:#9e7d0b;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 22px;
+    	}
+    }
+}
+
+#thinkDaily {
+
+}
+
+#recognition {
+	background-color: #faf8f4;
+
+	&:before {
+		content: '';
+	    height: 200px;
+	    display: block;
+	    background-color: #faf8f4;
+	    background: linear-gradient(to right bottom, #ffffff 50%, #faf8f4 50%);
+	}
+
+	&:after {
+		content: '';
+	    display: block;
+	    height: 200px;
+	    background-color: #faf8f4;
+	    background: linear-gradient(to left top, #ffffff 50%, #faf8f4 50%);
+	}
+
+	#recognitionLeftSection {
+		img {
+			position: absolute;
+			top: -150px;
+		}
+	}
+
+	#recognitionRightSection {
+		text-align: center;
+		padding-bottom: 50px;
+
+		h4 {
+			margin-bottom: 45px;
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				display: inline;
+
+				img {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}
+
+#businessTimeline {
+	margin-top: 150px;
+}
+
+}
 
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
@@ -155,55 +480,61 @@ body {
 /*------------------------------------------------*/
 
 #wrapper-footer {
-	color: $brand-secondary;
-	padding-top: 0;
-	padding-bottom: 0;
-	text-transform: uppercase;
-	font-size: 12px;
+	margin-top: 50px;
+	background-color: $brand-secondary;
+	padding-top: 50px;
+	padding-bottom: 25px;
+    color: #fff;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 20px 20px -10px #111;
+
+    h5 {
+    	color: #fff;
+    	text-transform: uppercase;
+    	font-weight: bold;
+    }
 
 	#footerWidgets {
-		padding: 50px 0;
+		padding-top: 50px;
 	}
 
-	h5 {
-			padding-bottom: 5px;
-		    border-bottom: solid 2px;
-		    text-transform: uppercase;
-		    color: $brand-primary
-		}
+	.widgettitle {
+		padding-bottom: 5px;
+    	border-bottom: solid 1px $brand-primary;
+    	font-weight: bold;
+    	text-transform: uppercase;
+    	color: $brand-primary;
+	}
 
-	ul {
-		padding-left: 0;
+	.menu {
+		padding-left: 25px;
 		list-style: none;
 
 		li {
 			margin-bottom: 5px;
 
 			a {
-				color: $brand-primary;
-				text-transform: uppercase;
-				font-size: 12px;
+				color: #fff;
+				font-weight: bold;
 
 				&:hover {
 					text-decoration: none;
 				}
 			}
 		}
-	}
-}
 
-#bottomFooter {
-	background-color: $brand-primary;
-	color: #fff;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	box-shadow: inset 0 15px 5px -16px #111;
+		.sub-menu {
+			padding-left: 25px;
+			list-style: none;
+			margin: 15px 0;
 
-	a {
-		color: #fff;
-
-		&:hover {
-			text-decoration: none;
+			li {
+				margin-bottom: 0;
+				a {
+					font-weight: normal;
+				}
+			}
 		}
 	}
 }

@@ -54,18 +54,5 @@ function d4tw_sidebars() {
         'after_title'   => '</h5>',
     );
     register_sidebar( $args );
-
-    $args = array(
-        'id'            => 'footer_4',
-        'class'         => 'footer_4',
-        'name'          => 'Footer 4',
-        'description'   => 'This widget area will appear in the fourth position of the footer.',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h5 class="widgettitle">',
-        'after_title'   => '</h5>',
-    );
-    register_sidebar( $args );
-
 }
 add_action( 'widgets_init', 'd4tw_sidebars' );

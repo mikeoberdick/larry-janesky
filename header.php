@@ -38,18 +38,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-toggleable-md">
+		<nav class="navbar navbar-expand-md">
 
 			<div class="container">
+
+				<a rel = "home" class="navbar-brand" data-itemprop="url" title="<?php echo esc_attr( get_bloginfo( 'name') ); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<h5><?php echo esc_attr( get_bloginfo( 'name') ); ?></h5>
+				</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class = "mobileToggle"><i class="fa fa-bars" aria-hidden="true"></i> Menu</span>
 				</button>
 					
-				<a rel = "home" class="navbar-brand" data-itemprop="url" title="<?php echo esc_attr( get_bloginfo( 'name') ); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img id = "headerLogo" src = "<?php the_field('company_logo', 'option'); ?>" alt = "Designs 4 The Web">
-				</a>
-
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(

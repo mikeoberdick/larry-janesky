@@ -9,3 +9,14 @@ jQuery('ul.navbar-nav li.dropdown').hover(function() {
 }, function() {
 	jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
+
+//Toggle Video Carousel Controls on Hover or active status
+jQuery('.vid').hover(function toggleControls() {
+    if (this.hasAttribute("controls")) {
+       this.removeAttribute("controls")
+    } else {
+      this.setAttribute("controls", "controls")
+   }})
+
+
+

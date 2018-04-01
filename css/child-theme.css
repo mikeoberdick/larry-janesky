@@ -10594,10 +10594,10 @@ h4 {
     text-transform: uppercase;
     color: #232e33; }
 
-.home nav a {
+.home nav a, .page-id-37 nav a, .single-speeches nav a {
   color: #fff; }
 
-.home .wrapper-navbar .navbar-brand h5 {
+.home .wrapper-navbar .navbar-brand h5, .page-id-37 .wrapper-navbar .navbar-brand h5, .single-speeches .wrapper-navbar .navbar-brand h5 {
   color: #fff; }
 
 /*------------------------------------------------*/
@@ -10795,9 +10795,196 @@ h4 {
     -webkit-filter: inherit;
     filter: inherit; }
 
+#publicSpeaking .contentContainer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  #publicSpeaking .contentContainer h2 {
+    font-family: 'LexiaDaMa', sans-serif;
+    color: #fff;
+    font-weight: 900; }
+  #publicSpeaking .contentContainer h4 {
+    font-weight: 300;
+    color: #fff; }
+  #publicSpeaking .contentContainer h5 {
+    color: #9e7d0b;
+    font-size: 14px;
+    font-family: 'LexiaDaMa', sans-serif; }
+  #publicSpeaking .contentContainer button {
+    color: #fff; }
+
+#publicSpeaking #featuredVideo {
+  min-height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+#publicSpeaking .secondaryVideo {
+  min-height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+#publicSpeaking #bookLarry {
+  margin: 50px auto;
+  text-align: center; }
+
+@media (min-width: 768px) {
+  #publicSpeaking .modal .modal-xl {
+    width: 50%;
+    max-width: 1200px; } }
+
+#publicSpeaking .modal .modal-xl .modal-body {
+  padding: 0; }
+  #publicSpeaking .modal .modal-xl .modal-body .close {
+    position: absolute;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    z-index: 2; }
+  #publicSpeaking .modal .modal-xl .modal-body #videoContainer {
+    padding-left: 0;
+    padding-right: 0; }
+  #publicSpeaking .modal .modal-xl .modal-body #contentContainer {
+    padding: 25px;
+    padding-top: 0; }
+
+#publicSpeaking #sidebarVideos .sidebarVid {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 150px;
+  margin-bottom: 15px;
+  position: relative; }
+  #publicSpeaking #sidebarVideos .sidebarVid a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(0, 0, 0, 0.75); }
+    #publicSpeaking #sidebarVideos .sidebarVid a:hover {
+      text-decoration: none; }
+  #publicSpeaking #sidebarVideos .sidebarVid h5 {
+    color: #fff;
+    text-align: center; }
+
+#videoContainer {
+  padding-left: 0;
+  padding-right: 0; }
+  #videoContainer video {
+    max-width: 100%; }
+
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
 /*------------------------------------------------*/
+/*------------------------------------------------*/
+/*-------------------[PAGINATION]-----------------*/
+/*------------------------------------------------*/
+#speechNavigation {
+  margin-bottom: 25px; }
+  #speechNavigation button {
+    background-color: #232e33;
+    height: 50px;
+    border: 0;
+    border-radius: 5px; }
+    #speechNavigation button a {
+      color: #fff; }
+      #speechNavigation button a:hover {
+        text-decoration: none; }
+
+/*------------------------------------------------*/
+/*--------------------[COMMENTS]------------------*/
+/*------------------------------------------------*/
+#commentNumber {
+  color: #9e7d0b;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #9e7d0b;
+  margin-bottom: 20px; }
+  #commentNumber span {
+    font-size: 20px;
+    font-weight: 500; }
+
+#comments h3 {
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 0px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  float: left;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 30px;
+  color: #9e7d0b; }
+
+#comments .comment {
+  border-bottom: solid 1px #9e7d0b;
+  margin-bottom: 20px; }
+  #comments .comment .commentmetadata {
+    color: #9e7d0b; }
+
+#commentform #comment {
+  width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+  background: #ffffff;
+  padding: 15px 10px;
+  outline: none;
+  color: #666666;
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  border: 1px solid #bababb;
+  border-radius: 15px; }
+
+#commentform #submit {
+  padding: 8px 25px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-weight: 700;
+  border-color: #917412 !important;
+  border-radius: 19px;
+  background: #fff !important;
+  color: #917412 !important;
+  border: 1px solid; }
+
 /*------------------------------------------------*/
 /*-----------------[IMAGE GALLERY]----------------*/
 /*------------------------------------------------*/

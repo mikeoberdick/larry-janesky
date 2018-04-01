@@ -32,7 +32,7 @@ function speech_post_type() {
 		'description'         => 'Speech',
 		'labels'              => $labels,
 		// Features this CPT supports in Post Editor
-		'supports'            => array( 'title', 'editor', 'author', 'thumbnail' ),
+		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'comments' ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,

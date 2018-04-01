@@ -32,3 +32,11 @@ function theme_enqueue_styles() {
 
 //Allow Text widgets to execute shortcodes
 add_filter('widget_text', 'do_shortcode');
+
+//Filter the comment redirect to stay on the referring page
+
+add_filter('comment_post_redirect', 'redirect_after_comment');
+function redirect_after_comment($location)
+{
+return $_SERVER["HTTP_REFERER"];
+}

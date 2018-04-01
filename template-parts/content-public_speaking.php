@@ -1,107 +1,201 @@
 <div id = "publicSpeaking">
   <div class="container-fluid">
     <div class="row">
+      <?php
+        $args = array(
+          'post_type' => 'speeches',
+          'posts_per_page' => '3'
+          );
+          
+          $top_wp_query = new WP_Query( $args );
 
-  <?php
-    $args = array(
-      'post_type' => 'speeches',
-      'posts_per_page' => '10'
-      );
-      
-      $wp_query = new WP_Query( $args );
+          // SET A VARIABLE TO KEEP TRACK OF THE POST NUMBER
+          $postCount = 1;
+          
+          // The Loop
+          while ( $top_wp_query->have_posts() ) : $top_wp_query->the_post();
 
-      // SET A VARIABLE TO KEEP TRACK OF THE POST NUMBER
-      $postCount = 1;
-      
-      // The Loop
-      while ( $wp_query->have_posts() ) : $wp_query->the_post();
+          // SET THE VARIABLES
+            $image = get_field('background_image');
+            $bgImage = $image['url'];
+            $title = get_field('speech_title');
+            $subtitle = get_field('speech_subtitle');
+            $location = get_field('speech_location');
+            $video = get_field('speech_video');
+            $content = get_field('speech_content');
 
-      // SET THE VARIABLES
-        $image = get_field('background_image');
-        $bgImage = $image['url'];
-        $title = get_field('speech_title');
-        $subtitle = get_field('speech_subtitle');
-        $location = get_field('speech_location');
+            //STYLE THE FIRST POST
+            if ( $postCount == 1 ): ?>
+              <div id = "featuredVideo" class="col-sm-12 speechVideo" style = "background-image: url('<?php echo $bgImage ?>');">
 
-        //STYLE THE FIRST POST
-        if ( $postCount == 1 ): ?>
+            <?php else : ?>
+            <div class="col-sm-12 col-md-6 secondaryVideo speechVideo" style = "background-image: url('<?php echo $bgImage ?>');">
+            <?php endif; ?>
 
-        <div id = "featuredVideo" class="col-sm-12 speechVideo" style = "background-image: url('<?php echo $bgImage ?>');">
-            <h2><?php echo $title ?></h2>
-            <h4><?php echo $subtitle ?></h4>
-            <h5><?php echo $location ?></h5>
-            <a href = '#'>
-              <button role = 'button' class = 'btn btn-primary btn-lg'>Watch</button>
-            </a>
-        </div><!-- #featuredVideo -->
-        
-        <?php $postCount++;
-         // STYLE THE NEXT TWO POSTS DIFFERENTLY
-         else : ?>
+                <div class="contentContainer">
+                  <h2><?php echo $title ?></h2>
+                  <h4><?php echo $subtitle ?></h4>
+                  <h5><?php echo $location ?></h5>
+                  <div>
+                      <a href = "#" data-toggle="modal" data-target="#video-<?php echo $postCount; ?>">
+                        <button role = 'button' class = 'btn btn-primary btn-lg'>Watch</button>
+                      </a>
+                    </div>
+                </div><!-- .contentContainer -->
+              </div><!-- .speechVideo -->
 
-        <div class="col-sm-12 col-md-6 speechVideo" style = "background-image: url('<?php echo $bgImage ?>');">
-            <h2><?php echo $title ?></h2>
-            <h4><?php echo $subtitle ?></h4>
-            <h5><?php echo $location ?></h5>
-            <a href = '#'>
-              <button role = 'button' class = 'btn btn-primary btn-lg'>Watch</button>
-            </a>
-        </div><!-- .col-sm-12 col-md-6 -->
+            <!-- VIDEO MODAL -->
+            <div class="modal fade primaryModal" id = "video-<?php echo $postCount; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                            <div id = "videoContainer" class="container-fluid">
+                                <video controls src="<?php echo $video; ?>" class = "w-100"></video>
+                            </div><!-- .container-fluid -->
+                              <div id = "contentContainer" class="container mt-3">
+                                <div class="row">
+                                  <div class="col-md-8">
+                                    <h2><?php echo $title ?></h2>
+                                    <h4><?php echo $subtitle ?></h4>
+                                    <p><?php echo $content; ?></p>
+                                    <div class = "mb-5">
+                                      <div id="commentNumber">
+                                        <span>
+                                          <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+                                        </span>
+                                      </div>
+                                      <?php comments_template(); ?>
+                                    </div>
+                                  </div><!-- .col-md-8 -->
 
-        <?php $postCount++;
-        endif;
-        endwhile; ?>
 
-        <script>
-          var val = " <?php echo $postCount ?>"
-          console.log( val );
-        </script>
+                                  <div id = "sidebarVideos" class = "col-md-4">
+                                  <?php
+                                  global $post;
+                                  $i = "0";
+                                  $args = array( 'post_type' => 'speeches','posts_per_page' => 3, 'orderby' => 'rand' );
+                                  $rand_posts = get_posts( $args );
+                                  foreach ( $rand_posts as $post ) : 
+                                  // SET THE VARIABLES FOR SIDEBAR VIDEOS
+                                  $image = get_field('background_image');
+                                  $bgImage = $image['url'];
+                                    setup_postdata( $post ); ?>
 
-</div>
-</div>
+                                    <div class = "sidebarVid" style = "background-image: url('<?php echo $bgImage ?>');">
+                                      <a href = "<?php the_permalink(); ?>">
+                                        <h5>
+                                        <?php the_title(); ?>
+                                      </h5>
+                                      </a>
+                                    </div>
 
-<div class="container">
+                                  <?php endforeach; ?>
+                                  </div>
+                                  <?php wp_reset_postdata(); ?>
+
+                                </div><!--  .row -->
+                              </div><!-- #contentContainer -->
+                        </div><!--  .modal-body -->
+                    </div><!--  .modal-content -->
+                </div><!--  .modal-dialog -->
+              </div><!--  .videoModal -->
+
+
+
+            <?php $postCount++;
+            endwhile; ?>
+      </div><!-- .row -->
+  </div><!-- .container-fluid -->
+
+<div id = "bookLarry" class="container">
   <h2>Want Larry At Your Next Business Event?</h2>
   <p>Larry Janesky is available to speak to your group, convention, conference  or show! Larry is a successful entrepreneur, seasoned business leader, sales trainer, author and inventor who will deliver straight talk to your audience. Larry can relate to a wide variety of audiences on the following subjects - Business Vision, Leadership, Innovation, Strategy, Team Building, Marketing, and Sales. Larry doesn't make things complicated - he delivers messages that are clear, that anyone can understand and apply. Never afraid to say it like he sees it, he can deliver a practical message with irreverence for bureaucracy and dogma.</p>
   <div>
-    <a href = '<?php echo bloginfo('url'); ?>/'><button role = 'button' class = 'btn btn-primary btn-lg'>Hire Larry to Speak</button></a>
+    <a href = '<?php echo bloginfo('url'); ?>/' class = "mr-3"><button role = 'button' class = 'btn btn-primary btn-lg'>Hire Larry to Speak</button></a>
     <a href = '<?php echo bloginfo('url'); ?>/'><button role = 'button' class = 'btn btn-primary btn-lg'>View Larry's Speaking Schedule</button></a>
   </div>
-</div><!-- .container -->
-
-
-
-
-
-
-
-
-
-
+</div><!-- #bookLarry -->
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12 col md-3">
-      [ VIDEO 4]
-    </div><!-- .col-sm-12 col md-3 -->
-    <div class="col-sm-12 col md-3">
-      [ VIDEO 5]
-    </div><!-- .col-sm-12 col md-3 -->
-    <div class="col-sm-12 col md-3">
-      [ VIDEO 6]
-    </div><!-- .col-sm-12 col md-3 -->
-    <div class="col-sm-12 col md-3">
-      [ VIDEO 7]
-    </div><!-- .col-sm-12 col md-3 -->
-    <col-sm-12 class="col-md-4">
-      [ VIDEO 8]
-    </col-sm-12><!-- .col-md-4 -->
-    <col-sm-12 class="col-md-4">
-      [ VIDEO 9]
-    </col-sm-12><!-- .col-md-4 -->
-    <col-sm-12 class="col-md-4">
-      [ VIDEO 10]
-    </col-sm-12><!-- .col-md-4 -->
+
+      <?php
+        $args = array(
+          'post_type' => 'speeches',
+          'posts_per_page' => '7',
+          'offset' => '3'
+          );
+          
+          $bottom_wp_query = new WP_Query( $args );
+
+          // SET A VARIABLE TO KEEP TRACK OF THE POST NUMBER
+          $postCount = 4;
+          
+          // The Loop
+          while ( $bottom_wp_query->have_posts() ) : $bottom_wp_query->the_post();
+
+          // SET THE VARIABLES
+            $image = get_field('background_image');
+            $bgImage = $image['url'];
+            $title = get_field('speech_title');
+            $subtitle = get_field('speech_subtitle');
+            $location = get_field('speech_location');
+
+            //STYLE THE FIRST POST
+            if ( $postCount == 4 || $postCount == 5 || $postCount == 6 || $postCount == 7 ): ?>
+            <div class="col-sm-12 col-md-3 secondaryVideo speechVideo" style = "background-image: url('<?php echo $bgImage ?>');">
+            <?php else : ?>
+            <div class="col-sm-12 col-md-6 secondaryVideo speechVideo" style = "background-image: url('<?php echo $bgImage ?>');">
+            <?php endif; ?>
+                <div class="contentContainer">
+                  <h2><?php echo $title ?></h2>
+                  <h4><?php echo $subtitle ?></h4>
+                  <h5><?php echo $location ?></h5>
+                  <div>
+                      <a href = "#" data-toggle="modal" data-target="#video-<?php echo $postCount; ?>">
+                        <button role = 'button' class = 'btn btn-primary btn-lg'>Watch</button>
+                      </a>
+                    </div>
+                </div><!-- .contentContainer -->       
+            </div><!-- .secondaryVideo -->
+
+            <!-- MODAL -->
+            <div class="modal fade" id = "video-<?php echo $postCount; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                            <div id = "videoContainer" class="container-fluid">
+                                <video controls src="<?php echo $video; ?>" class = "w-100"></video>
+                            </div><!-- .container-fluid -->
+                              <div id = "contentContainer" class="container mt-3">
+                                <div class="row">
+                                  <div class="col-md-8">
+                                    <h2><?php echo $title ?></h2>
+                                    <h4><?php echo $subtitle ?></h4>
+                                    <p><?php echo $content; ?></p>
+                                    <div class = "mb-5">
+                                      <div id="commentNumber">
+                                        <span>
+                                          <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+                                        </span>
+                                      </div>
+                                      <?php comments_template(); ?>
+                                    </div>
+                                  </div><!-- .col-md-8 -->
+                                    <div class="col-md-4">
+                                      [ RELATED VIDEOS ]
+                                    </div><!-- .col-md-4 -->
+                                </div><!--  .row -->
+                              </div><!-- #contentContainer -->
+                        </div><!--  .modal-body -->
+                    </div><!--  .modal-content -->
+                </div><!--  .modal-dialog -->
+              </div><!--  .videoModal -->
+            
+            <?php $postCount++;
+            endwhile; ?>
   </div><!-- .row -->
 </div><!-- .container-fluid -->
 

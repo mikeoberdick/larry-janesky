@@ -121,7 +121,7 @@ h4 {
 	}
 }
 
-.home {
+.home, .page-id-37, .single-speeches {
 	nav {
 		a {
 			color: #fff;
@@ -419,13 +419,244 @@ h4 {
 ////////////////////////////////////////////////////
 // PUBLIC SPEAKING
 
+#publicSpeaking {
+	.contentContainer {
+		text-align: center;
+		background-color: rgba(0,0,0,.85);
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
 
+		h2 {
+			font-family: 'LexiaDaMa', sans-serif;
+			color: #fff;
+			font-weight: 900;
+		}
 
+		h4 {
+			font-weight: 300;
+	    	color: #fff;
+		}
+
+		h5 {
+			color: $light-gold;
+			font-size: 14px;
+			font-family: 'LexiaDaMa', sans-serif;
+		}
+
+		button {
+			color: #fff;
+		}
+	}
+
+	#featuredVideo {
+		min-height: 550px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.secondaryVideo {
+		min-height: 300px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	#bookLarry {
+		margin: 50px auto;
+		text-align: center;
+	}
+
+	.modal {
+		.modal-xl {
+  			@include media-breakpoint-up(md) {
+	  			width: 50%;
+				max-width:1200px;
+	  			}
+
+	  		.modal-body {
+				padding: 0;
+
+				.close {
+					position: absolute;
+				    right: 15px;
+				    font-size: 2rem;
+				    font-weight: 700;
+				    line-height: 1;
+				    color: #fff;
+				    z-index: 2;
+				}
+			
+				#videoContainer {
+					padding-left: 0;
+			    	padding-right: 0;
+				}
+
+				#contentContainer {
+					padding: 25px;
+					padding-top: 0;
+				}
+			}
+		}	
+	}
+
+	#sidebarVideos {
+		.sidebarVid {
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		    min-height: 150px;
+		    margin-bottom: 15px;
+			position: relative;
+
+			a {
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    height: 100%;
+			    width: 100%;
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    background-color: rgba(0,0,0,.75);
+
+			    &:hover {
+			    	text-decoration: none;
+			    }
+			}
+
+		    h5 {
+		    	color: #fff;
+		    	text-align: center;
+		    }
+		}
+	}
+}
+
+////////////////////////////////////////////////////
+// PUBLIC SPEAKING SINGLE POST PAGE
+
+#videoContainer {
+	padding-left: 0;
+	padding-right: 0;
+
+	video {
+		max-width: 100%;
+	}
+}
 
 
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
 /*------------------------------------------------*/
+
+/*------------------------------------------------*/
+/*-------------------[PAGINATION]-----------------*/
+/*------------------------------------------------*/
+
+#speechNavigation {
+	margin-bottom: 25px;
+
+	button {
+		background-color: $brand-secondary;
+		height: 50px;
+		border: 0;
+		@include border-radius(5px);
+
+		a {
+			color: #fff;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+/*------------------------------------------------*/
+/*--------------------[COMMENTS]------------------*/
+/*------------------------------------------------*/
+
+#commentNumber {
+	color: $light-gold;
+	padding-bottom: 10px;
+	border-bottom: solid 1px $light-gold;
+	margin-bottom: 20px;
+
+	span {
+		font-size: 20px;
+		font-weight: 500;
+	}
+}
+
+#comments {
+	h3 {
+		font-size: 20px;
+	    font-weight: 600;
+	    border-bottom: 0px;
+	    padding-bottom: 20px;
+	    margin-bottom: 0px;
+	    float: left;
+	    width: 100%;
+	    font-family: 'Roboto', sans-serif;
+	    margin-top: 30px;
+	    color: $light-gold;
+	  }
+
+    .comment {
+    	border-bottom: solid 1px $light-gold;
+		margin-bottom: 20px;
+
+		.commentmetadata {
+			color: $light-gold;
+		}
+	}
+}
+
+#commentform {
+	#comment {
+	    width: 100%;
+	    max-height: 100px;
+	    min-height: 100px;
+	    background: #ffffff;
+	    padding: 15px 10px;
+	    outline: none;
+	    color: #666666;
+	    margin-bottom: 25px;
+	    font-size: 16px;
+	    line-height: 30px;
+	    font-family: 'Roboto', sans-serif;
+	    font-weight: 400;
+	    border: 1px solid #bababb;
+		border-radius: 15px;
+	}
+
+	#submit {
+		padding: 8px 25px;
+	    font-family: 'Lato', sans-serif;
+	    font-size: 12px;
+	    text-transform: uppercase;
+	    line-height: 20px;
+	    font-weight: 700;
+	    border-color: #917412 !important;
+	    border-radius: 19px;
+	    background: #fff !important;
+	    color: #917412 !important;
+	    border: 1px solid;
+	}
+}
+
+
+
 
 
 /*------------------------------------------------*/

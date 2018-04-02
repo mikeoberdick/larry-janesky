@@ -85,6 +85,38 @@ $container = get_theme_mod( 'understrap_container_type' );
     		},
     	});
   		});
+  	</script>
+  	<script>
+		jQuery(document).ready(function(){
+  			jQuery('.hpLogoSlider').slick({
+  				centerMode: true,
+  				centerPadding: '100px',
+  				slidesToShow: 1,
+  				nextArrow: '<i class="fa fa-chevron-right"></i>',
+  				prevArrow: '<i class="fa fa-chevron-left"></i>',
+  				adaptiveHeight: true,
+  				responsive: [
+			    {
+			      breakpoint: 768,
+			      settings: {
+			        arrows: false,
+			        centerMode: true,
+			        centerPadding: '40px',
+			        slidesToShow: 1
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			        arrows: false,
+			        centerMode: true,
+			        centerPadding: '40px',
+			        slidesToShow: 1
+			      }
+			    }
+			  ]
+		  });
+		});
 	</script>
 <?php } ?>
 

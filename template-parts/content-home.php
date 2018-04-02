@@ -35,7 +35,7 @@
 				<h2>Expert Communicator</h2>
 				<h4>Public Speaking and Speeches</h4>
 				<p>Larry has presented at a number of high level organizations where he has given hes expert advice.  Subjects ranging from entrepreneurship, business ownership, leadership, slaes, and personal development.</p>
-				<a href = '#'><button role = 'button' class = 'btn btn-primary'>View All Videos</button></a>
+				<a href = '<?php echo bloginfo('url'); ?>/public-speaking'><button role = 'button' class = 'btn btn-primary'>View All Videos</button></a>
 			</div><!-- .col-md-6 -->
 
 			<!-- VIDEO CAROUSEL -->
@@ -60,7 +60,7 @@
 					<li>
 						<video class="vid" src="<?php echo get_stylesheet_directory_uri(); ?>/vids/6.mp4"></video>
 					</li>
-				</ul><!-- .bxslider -->
+				</ul><!-- .hpVideoSlider -->
 			</div><!-- .col-md-6 -->
 		</div><!-- .row -->
 	</div><!-- .container -->
@@ -100,8 +100,16 @@
       			<h4>Network of Companies that sell Larry's Products</h4>
       			<a href = '#'><button role = 'button' class = 'btn btn-primary'>View Larry's Businesses</button></a>
       			<div id = "dealerNetworkCarousel">
-      				[ LOGO CAROUSEL HERE ]
-      			</div>
+      				<div class="hpLogoSlider">
+						<img src = "http://via.placeholder.com/250x150?text=Image+1">
+						<img src = "http://via.placeholder.com/250x150/000000/ffffff?Image+2">
+						<img src = "http://via.placeholder.com/250x150?text=Image+3">
+						<img src = "http://via.placeholder.com/250x150?text=Image+4">
+						<img src = "http://via.placeholder.com/250x150?text=Image+5">
+						<img src = "http://via.placeholder.com/250x150/cc0000/000000?Image+6">
+					</div><!-- .hpLogoSlider -->
+      			</div><!-- #dealerNetworkCarousel -->
+      			
       			<div id = "carouselCaption">
       				<h2>122</h2>
       				<h4>Dealers Worldwide</h4>
@@ -135,6 +143,9 @@
 </div><!-- #thinkDaily -->
 
 <!-- RECOGNITION AND AWARDS SECTION -->
+<div id = "preRecognition" class="container-fluid">
+	
+</div>
 <div id = "recognition" class = "container-fluid">
 	<div class="container">
 		<div class="row">
@@ -148,15 +159,15 @@
 			<div id = "recognitionRightSection" class="col-md-6">
 				<h2>Recognition and Awards</h2>
 				<h4>Third Party Acknowledgment</h4>
-				<ul>
-					<li><img src = "http://via.placeholder.com/150x100" alt = "award title" title = "award title"></li>
-					<li><img src = "http://via.placeholder.com/150x100" alt = "award title" title = "award title"></li>
-					<li><img src = "http://via.placeholder.com/150x100" alt = "award title" title = "award title"></li>
-					<li><img src = "http://via.placeholder.com/150x100" alt = "award title" title = "award title"></li>
-					<li><img src = "http://via.placeholder.com/150x100" alt = "award title" title = "award title"></li>
-					<li><img src = "http://via.placeholder.com/150x100" alt = "award title" title = "award title"></li>
-				</ul>
-				<a href = '#'><button role = 'button' class = 'btn btn-primary'>View All Awards</button></a>
+				<div class="row mb-4">
+					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_1.jpg" class = "img-responsive"></div>
+					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_2.jpg" class = "img-responsive"></div>
+					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_3.jpg" class = "img-responsive"></div>
+					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_4.jpg" class = "img-responsive"></div>
+					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_5.jpg" class = "img-responsive"></div>
+					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_6.jpg" class = "img-responsive"></div>
+				</div>
+				<a href = '#' class = "mt-5"><button role = 'button' class = 'btn btn-primary'>View All Awards</button></a>
 			</div><!-- .col-md-6 -->
 		</div><!-- .row -->
 	</div><!-- .container -->

@@ -10733,28 +10733,93 @@ h4 {
   background-repeat: no-repeat;
   background-position-x: -115px; }
   .home #dealerNetwork #dealerNetworkCarousel {
-    margin-top: 25px;
+    margin-top: 50px;
     border-top: solid 1px #e9ecef;
     border-bottom: solid 1px #e9ecef;
-    padding: 100px 0; }
+    padding: 50px 0; }
+    .home #dealerNetwork #dealerNetworkCarousel:before {
+      content: "";
+      z-index: 2;
+      display: block;
+      position: absolute;
+      width: 150px;
+      height: 100%;
+      left: 0;
+      background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
+    .home #dealerNetwork #dealerNetworkCarousel:after {
+      content: "";
+      z-index: 2;
+      display: block;
+      position: absolute;
+      width: 150px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-image: -webkit-gradient(linear, right top, left top, from(white), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
+  .home #dealerNetwork .fa-chevron-left {
+    position: absolute;
+    z-index: 3;
+    color: #9e7d0b;
+    height: 100%;
+    width: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
+    left: 20%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 30px; }
+  .home #dealerNetwork .fa-chevron-right {
+    position: absolute;
+    z-index: 3;
+    color: #9e7d0b;
+    height: 100%;
+    width: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
+    right: 20%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 30px; }
   .home #dealerNetwork #carouselCaption {
     text-align: center;
     display: inline-block;
     background-color: white;
     position: relative;
-    top: -50px; }
+    top: -50px;
+    padding-left: 25px;
+    padding-right: 25px; }
     .home #dealerNetwork #carouselCaption h2 {
-      margin-top: 0px; }
+      margin-top: 5px;
+      font-size: 75px;
+      color: #3d3d35; }
+    .home #dealerNetwork #carouselCaption h4 {
+      color: #3d3d35;
+      font-style: normal; }
+
+.home #thinkDaily {
+  padding-top: 100px;
+  padding-bottom: 200px; }
+
+.home #preRecognition {
+  height: 200px;
+  margin-top: -200px;
+  display: block;
+  background-color: #faf8f4;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, transparent), color-stop(50%, #faf8f4));
+  background: linear-gradient(to right bottom, transparent 50%, #faf8f4 50%); }
 
 .home #recognition {
-  background-color: #faf8f4; }
-  .home #recognition:before {
-    content: '';
-    height: 200px;
-    display: block;
-    background-color: #faf8f4;
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffffff), color-stop(50%, #faf8f4));
-    background: linear-gradient(to right bottom, #ffffff 50%, #faf8f4 50%); }
+  background-color: #faf8f4;
+  padding-left: 0;
+  padding-right: 0; }
   .home #recognition:after {
     content: '';
     display: block;
@@ -10770,13 +10835,24 @@ h4 {
     padding-bottom: 50px; }
     .home #recognition #recognitionRightSection h4 {
       margin-bottom: 45px; }
-    .home #recognition #recognitionRightSection ul {
-      list-style: none;
-      padding-left: 0; }
-      .home #recognition #recognitionRightSection ul li {
-        display: inline; }
-        .home #recognition #recognitionRightSection ul li img {
-          margin-bottom: 5px; }
+    .home #recognition #recognitionRightSection .award {
+      min-height: 115px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .home #recognition #recognitionRightSection .award:nth-of-type(-n+3) {
+        border-bottom: 1px solid #d3d2cf; }
+      .home #recognition #recognitionRightSection .award:nth-of-type(3n+2) {
+        border-left: 1px solid #d3d2cf;
+        border-right: 1px solid #d3d2cf; }
+      .home #recognition #recognitionRightSection .award img {
+        mix-blend-mode: multiply; }
 
 .home #businessTimeline {
   margin-top: 150px; }

@@ -317,11 +317,60 @@ h4 {
     background-position-x: -115px;
 
     #dealerNetworkCarousel {
-    	margin-top: 25px;
+    	margin-top: 50px;
     	border-top: solid 1px #e9ecef;
     	border-bottom: solid 1px #e9ecef;
-    	padding: 100px 0;
+    	padding: 50px 0;
+
+    	&:before {
+    		content: "";
+		    z-index: 2;
+		    display: block;
+		    position: absolute;
+		    width: 150px;
+		    height: 100%;
+		    left: 0;
+		    background-image: linear-gradient(to right, rgba(256,256,256,1), rgba(256,256,256,.75), rgba(256,256,256,.5), rgba(256,256,256,.25), rgba(256,256,256,0));
+    	}
+
+    	&:after {
+    		content: "";
+		    z-index: 2;
+		    display: block;
+		    position: absolute;
+		    width: 150px;
+		    height: 100%;
+		    top: 0;
+		    right: 0;
+		    background-image: linear-gradient(to left, rgba(256,256,256,1), rgba(256,256,256,.75), rgba(256,256,256,.5), rgba(256,256,256,.25), rgba(256,256,256,0));
+    	}
     }
+
+    .fa-chevron-left {
+    		position: absolute;
+		    z-index: 3;
+		    color: $light-gold;
+		    height: 100%;
+		    width: 25px;
+		    display: flex;
+		    top: 0;
+		    left: 20%;
+		    align-items: center;
+		    font-size: 30px;
+    	}
+
+    	.fa-chevron-right {
+    		position: absolute;
+		    z-index: 3;
+		    color: $light-gold;
+		    height: 100%;
+		    width: 25px;
+		    display: flex;
+		    top: 0;
+		    right: 20%;
+		    align-items: center;
+		    font-size: 30px;
+    	}
 
     #carouselCaption {
     	text-align: center;
@@ -329,27 +378,41 @@ h4 {
 	    background-color: white;
 	    position: relative;
 	    top: -50px;
+	    padding-left: 25px;
+    	padding-right: 25px;
 
     	h2 {
-    		margin-top: 0px;
+    		margin-top: 5px;
+    		font-size: 75px;
+    		color: #3d3d35;
+    	}
+
+    	h4 {
+    		color: #3d3d35;
+    		font-style: normal;
     	}
     }
 }
 
 #thinkDaily {
+	padding-top: 100px;
+	padding-bottom: 200px;
 
+}
+
+#preRecognition {
+	height: 200px;
+	margin-top: -200px;
+    display: block;
+    background-color: #faf8f4;
+    background: -webkit-gradient(linear,left top,right bottom,color-stop(50%,transparent),color-stop(50%,#faf8f4));
+    background: linear-gradient(to right bottom,transparent 50%,#faf8f4 50%);
 }
 
 #recognition {
 	background-color: #faf8f4;
-
-	&:before {
-		content: '';
-	    height: 200px;
-	    display: block;
-	    background-color: #faf8f4;
-	    background: linear-gradient(to right bottom, #ffffff 50%, #faf8f4 50%);
-	}
+	padding-left: 0;
+    padding-right: 0;
 
 	&:after {
 		content: '';
@@ -374,16 +437,23 @@ h4 {
 			margin-bottom: 45px;
 		}
 
-		ul {
-			list-style: none;
-			padding-left: 0;
+		.award {
+			min-height: 115px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-			li {
-				display: inline;
+			&:nth-of-type(-n+3) {
+				border-bottom: 1px solid #d3d2cf;
+			}
 
-				img {
-					margin-bottom: 5px;
-				}
+			&:nth-of-type(3n+2) {
+				border-left: 1px solid #d3d2cf;
+				border-right: 1px solid #d3d2cf;
+			}
+
+			img {
+				mix-blend-mode: multiply;
 			}
 		}
 	}

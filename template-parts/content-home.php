@@ -55,9 +55,13 @@
 				            $video = get_field('speech_video');
 				        ?>
 
-				        <li><video class = "vid" src = "<?php echo $video; ?>"></video></li>
-            			<?php endwhile; ?>
-            			<?php wp_reset_postdata() ?>
+				        <li>
+				        	<video class = "vid" src = "<?php echo $video; ?>"></video>
+				        </li>
+						
+						<?php endwhile; ?>
+            			<?php wp_reset_postdata(); ?>
+
 				</ul><!-- .hpVideoSlider -->
 			</div><!-- .col-md-6 -->
 		</div><!-- .row -->
@@ -99,7 +103,8 @@
       			<a href = '#'><button role = 'button' class = 'btn btn-primary'>View Larry's Businesses</button></a>
       			<div id = "dealerNetworkCarousel">
       				<div class="hpLogoSlider">
-      					<?php if( have_rows('business_logos') ): while( have_rows('business_logos') ): the_row();
+
+      					<?php while( have_rows('business_logos') ): the_row();
 	      					//VARIABLES
 	      					$image = get_sub_field('logo');
 	      					$size = 'hp-logo';
@@ -108,7 +113,7 @@
 						<img src = "<?php echo $thumb; ?>">
 
 					<?php endwhile; ?>
-				<?php endif; ?>
+					<?php wp_reset_postdata(); ?>
 						
 					</div><!-- .hpLogoSlider -->
       			</div><!-- #dealerNetworkCarousel -->
@@ -130,7 +135,7 @@
 			<div id = "thinkDailyLeftSection" class="col-md-6">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/todays_message.png);" class = "mb-4" alt="Think Daily" title = "Think Daily">
 				<p>Think Daily, and Think Daily for Businesspeople are daily messages from Larry meant to motivate, educate, inspire, and question - but most of all, to invite you to THINK about the issues that are important to you each day.</p>
-				<a href = '<?php echo bloginfo('url'); ?>/'><button role = 'button' class = 'btn btn-primary btn-lg mb-5'>View All Think Daily Messages</button></a>
+				<a href = '<?php echo bloginfo('url'); ?>/think-daily'><button role = 'button' class = 'btn btn-primary btn-lg mb-5'>View All Think Daily Messages</button></a>
 				<div>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/app_store.png);" class = "mr-3" alt="Grab the app on the App Store">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/play_store.png);" alt="Grab the app on the Google Play Store">
@@ -139,7 +144,31 @@
 
 			<!-- RIGHT SECTION -->
 			<div id = "thinkDailyRightSection" class="col-md-6">
-				[ BLOG HERE]
+				<div id = "hpPostCarousel">
+      				<div class="hpPostSlider">
+					
+					<?php
+						global $post;
+						$args = array( 'posts_per_page' => '10' );
+						$postsList = get_posts( $args );
+
+							foreach( $postsList as $post ) :
+								setup_postdata( $post ); ?>
+
+							<div class = "hpPost">
+								<div class = "postDate" style = "background: url('<?php the_post_thumbnail_url(); ?>');">
+					        		<span class = "month"><?php echo get_the_date('M'); ?></span>
+					        		<span class = "day"><?php echo get_the_date('j'); ?></span>
+				        		</div><!-- .postDate -->
+				        		<h5><?php echo the_title(); ?></h5>
+				        		<p><?php echo get_the_excerpt(); ?></p>
+							</div><!-- .hpPost -->
+				        		
+							<?php endforeach;
+				        	wp_reset_postdata(); ?>
+      					
+					</div><!-- .hpPostSlider -->
+      			</div><!-- .hpPostCarousel -->
 			</div><!-- .col-md-6 -->
 		</div><!-- .row -->
 	</div><!-- .container -->
@@ -163,13 +192,17 @@
 				<h2>Recognition and Awards</h2>
 				<h4>Third Party Acknowledgment</h4>
 				<div class="row mb-4">
-					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_1.jpg" class = "img-responsive"></div>
-					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_2.jpg" class = "img-responsive"></div>
-					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_3.jpg" class = "img-responsive"></div>
-					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_4.jpg" class = "img-responsive"></div>
-					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_5.jpg" class = "img-responsive"></div>
-					<div class="col-md-4 award"><img src = "<?php echo get_stylesheet_directory_uri(); ?>/img/awards/larry_janesky_award_6.jpg" class = "img-responsive"></div>
-				</div>
+					<?php while( have_rows('lj_awards') ): the_row();
+	      					//VARIABLES
+	      					$image = get_sub_field('award');
+	      					$img = $image[url]; ?>
+
+	      					<div class="col-md-4 award"><img src = "<?php echo $img; ?>" class = "img-responsive"></div>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+
+				</div><!-- .row -->
 				<a href = '#' class = "mt-5"><button role = 'button' class = 'btn btn-primary'>View All Awards</button></a>
 			</div><!-- .col-md-6 -->
 		</div><!-- .row -->
@@ -195,18 +228,4 @@
 		</div>
 	</div><!-- 	.container-fluid -->
 </div><!-- 	#businessTimeline -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div><!-- #homepage -->

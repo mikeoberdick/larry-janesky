@@ -87,6 +87,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     	});
   		});
   	</script>
+
   	<script>
 		jQuery(document).ready(function(){
   			jQuery('.hpLogoSlider').slick({
@@ -115,6 +116,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 			      }
 			    }
 			  ]
+		  });
+		});
+	</script>
+
+	<script>
+		jQuery(document).ready(function(){
+  			jQuery('.hpPostSlider').slick({
+  				vertical: true,
+  				centerMode: true,
+  				autoplay: false,
+  				draggable: false,
+  				slidesToShow: 3,
+  				nextArrow: '<img class = "postSliderArrowBottom" src = "<?php echo get_stylesheet_directory_uri(); ?>/img/slider/arrow_left.png">',
+  				prevArrow: '<img class = "postSliderArrowTop" src = "<?php echo get_stylesheet_directory_uri(); ?>/img/slider/arrow_right.png">'
 		  });
 		});
 	</script>

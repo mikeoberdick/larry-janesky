@@ -10803,6 +10803,56 @@ h4 {
 .home #thinkDaily {
   padding-top: 100px;
   padding-bottom: 200px; }
+  .home #thinkDaily .postSliderArrowTop, .home #thinkDaily .postSliderArrowBottom {
+    display: block;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin: auto; }
+  .home #thinkDaily .slick-slide {
+    position: relative;
+    width: 450px !important;
+    -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
+    box-shadow: 4px 5px 12px 1px #b8b8b8;
+    margin-bottom: 20px;
+    padding: 25px;
+    padding-left: 65px;
+    background: white;
+    margin-left: 40px; }
+    .home #thinkDaily .slick-slide h5 {
+      font-family: 'LexiaDaMa';
+      color: #1453a5;
+      font-weight: bold; }
+    .home #thinkDaily .slick-slide a {
+      color: #9e7d0b; }
+      .home #thinkDaily .slick-slide a:hover {
+        text-decoration: none; }
+    .home #thinkDaily .slick-slide .postDate {
+      position: absolute;
+      border-radius: 40px;
+      width: 80px;
+      height: 80px;
+      top: 20px;
+      left: -40px;
+      background-size: contain !important;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .home #thinkDaily .slick-slide .postDate .month, .home #thinkDaily .slick-slide .postDate .day {
+        color: #fff;
+        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+      .home #thinkDaily .slick-slide .postDate .day {
+        font-size: 25px;
+        font-weight: bold; }
 
 .home #preRecognition {
   height: 200px;

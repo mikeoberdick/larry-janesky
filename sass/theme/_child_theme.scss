@@ -404,6 +404,65 @@ h4 {
 	padding-top: 100px;
 	padding-bottom: 200px;
 
+	.postSliderArrowTop, .postSliderArrowBottom {
+		display: block;
+	    -webkit-transform: rotate(-90deg);
+	    -moz-transform: rotate(-90deg);
+	    -o-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	    transform: rotate(-90deg);
+	    margin: auto;
+	}
+
+	.slick-slide {
+		position: relative;
+		width: 450px !important;
+	    -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
+	    box-shadow: 4px 5px 12px 1px #b8b8b8;
+	    margin-bottom: 20px;
+	    padding: 25px;
+	    padding-left: 65px;
+	    background: white;
+	    margin-left: 40px;
+
+	    h5 {
+	    	font-family: 'LexiaDaMa';
+		    color: #1453a5;
+		    font-weight: bold;
+	    }
+
+	    a {
+	    	color: $light-gold;
+
+	    	&:hover {
+	    		text-decoration: none;
+	    	}
+	    }
+
+	    .postDate {
+			position: absolute;
+		    border-radius: 40px;
+		    width: 80px;
+		    height: 80px;
+		    top: 20px;
+		    left: -40px;
+		    background-size: contain !important;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+
+		    .month, .day {
+		    	color: #fff;
+		    	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+		    }
+
+		    .day {
+		    	font-size: 25px;
+		    	font-weight: bold;
+		    }
+	    }
+	}
 }
 
 #preRecognition {

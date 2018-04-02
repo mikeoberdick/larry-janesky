@@ -10743,8 +10743,10 @@ h4 {
       display: block;
       position: absolute;
       width: 150px;
-      height: 100%;
-      left: 0;
+      height: 150px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
       background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
       background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
     .home #dealerNetwork #dealerNetworkCarousel:after {
@@ -10753,41 +10755,35 @@ h4 {
       display: block;
       position: absolute;
       width: 150px;
-      height: 100%;
+      height: 150px;
       top: 0;
       right: 0;
+      bottom: 0;
+      margin: auto;
       background-image: -webkit-gradient(linear, right top, left top, from(white), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
       background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
-  .home #dealerNetwork .fa-chevron-left {
+    .home #dealerNetwork #dealerNetworkCarousel .slick-track {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .home #dealerNetwork #dealerNetworkCarousel .slick-track .slick-slide {
+        width: 200px;
+        padding-left: 25px;
+        padding-right: 25px; }
+  .home #dealerNetwork .sliderArrowLeft, .home #dealerNetwork .sliderArrowRight {
     position: absolute;
     z-index: 3;
     color: #9e7d0b;
-    height: 100%;
-    width: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    margin: auto;
     top: 0;
-    left: 20%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 30px; }
-  .home #dealerNetwork .fa-chevron-right {
-    position: absolute;
-    z-index: 3;
-    color: #9e7d0b;
-    height: 100%;
-    width: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: 0;
-    right: 20%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 30px; }
+    bottom: 0; }
+  .home #dealerNetwork .sliderArrowLeft {
+    left: 30%; }
+  .home #dealerNetwork .sliderArrowRight {
+    right: 30%; }
   .home #dealerNetwork #carouselCaption {
     text-align: center;
     display: inline-block;

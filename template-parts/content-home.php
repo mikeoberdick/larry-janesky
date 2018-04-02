@@ -41,25 +41,23 @@
 			<!-- VIDEO CAROUSEL -->
 			<div id = "communicatorRightSection" class="col-md-6">
 				<ul class="bxslider">
+					<?php
+				        $args = array(
+				          'post_type' => 'speeches'
+				          );
+				          
+				          $video_slider_query = new WP_Query( $args );
+				          
+				          // The Loop
+				          while ( $video_slider_query->have_posts() ) : $video_slider_query->the_post();
 
-					<li>
-						<video class="vid" src="<?php echo get_stylesheet_directory_uri(); ?>/vids/1.mp4"></video>
-					</li>
-					<li>
-						<video class="vid" src="<?php echo get_stylesheet_directory_uri(); ?>/vids/2.mp4"></video>
-					</li>
-					<li>
-						<video class="vid" src="<?php echo get_stylesheet_directory_uri(); ?>/vids/3.mp4"></video>
-					</li>
-					<li>
-						<video class="vid" src="<?php echo get_stylesheet_directory_uri(); ?>/vids/4.mp4"></video>
-					</li>
-					<li>
-						<video class="vid" src="<?php echo get_stylesheet_directory_uri(); ?>/vids/5.mp4"></video>
-					</li>
-					<li>
-						<video class="vid" src="<?php echo get_stylesheet_directory_uri(); ?>/vids/6.mp4"></video>
-					</li>
+				          // SET THE VARIABLES
+				            $video = get_field('speech_video');
+				        ?>
+
+				        <li><video class = "vid" src = "<?php echo $video; ?>"></video></li>
+            			<?php endwhile; ?>
+            			<?php wp_reset_postdata() ?>
 				</ul><!-- .hpVideoSlider -->
 			</div><!-- .col-md-6 -->
 		</div><!-- .row -->
@@ -101,12 +99,17 @@
       			<a href = '#'><button role = 'button' class = 'btn btn-primary'>View Larry's Businesses</button></a>
       			<div id = "dealerNetworkCarousel">
       				<div class="hpLogoSlider">
-						<img src = "http://via.placeholder.com/250x150?text=Image+1">
-						<img src = "http://via.placeholder.com/250x150/000000/ffffff?Image+2">
-						<img src = "http://via.placeholder.com/250x150?text=Image+3">
-						<img src = "http://via.placeholder.com/250x150?text=Image+4">
-						<img src = "http://via.placeholder.com/250x150?text=Image+5">
-						<img src = "http://via.placeholder.com/250x150/cc0000/000000?Image+6">
+      					<?php if( have_rows('business_logos') ): while( have_rows('business_logos') ): the_row();
+	      					//VARIABLES
+	      					$image = get_sub_field('logo');
+	      					$size = 'hp-logo';
+	      					$thumb = $image['sizes'][ $size ]; ?>
+						
+						<img src = "<?php echo $thumb; ?>">
+
+					<?php endwhile; ?>
+				<?php endif; ?>
+						
 					</div><!-- .hpLogoSlider -->
       			</div><!-- #dealerNetworkCarousel -->
       			

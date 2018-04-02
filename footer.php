@@ -74,6 +74,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     		minSlides: 3,
     		maxSlides: 3,
     		moveSlides: 1,
+    		adaptiveHeight: true,
     		video: true,
     		pager: false,
     		onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
@@ -90,11 +91,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 		jQuery(document).ready(function(){
   			jQuery('.hpLogoSlider').slick({
   				centerMode: true,
-  				centerPadding: '100px',
   				slidesToShow: 1,
-  				nextArrow: '<i class="fa fa-chevron-right"></i>',
-  				prevArrow: '<i class="fa fa-chevron-left"></i>',
-  				adaptiveHeight: true,
+  				nextArrow: '<img class = "sliderArrowLeft" src = "<?php echo get_stylesheet_directory_uri(); ?>/img/slider/arrow_left.png">',
+  				prevArrow: '<img class = "sliderArrowRight" src = "<?php echo get_stylesheet_directory_uri(); ?>/img/slider/arrow_right.png">',
+  				variableWidth: true,
   				responsive: [
 			    {
 			      breakpoint: 768,

@@ -40,3 +40,9 @@ function redirect_after_comment($location)
 {
 return $_SERVER["HTTP_REFERER"];
 }
+
+// Add the homepage logo image size
+add_action( 'after_setup_theme', 'd4tw_custom_thumbs' );
+function d4tw_custom_thumbs() {
+    add_image_size( 'hp-logo', 150, 90 );
+}

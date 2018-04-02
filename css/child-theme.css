@@ -10917,6 +10917,36 @@ h4 {
     -webkit-filter: inherit;
     filter: inherit; }
 
+#liberty #libertyHeader {
+  min-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px; }
+  #liberty #libertyHeader h2 {
+    padding-top: 100px; }
+  @media (min-width: 768px) {
+    #liberty #libertyHeader p {
+      width: 50%;
+      margin: auto; } }
+
+#liberty .libertyCompany {
+  margin-bottom: 100px; }
+  #liberty .libertyCompany h2 {
+    margin-bottom: 25px; }
+  #liberty .libertyCompany .libertyLogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #liberty .libertyCompany .libertyLogo img {
+      margin: auto; }
+
 #publicSpeaking .contentContainer {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.85);

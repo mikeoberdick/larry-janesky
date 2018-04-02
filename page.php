@@ -33,6 +33,10 @@ get_header();
 					get_template_part( 'template-parts/content', 'public_speaking' );
 			}
 
+			elseif( is_page( 'liberty' )) {
+					get_template_part( 'template-parts/content', 'liberty' );
+			}
+
 			else {
 			   get_template_part( 'loop-templates/content', 'page' );
 			}

@@ -552,6 +552,46 @@ h4 {
 }
 
 ////////////////////////////////////////////////////
+// LIBERTY
+
+#liberty {
+	#libertyHeader {
+		min-height: 350px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 100px;
+
+		h2 {
+			padding-top: 100px;
+		}
+
+		p {
+			@include media-breakpoint-up(md) {
+				width: 50%;
+				margin: auto;
+			}
+		}
+	}
+
+	.libertyCompany {
+		margin-bottom: 100px;
+
+		h2 {
+			margin-bottom: 25px;
+		}
+	
+		.libertyLogo {
+			display: flex;
+
+			img {
+				margin: auto;
+			}
+		}
+	}	
+}
+
+////////////////////////////////////////////////////
 // PUBLIC SPEAKING
 
 #publicSpeaking {

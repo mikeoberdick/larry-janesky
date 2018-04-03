@@ -103,6 +103,7 @@ h4 {
 		width: 100%;
 		background-color: transparent;
 		z-index: 1;
+		margin-top: 15px;
 		
 		a {
 			text-transform: uppercase;
@@ -595,147 +596,153 @@ h4 {
 // THINK DAILY
 
 #thinkDaily {
-	#thinkDailyHeader {
-		min-height: 350px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	#thinkDailyBlogHeader {
+		min-height: 600px;
 		margin-bottom: 100px;
+		display: flex;
+		align-items: center;
 
-		#archiveDropdowns {
-			margin-top: 50px;
+			#blogHeaderLeft {
+				align-self: center;
+				
+					img {
+						margin-bottom: 3rem;
+					}
+			}
 
-			#archiveDropdown {
-				display: flex;
-			    flex-direction: row;
-			    justify-content: center;
-			    align-items: center;
+	#blogBlogSignup {
+		text-align: center;
+		background: white;
+    	padding: 15px;
+    	-webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
+		box-shadow: 4px 5px 12px 1px #b8b8b8;
 
-			    select {
-					border: 1px solid $light-gold;
-				    border-radius: 20px;
-				    color: $light-gold;
-				    font-family: LexiaDaMa,sans-serif;
-				    -webkit-appearance: none;
-				    height: 50px;
-				    padding: 0px 30px;
-				    line-height: 1.75;
-				    background-color: #ffffff;
-				  }
+		p {
+			color: #1453a5;
+		    font-family: 'LexiaDaMa', serif;
+		    font-size: 20px;
+		    text-align: center;
+		    margin-bottom: 30px;
+		    font-weight: bold;
+		}
 
-				#archiveFormSubmit {
-			    	background-color: $brand-secondary;
-			    	color: #fff;
-			    	border-radius: 20px;
-			    	font-family: LexiaDaMa,sans-serif;
-			    	padding: 5px 30px;
-			    	border: 0;
-			    	cursor: pointer;
+		form {
+			justify-content: center;
 
-			    	&:hover {
-			    		text-decoration: none;
-			    	}
-				}
+			input {
+				border-color: #ddd;
+	    		background-color: #fff;
+	    		color: #dedede;
+	    		font-size: 14px;
+	    		height: 50px;
+			    @include border-radius(30px);
+			    width: 100%;
+
+			    &:first-of-type {
+			    	margin-bottom: 15px;
+			    }
+			}
+
+			#email {
+				min-width: 50%;
+			}
+
+			button {
+				margin-top: 0;
+				margin-bottom: 15px;
+				font-size: 15px;
+				padding: 5px 20px;
 			}
 		}
 
-	    #monthSelectContainer {
-	    	&:after {
-		    	content: '\f078';
-			    font: normal normal normal 17px/1 FontAwesome;
-			    color: $light-gold;
-			    right: 11px;
-			    top: 0px;
-			    left: -60px;
-			    height: 34px;
-			    padding: 15px 0px 0px 8px;
-			    pointer-events: none;
-			    position: relative;	
-	    	}
-	    }
-
-	    #yearSelectContainer {
-	    	&:after {
-		    	content: '\f078';
-			    font: normal normal normal 17px/1 FontAwesome;
-			    color: $light-gold;
-			    right: 11px;
-			    top: 0px;
-			    left: -50px;
-			    height: 34px;
-			    padding: 15px 0px 0px 8px;
-			    pointer-events: none;
-			    position: relative;	
-	    	}
-
-	    	select {
-	    		padding-right: 50px !important;
-	    	}
-	    }
+			.privacy {
+			    color: #5d5d5d;
+			    font-family: 'Roboto', sans-serif;
+			    font-weight: 300;
+			    margin-top: 20px;
+			    font-size: 10px;
+			}
+		}
 	}
 
-	#postContainer {
-		position: relative;
-			&:after {
-			content:"";
-		    position: absolute;
-		    z-index: -1;
-		    top: 0;
-		    bottom: 0;
-		    left: 50%;
-		    border-left: 1px solid $light-gold;
-		    transform: translate(-50%);
-		}
+	.read-more-link {
+		display: none;
+	}
+}
 
-			.postCard {
-				position: relative;
-				max-width: 450px !important;
-			    -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
-			    box-shadow: 4px 5px 12px 1px #b8b8b8;
-			    margin-bottom: 20px;
-			    padding: 25px;
-			    padding-left: 65px;
-			    background: white;
+#blogPageTitle {
+	font-size: 30px;
+	color: #1453a5;
+	font-family: 'LexiaDaMa';
+	text-align: center;
+	margin-bottom: 50px;
+	font-weight: bold;
+	}
+
+#featuredPostContainer {
+	position: relative;
+
+		&:after {
+				content:"";
+			    position: absolute;
+			    z-index: -1;
+			    top: 0;
+			    bottom: 0;
+			    left: 50%;
+			    border-left: 1px solid $light-gold;
+			    transform: translate(-50%);
+			}
+
+		#featuredPostCard {
+			position: relative;
+		    -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
+		    box-shadow: 4px 5px 12px 1px #b8b8b8;
+		    margin-bottom: 50px;
+		    padding: 25px;
+		    padding-left: 65px;
+		    background: white;
+		    max-width: 1000px;
+		    margin-left: auto;
+		    margin-right: auto;
 
 			    h5 {
 			    	font-family: 'LexiaDaMa';
-				    color: #1453a5;
 				    font-weight: bold;
+
+				    a {
+				    	color: #1453a5;
+
+				    	&:hover {
+				    		text-decoration: none;
+				    	}
+				    }
 			    }
 
-			    a {
-			    	color: $light-gold;
+	    .postDate {
+			position: absolute;
+		    border-radius: 40px;
+		    width: 80px;
+		    height: 80px;
+		    top: 20px;
+		    background-size: contain !important;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    left: -40px;
 
-			    	&:hover {
-			    		text-decoration: none;
-			    	}
+			    .month, .day {
+			    	color: #fff;
+			    	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 			    }
 
-		    .postDate {
-				position: absolute;
-			    border-radius: 40px;
-			    width: 80px;
-			    height: 80px;
-			    top: 20px;
-			    background-size: contain !important;
-			    display: flex;
-			    flex-direction: column;
-			    justify-content: center;
-			    align-items: center;
-
-				    .month, .day {
-				    	color: #fff;
-				    	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-				    }
-
-				    .day {
-				    	font-size: 25px;
-				    	font-weight: bold;
-				    }
-		    	}
-			}	
-		}
-	}
+			    .day {
+			    	font-size: 25px;
+			    	font-weight: bold;
+			    }
+	    }
+	}	
+}
 
 .odd {
 	.postCard {
@@ -749,6 +756,8 @@ h4 {
 .even {
 	.postCard {
 		margin-left: 50px;
+		padding-left: 25px !important;
+		padding-right: 65px !important	;
 		.postDate {
 			right: -40px;
 		}
@@ -771,6 +780,192 @@ h4 {
     		color: #fff;
     	}
     }
+}
+
+#archiveLink {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: 'LexiaDaMa', serif;
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+#blogBottomBanner {
+	background-color: #1553a6;
+	padding-top: 100px;
+	margin-bottom: -80px;
+	overflow: hidden;
+
+	p {
+		color: #fff;
+		margin-top: 25px;
+	}
+
+	#mobileImage {
+		margin-bottom: -150px;
+	}
+
+}
+
+.postSep {
+	background: $light-gold;
+}
+
+.postTitle {
+	a {
+		color: #1453a5;		
+	}
+}
+
+////////////////////////////////////////////////////
+// THINK DAILY ARCHIVE
+
+
+#thinkDailyArchiveHeader {
+	min-height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+#archiveDropdowns {
+	margin-top: 50px;
+
+		#archiveDropdown {
+			display: flex;
+		    flex-direction: row;
+		    justify-content: center;
+		    align-items: center;
+
+		    select {
+				border: 1px solid $light-gold;
+			    border-radius: 20px;
+			    color: $light-gold;
+			    font-family: LexiaDaMa,sans-serif;
+			    -webkit-appearance: none;
+			    height: 50px;
+			    padding: 0px 30px;
+			    line-height: 1.75;
+			    background-color: #ffffff;
+			  }
+
+		#archiveFormSubmit {
+	    	background-color: $brand-secondary;
+	    	color: #fff;
+	    	border-radius: 20px;
+	    	font-family: LexiaDaMa,sans-serif;
+	    	padding: 5px 30px;
+	    	border: 0;
+	    	cursor: pointer;
+
+	    	&:hover {
+	    		text-decoration: none;
+	    	}
+		}
+	}
+}
+
+#monthSelectContainer {
+	&:after {
+    	content: '\f078';
+	    font: normal normal normal 17px/1 FontAwesome;
+	    color: $light-gold;
+	    right: 11px;
+	    top: 0px;
+	    left: -60px;
+	    height: 34px;
+	    padding: 15px 0px 0px 8px;
+	    pointer-events: none;
+	    position: relative;	
+	}
+}
+
+#yearSelectContainer {
+	&:after {
+    	content: '\f078';
+	    font: normal normal normal 17px/1 FontAwesome;
+	    color: $light-gold;
+	    right: 11px;
+	    top: 0px;
+	    left: -50px;
+	    height: 34px;
+	    padding: 15px 0px 0px 8px;
+	    pointer-events: none;
+	    position: relative;	
+	}
+
+	select {
+		padding-right: 50px !important;
+	}
+}
+
+#postContainer {
+	position: relative;
+		
+		&:after {
+			content:"";
+		    position: absolute;
+		    z-index: -1;
+		    top: 0;
+		    bottom: 0;
+		    left: 50%;
+		    border-left: 1px solid $light-gold;
+		    transform: translate(-50%);
+		}
+
+		.postCard {
+			position: relative;
+			max-width: 450px !important;
+		    -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
+		    box-shadow: 4px 5px 12px 1px #b8b8b8;
+		    margin-bottom: 20px;
+		    padding: 25px;
+		    padding-left: 65px;
+		    background: white;
+
+			    h5 {
+			    	font-family: 'LexiaDaMa';
+				    color: #1453a5;
+				    font-weight: bold;
+
+				    a {
+				    	color: #1453a5;
+
+				    	&:hover {
+				    		text-decoration: none;
+				    	}
+				    }
+			    }
+
+	    .postDate {
+			position: absolute;
+		    border-radius: 40px;
+		    width: 80px;
+		    height: 80px;
+		    top: 20px;
+		    background-size: contain !important;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+
+			    .month, .day {
+			    	color: #fff;
+			    	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+			    }
+
+			    .day {
+			    	font-size: 25px;
+			    	font-weight: bold;
+			    }
+	    }
+	}	
 }
 
 ////////////////////////////////////////////////////
@@ -1077,40 +1272,40 @@ h4 {
 	}
 }
 
-	#thinkDailyForm {
-		margin-top: 100px;
+	.blogSignup {
 		text-align: center;
+		margin-top: 100px;
 
-		p {
-			color: #1453a5;
-		    font-family: 'Monserrat';
-		    font-size: 25px;
-		    text-align: center;
-		    margin-bottom: 30px;
-		    font-weight: bold;
-		    margin-top: 25px;
+	p {
+		color: #1453a5;
+	    font-family: 'LexiaDaMa';
+	    font-size: 25px;
+	    text-align: center;
+	    margin-bottom: 30px;
+	    font-weight: bold;
+	    margin-top: 25px;
+	}
+
+	form {
+		justify-content: center;
+
+		input {
+			border-color: #ddd;
+    		background-color: #f4f4f4;
+    		color: #444;
+    		font-size: 14px;
+    		height: 50px;
+		    @include border-radius(30px);
 		}
 
-		form {
-			justify-content: center;
-
-			input {
-				border-color: #ddd;
-	    		background-color: #f4f4f4;
-	    		color: #444;
-	    		font-size: 14px;
-	    		height: 50px;
-			    @include border-radius(30px);
-			}
-
-			#email {
-				min-width: 50%;
-			}
-
-			button {
-				margin-top: 0;
-			}
+		#email {
+			min-width: 50%;
 		}
+
+		button {
+			margin-top: 0;
+		}
+	}
 
 		.privacy {
 		    color: #5d5d5d;

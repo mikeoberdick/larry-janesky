@@ -156,7 +156,7 @@
 								setup_postdata( $post ); ?>
 
 							<div class = "hpPost">
-								<div class = "postDate" style = "background: url('<?php the_post_thumbnail_url(); ?>');">
+								<div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
 					        		<span class = "month"><?php echo get_the_date('M'); ?></span>
 					        		<span class = "day"><?php echo get_the_date('j'); ?></span>
 				        		</div><!-- .postDate -->

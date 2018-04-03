@@ -10582,7 +10582,8 @@ h4 {
   position: absolute;
   width: 100%;
   background-color: transparent;
-  z-index: 1; }
+  z-index: 1;
+  margin-top: 15px; }
   .wrapper-navbar nav a {
     text-transform: uppercase;
     color: #232e33; }
@@ -10947,7 +10948,183 @@ h4 {
     #liberty .libertyCompany .libertyLogo img {
       margin: auto; }
 
-#thinkDaily #thinkDailyHeader {
+#thinkDaily #thinkDailyBlogHeader {
+  min-height: 600px;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #thinkDaily #thinkDailyBlogHeader #blogHeaderLeft {
+    -ms-flex-item-align: center;
+        align-self: center; }
+    #thinkDaily #thinkDailyBlogHeader #blogHeaderLeft img {
+      margin-bottom: 3rem; }
+  #thinkDaily #thinkDailyBlogHeader #blogBlogSignup {
+    text-align: center;
+    background: white;
+    padding: 15px;
+    -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
+    box-shadow: 4px 5px 12px 1px #b8b8b8; }
+    #thinkDaily #thinkDailyBlogHeader #blogBlogSignup p {
+      color: #1453a5;
+      font-family: 'LexiaDaMa', serif;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold; }
+    #thinkDaily #thinkDailyBlogHeader #blogBlogSignup form {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      #thinkDaily #thinkDailyBlogHeader #blogBlogSignup form input {
+        border-color: #ddd;
+        background-color: #fff;
+        color: #dedede;
+        font-size: 14px;
+        height: 50px;
+        border-radius: 30px;
+        width: 100%; }
+        #thinkDaily #thinkDailyBlogHeader #blogBlogSignup form input:first-of-type {
+          margin-bottom: 15px; }
+      #thinkDaily #thinkDailyBlogHeader #blogBlogSignup form #email {
+        min-width: 50%; }
+      #thinkDaily #thinkDailyBlogHeader #blogBlogSignup form button {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 15px;
+        padding: 5px 20px; }
+    #thinkDaily #thinkDailyBlogHeader #blogBlogSignup .privacy {
+      color: #5d5d5d;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      margin-top: 20px;
+      font-size: 10px; }
+
+#thinkDaily .read-more-link {
+  display: none; }
+
+#blogPageTitle {
+  font-size: 30px;
+  color: #1453a5;
+  font-family: 'LexiaDaMa';
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bold; }
+
+#featuredPostContainer {
+  position: relative; }
+  #featuredPostContainer:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1px solid #9e7d0b;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%); }
+  #featuredPostContainer #featuredPostCard {
+    position: relative;
+    -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
+    box-shadow: 4px 5px 12px 1px #b8b8b8;
+    margin-bottom: 50px;
+    padding: 25px;
+    padding-left: 65px;
+    background: white;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; }
+    #featuredPostContainer #featuredPostCard h5 {
+      font-family: 'LexiaDaMa';
+      font-weight: bold; }
+      #featuredPostContainer #featuredPostCard h5 a {
+        color: #1453a5; }
+        #featuredPostContainer #featuredPostCard h5 a:hover {
+          text-decoration: none; }
+    #featuredPostContainer #featuredPostCard .postDate {
+      position: absolute;
+      border-radius: 40px;
+      width: 80px;
+      height: 80px;
+      top: 20px;
+      background-size: contain !important;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      left: -40px; }
+      #featuredPostContainer #featuredPostCard .postDate .month, #featuredPostContainer #featuredPostCard .postDate .day {
+        color: #fff;
+        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+      #featuredPostContainer #featuredPostCard .postDate .day {
+        font-size: 25px;
+        font-weight: bold; }
+
+.odd .postCard {
+  margin-left: 25px; }
+  .odd .postCard .postDate {
+    left: -40px; }
+
+.even .postCard {
+  margin-left: 50px;
+  padding-left: 25px !important;
+  padding-right: 65px !important; }
+  .even .postCard .postDate {
+    right: -40px; }
+
+#postNavContainer {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  #postNavContainer .page-link {
+    color: #1453a5; }
+  #postNavContainer .page-item.active .page-link {
+    background-color: #1453a5;
+    border-color: #1453a5;
+    color: #fff; }
+
+#archiveLink {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'LexiaDaMa', serif; }
+  #archiveLink a:hover {
+    text-decoration: none; }
+
+#blogBottomBanner {
+  background-color: #1553a6;
+  padding-top: 100px;
+  margin-bottom: -80px;
+  overflow: hidden; }
+  #blogBottomBanner p {
+    color: #fff;
+    margin-top: 25px; }
+  #blogBottomBanner #mobileImage {
+    margin-bottom: -150px; }
+
+.postSep {
+  background: #9e7d0b; }
+
+.postTitle a {
+  color: #1453a5; }
+
+#thinkDailyArchiveHeader {
   min-height: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10959,70 +11136,74 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 100px; }
-  #thinkDaily #thinkDailyHeader #archiveDropdowns {
-    margin-top: 50px; }
-    #thinkDaily #thinkDailyHeader #archiveDropdowns #archiveDropdown {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      #thinkDaily #thinkDailyHeader #archiveDropdowns #archiveDropdown select {
-        border: 1px solid #9e7d0b;
-        border-radius: 20px;
-        color: #9e7d0b;
-        font-family: LexiaDaMa,sans-serif;
-        -webkit-appearance: none;
-        height: 50px;
-        padding: 0px 30px;
-        line-height: 1.75;
-        background-color: #ffffff; }
-      #thinkDaily #thinkDailyHeader #archiveDropdowns #archiveDropdown #archiveFormSubmit {
-        background-color: #232e33;
-        color: #fff;
-        border-radius: 20px;
-        font-family: LexiaDaMa,sans-serif;
-        padding: 5px 30px;
-        border: 0;
-        cursor: pointer; }
-        #thinkDaily #thinkDailyHeader #archiveDropdowns #archiveDropdown #archiveFormSubmit:hover {
-          text-decoration: none; }
-  #thinkDaily #thinkDailyHeader #monthSelectContainer:after {
-    content: '\f078';
-    font: normal normal normal 17px/1 FontAwesome;
-    color: #9e7d0b;
-    right: 11px;
-    top: 0px;
-    left: -60px;
-    height: 34px;
-    padding: 15px 0px 0px 8px;
-    pointer-events: none;
-    position: relative; }
-  #thinkDaily #thinkDailyHeader #yearSelectContainer:after {
-    content: '\f078';
-    font: normal normal normal 17px/1 FontAwesome;
-    color: #9e7d0b;
-    right: 11px;
-    top: 0px;
-    left: -50px;
-    height: 34px;
-    padding: 15px 0px 0px 8px;
-    pointer-events: none;
-    position: relative; }
-  #thinkDaily #thinkDailyHeader #yearSelectContainer select {
-    padding-right: 50px !important; }
 
-#thinkDaily #postContainer {
+#archiveDropdowns {
+  margin-top: 50px; }
+  #archiveDropdowns #archiveDropdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #archiveDropdowns #archiveDropdown select {
+      border: 1px solid #9e7d0b;
+      border-radius: 20px;
+      color: #9e7d0b;
+      font-family: LexiaDaMa,sans-serif;
+      -webkit-appearance: none;
+      height: 50px;
+      padding: 0px 30px;
+      line-height: 1.75;
+      background-color: #ffffff; }
+    #archiveDropdowns #archiveDropdown #archiveFormSubmit {
+      background-color: #232e33;
+      color: #fff;
+      border-radius: 20px;
+      font-family: LexiaDaMa,sans-serif;
+      padding: 5px 30px;
+      border: 0;
+      cursor: pointer; }
+      #archiveDropdowns #archiveDropdown #archiveFormSubmit:hover {
+        text-decoration: none; }
+
+#monthSelectContainer:after {
+  content: '\f078';
+  font: normal normal normal 17px/1 FontAwesome;
+  color: #9e7d0b;
+  right: 11px;
+  top: 0px;
+  left: -60px;
+  height: 34px;
+  padding: 15px 0px 0px 8px;
+  pointer-events: none;
   position: relative; }
-  #thinkDaily #postContainer:after {
+
+#yearSelectContainer:after {
+  content: '\f078';
+  font: normal normal normal 17px/1 FontAwesome;
+  color: #9e7d0b;
+  right: 11px;
+  top: 0px;
+  left: -50px;
+  height: 34px;
+  padding: 15px 0px 0px 8px;
+  pointer-events: none;
+  position: relative; }
+
+#yearSelectContainer select {
+  padding-right: 50px !important; }
+
+#postContainer {
+  position: relative; }
+  #postContainer:after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -11032,7 +11213,7 @@ h4 {
     border-left: 1px solid #9e7d0b;
     -webkit-transform: translate(-50%);
             transform: translate(-50%); }
-  #thinkDaily #postContainer .postCard {
+  #postContainer .postCard {
     position: relative;
     max-width: 450px !important;
     -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
@@ -11041,15 +11222,15 @@ h4 {
     padding: 25px;
     padding-left: 65px;
     background: white; }
-    #thinkDaily #postContainer .postCard h5 {
+    #postContainer .postCard h5 {
       font-family: 'LexiaDaMa';
       color: #1453a5;
       font-weight: bold; }
-    #thinkDaily #postContainer .postCard a {
-      color: #9e7d0b; }
-      #thinkDaily #postContainer .postCard a:hover {
-        text-decoration: none; }
-    #thinkDaily #postContainer .postCard .postDate {
+      #postContainer .postCard h5 a {
+        color: #1453a5; }
+        #postContainer .postCard h5 a:hover {
+          text-decoration: none; }
+    #postContainer .postCard .postDate {
       position: absolute;
       border-radius: 40px;
       width: 80px;
@@ -11069,37 +11250,12 @@ h4 {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      #thinkDaily #postContainer .postCard .postDate .month, #thinkDaily #postContainer .postCard .postDate .day {
+      #postContainer .postCard .postDate .month, #postContainer .postCard .postDate .day {
         color: #fff;
         text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
-      #thinkDaily #postContainer .postCard .postDate .day {
+      #postContainer .postCard .postDate .day {
         font-size: 25px;
         font-weight: bold; }
-
-.odd .postCard {
-  margin-left: 25px; }
-  .odd .postCard .postDate {
-    left: -40px; }
-
-.even .postCard {
-  margin-left: 50px; }
-  .even .postCard .postDate {
-    right: -40px; }
-
-#postNavContainer {
-  margin-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  #postNavContainer .page-link {
-    color: #1453a5; }
-  #postNavContainer .page-item.active .page-link {
-    background-color: #1453a5;
-    border-color: #1453a5;
-    color: #fff; }
 
 #publicSpeaking .contentContainer {
   text-align: center;
@@ -11351,33 +11507,33 @@ h4 {
   font-family: "nunito", sans-serif;
   font-size: 12px; }
 
-#thinkDailyForm {
-  margin-top: 100px;
-  text-align: center; }
-  #thinkDailyForm p {
+.blogSignup {
+  text-align: center;
+  margin-top: 100px; }
+  .blogSignup p {
     color: #1453a5;
-    font-family: 'Monserrat';
+    font-family: 'LexiaDaMa';
     font-size: 25px;
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
     margin-top: 25px; }
-  #thinkDailyForm form {
+  .blogSignup form {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    #thinkDailyForm form input {
+    .blogSignup form input {
       border-color: #ddd;
       background-color: #f4f4f4;
       color: #444;
       font-size: 14px;
       height: 50px;
       border-radius: 30px; }
-    #thinkDailyForm form #email {
+    .blogSignup form #email {
       min-width: 50%; }
-    #thinkDailyForm form button {
+    .blogSignup form button {
       margin-top: 0; }
-  #thinkDailyForm .privacy {
+  .blogSignup .privacy {
     color: #5d5d5d;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;

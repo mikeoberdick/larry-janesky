@@ -68,4 +68,4 @@
         </div><!-- .col-md-6 -->
       </div>
   </div><!-- .container -->
-</div><!-- #family -->
+</div><!-- #liberty -->

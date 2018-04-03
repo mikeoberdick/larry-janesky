@@ -1,4 +1,4 @@
-<?php
+<?php /* Template Name: Archive */
 /**
  * The Archive template file.
  *
@@ -60,9 +60,25 @@ get_header(); ?>
 
 <main id = "main" class = "site-main">
   <div id = "postContainer" class="container">
+    <?php
+        $args = array(
+          'posts_per_page' => '10'
+          );
 
-    <?php $postCount = 1; //SETUP COUNT FOR STYLING ODD/EVEN POSTS ?>
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        $args['paged'] = get_query_var('paged') ? get_query_var('paged') : 1;
+          
+          $archiveQuery = new WP_Query( $args );
+
+          // Pagination fix
+            $temp_query = $wp_query;
+            $wp_query   = NULL;
+            $wp_query   = $archiveQuery;
+
+          // SET A VARIABLE TO KEEP TRACK OF THE POST NUMBER
+          $postCount = 1;
+          
+          // The Loop
+          while ( $archiveQuery->have_posts() ) : $archiveQuery->the_post(); ?>
 
   <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <?php if ( $postCount % 2 == 0 ): ?>
@@ -77,21 +93,28 @@ get_header(); ?>
         </div><!-- .postDate -->
           <h5 class = "postTitle"><a href = "<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h5>
           <p><?php echo get_the_excerpt(); ?></p>
-          <hr class = "postSep"> 
-          [COMMENT COUNT]
+          <hr class = "postSep">
+          [COMMENTS HERE]
         </div><!-- .postCard -->  
     </article><!-- #post-## -->
 
-<?php
- $postCount++;
-  endwhile;
-  endif; ?>
+<?php $postCount++; endwhile;
+wp_reset_postdata(); ?>
 
   </div><!-- #postContainer -->
+<div id="postNavContainer">
+   <?php understrap_pagination(); ?>
+</div>
+
+<?php
+// Reset main query object
+$wp_query = NULL;
+$wp_query = $temp_query;
+?>
+
 </main>
 
-<!-- The pagination component -->
-<?php understrap_pagination(); ?>
+
 
 <div class="container blogSignup">
   <img src= "<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_logo.png" alt="Think Daily by Larry Janesky">

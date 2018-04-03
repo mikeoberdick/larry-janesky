@@ -199,7 +199,7 @@
   </div><!-- .row -->
 </div><!-- .container-fluid -->
 
-<div id = "thinkDailyForm" class="container">
+<div class="container blogSignup">
   <img src= "<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_logo.png" alt="Think Daily by Larry Janesky">
   <p>Join the over 20,000 people who receive Larry's Daily Inspiring Messages</p>
   <div>

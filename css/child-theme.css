@@ -10978,7 +10978,7 @@ h4 {
       #thinkDaily #thinkDailyHeader #archiveDropdowns #archiveDropdown select {
         border: 1px solid #9e7d0b;
         border-radius: 20px;
-        color: #7d6816;
+        color: #9e7d0b;
         font-family: LexiaDaMa,sans-serif;
         -webkit-appearance: none;
         height: 50px;
@@ -11085,6 +11085,21 @@ h4 {
   margin-left: 50px; }
   .even .postCard .postDate {
     right: -40px; }
+
+#postNavContainer {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  #postNavContainer .page-link {
+    color: #1453a5; }
+  #postNavContainer .page-item.active .page-link {
+    background-color: #1453a5;
+    border-color: #1453a5;
+    color: #fff; }
 
 #publicSpeaking .contentContainer {
   text-align: center;

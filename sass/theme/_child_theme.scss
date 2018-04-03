@@ -612,9 +612,9 @@ h4 {
 			    align-items: center;
 
 			    select {
-					border: 1px solid #9e7d0b;
+					border: 1px solid $light-gold;
 				    border-radius: 20px;
-				    color: $brand-primary;
+				    color: $light-gold;
 				    font-family: LexiaDaMa,sans-serif;
 				    -webkit-appearance: none;
 				    height: 50px;
@@ -643,7 +643,7 @@ h4 {
 	    	&:after {
 		    	content: '\f078';
 			    font: normal normal normal 17px/1 FontAwesome;
-			    color: #9e7d0b;
+			    color: $light-gold;
 			    right: 11px;
 			    top: 0px;
 			    left: -60px;
@@ -658,7 +658,7 @@ h4 {
 	    	&:after {
 		    	content: '\f078';
 			    font: normal normal normal 17px/1 FontAwesome;
-			    color: #9e7d0b;
+			    color: $light-gold;
 			    right: 11px;
 			    top: 0px;
 			    left: -50px;
@@ -753,6 +753,24 @@ h4 {
 			right: -40px;
 		}
 	}
+}
+
+#postNavContainer {
+	margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+    .page-link {
+    	color: #1453a5;
+    }
+
+    .page-item.active {
+    	.page-link {
+    		background-color: #1453a5;
+    		border-color: #1453a5;
+    		color: #fff;
+    	}
+    }
 }
 
 ////////////////////////////////////////////////////

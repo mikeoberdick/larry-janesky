@@ -17,3 +17,12 @@ jQuery('.vid').hover(function toggleControls() {
     } else {
       this.setAttribute("controls", "controls")
    }})
+
+//Archive Dropdown Functionality
+jQuery(document).ready(function() {
+	jQuery('#archiveDropdown').on('change', function(){
+	    var month = jQuery('#month').val();
+	    var year = jQuery('#year').val();
+	    jQuery('#archiveFormSubmit').attr('href', '/' + year + '/' + month);
+	});
+});

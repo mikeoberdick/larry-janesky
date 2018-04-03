@@ -127,7 +127,7 @@
 </div><!-- #dealerNetwork -->
 
 <!-- THINK DAILY BLOG SECTION -->
-<div id = "thinkDaily" class="container-fluid" style = "background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_homepage.jpg);">
+<div id = "thinkDaily" class="container-fluid" style = "background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_bg.jpg);">
 	<div class="container">
 		<div class="row">
 			

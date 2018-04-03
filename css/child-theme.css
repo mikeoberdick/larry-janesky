@@ -10947,6 +10947,145 @@ h4 {
     #liberty .libertyCompany .libertyLogo img {
       margin: auto; }
 
+#thinkDaily #thinkDailyHeader {
+  min-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px; }
+  #thinkDaily #thinkDailyHeader #archiveDropdowns {
+    margin-top: 50px; }
+    #thinkDaily #thinkDailyHeader #archiveDropdowns #archiveDropdown {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      #thinkDaily #thinkDailyHeader #archiveDropdowns #archiveDropdown select {
+        border: 1px solid #9e7d0b;
+        border-radius: 20px;
+        color: #7d6816;
+        font-family: LexiaDaMa,sans-serif;
+        -webkit-appearance: none;
+        height: 50px;
+        padding: 0px 30px;
+        line-height: 1.75;
+        background-color: #ffffff; }
+      #thinkDaily #thinkDailyHeader #archiveDropdowns #archiveDropdown #archiveFormSubmit {
+        background-color: #232e33;
+        color: #fff;
+        border-radius: 20px;
+        font-family: LexiaDaMa,sans-serif;
+        padding: 5px 30px;
+        border: 0;
+        cursor: pointer; }
+        #thinkDaily #thinkDailyHeader #archiveDropdowns #archiveDropdown #archiveFormSubmit:hover {
+          text-decoration: none; }
+  #thinkDaily #thinkDailyHeader #monthSelectContainer:after {
+    content: '\f078';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #9e7d0b;
+    right: 11px;
+    top: 0px;
+    left: -60px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;
+    pointer-events: none;
+    position: relative; }
+  #thinkDaily #thinkDailyHeader #yearSelectContainer:after {
+    content: '\f078';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #9e7d0b;
+    right: 11px;
+    top: 0px;
+    left: -50px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;
+    pointer-events: none;
+    position: relative; }
+  #thinkDaily #thinkDailyHeader #yearSelectContainer select {
+    padding-right: 50px !important; }
+
+#thinkDaily #postContainer {
+  position: relative; }
+  #thinkDaily #postContainer:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1px solid #9e7d0b;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%); }
+  #thinkDaily #postContainer .postCard {
+    position: relative;
+    max-width: 450px !important;
+    -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
+    box-shadow: 4px 5px 12px 1px #b8b8b8;
+    margin-bottom: 20px;
+    padding: 25px;
+    padding-left: 65px;
+    background: white; }
+    #thinkDaily #postContainer .postCard h5 {
+      font-family: 'LexiaDaMa';
+      color: #1453a5;
+      font-weight: bold; }
+    #thinkDaily #postContainer .postCard a {
+      color: #9e7d0b; }
+      #thinkDaily #postContainer .postCard a:hover {
+        text-decoration: none; }
+    #thinkDaily #postContainer .postCard .postDate {
+      position: absolute;
+      border-radius: 40px;
+      width: 80px;
+      height: 80px;
+      top: 20px;
+      background-size: contain !important;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      #thinkDaily #postContainer .postCard .postDate .month, #thinkDaily #postContainer .postCard .postDate .day {
+        color: #fff;
+        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+      #thinkDaily #postContainer .postCard .postDate .day {
+        font-size: 25px;
+        font-weight: bold; }
+
+.odd .postCard {
+  margin-left: 25px; }
+  .odd .postCard .postDate {
+    left: -40px; }
+
+.even .postCard {
+  margin-left: 50px; }
+  .even .postCard .postDate {
+    right: -40px; }
+
 #publicSpeaking .contentContainer {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.85);

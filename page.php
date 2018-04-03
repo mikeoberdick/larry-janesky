@@ -30,7 +30,7 @@ get_header();
 			}
 
 			elseif( is_page( 'public-speaking' )) {
-					get_template_part( 'template-parts/content', 'public_speaking' );
+					get_template_part( 'template-parts/content', 'public-speaking' );
 			}
 
 			elseif( is_page( 'liberty' )) {

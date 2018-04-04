@@ -50,10 +50,10 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
-                            <div id = "videoContainer" class="container-fluid">
+                            <div class="container-fluid modalHeaderContainer">
                                 <video controls src="<?php echo $video; ?>" class = "w-100"></video>
                             </div><!-- .container-fluid -->
-                              <div id = "contentContainer" class="container mt-3">
+                              <div class="container modalContentContainer mt-3">
                                 <div class="row">
                                   <div class="col-md-8">
                                     <h2><?php echo $title ?></h2>
@@ -166,10 +166,10 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
-                            <div id = "videoContainer" class="container-fluid">
+                            <div class="container-fluid modalHeaderContainer">
                                 <video controls src="<?php echo $video; ?>" class = "w-100"></video>
                             </div><!-- .container-fluid -->
-                              <div id = "contentContainer" class="container mt-3">
+                              <div class="container modalContentContainer mt-3">
                                 <div class="row">
                                   <div class="col-md-8">
                                     <h2><?php echo $title ?></h2>

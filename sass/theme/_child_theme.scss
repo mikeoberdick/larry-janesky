@@ -822,6 +822,43 @@ h4 {
 	}
 }
 
+.commentCountContainer {
+	color: $light-gold;
+	i {
+		margin-left: 5px;
+	}
+}
+
+.blogModalContentContainer {
+	position: relative;
+	padding-left: 65px !important;
+	padding-right: 100px !important;
+
+	.postDate {
+			position: absolute;
+		    border-radius: 40px;
+		    width: 80px;
+		    height: 80px;
+		    top: 20px;
+		    background-size: contain !important;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    left: -40px;
+
+			    .month, .day {
+			    	color: #fff;
+			    	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+			    }
+
+			    .day {
+			    	font-size: 25px;
+			    	font-weight: bold;
+			    }
+	    }
+}
+
 ////////////////////////////////////////////////////
 // THINK DAILY ARCHIVE
 
@@ -1028,46 +1065,15 @@ h4 {
 		text-align: center;
 	}
 
-	.modal {
-		.modal-xl {
-  			@include media-breakpoint-up(md) {
-	  			width: 50%;
-				max-width:1200px;
-	  			}
 
-	  		.modal-body {
-				padding: 0;
 
-				.close {
-					position: absolute;
-				    right: 15px;
-				    font-size: 2rem;
-				    font-weight: 700;
-				    line-height: 1;
-				    color: #fff;
-				    z-index: 2;
-				}
-			
-				#videoContainer {
-					padding-left: 0;
-			    	padding-right: 0;
-				}
-
-				#contentContainer {
-					padding: 25px;
-					padding-top: 0;
-				}
-			}
-		}	
-	}
-
-	#sidebarVideos {
-		.sidebarVid {
-		    background-size: cover;
-		    background-repeat: no-repeat;
-		    min-height: 150px;
-		    margin-bottom: 15px;
-			position: relative;
+#sidebarVideos {
+	.sidebarVid {
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    min-height: 150px;
+	    margin-bottom: 15px;
+		position: relative;
 
 			a {
 				position: absolute;
@@ -1107,8 +1113,53 @@ h4 {
 
 
 /*------------------------------------------------*/
-/*--------------------[SIDEBAR]-------------------*/
+/*--------------------[MODALS]--------------------*/
 /*------------------------------------------------*/
+
+.modal {
+	.modal-xl {
+			@include media-breakpoint-up(md) {
+  			width: 50%;
+			max-width:1200px;
+  			}
+
+  		.modal-body {
+			padding: 0;
+
+			.close {
+				position: absolute;
+			    right: 15px;
+			    font-size: 2rem;
+			    font-weight: 700;
+			    line-height: 1;
+			    color: #fff;
+			    z-index: 2;
+			}
+		
+			.modalHeaderContainer {
+				padding-left: 0;
+		    	padding-right: 0;
+			}
+
+			.modalContentContainer {
+				padding: 25px;
+				padding-top: 0;
+			}
+		}
+	}	
+}
+
+#thinkDaily {
+	.modalContentContainer {
+		h2 {
+			color: #1453a5;
+			font-family: 'LexiaDaMa', serif;
+    		font-size: 30px;
+    		font-weight: 700;
+    		margin: 30px auto;
+		}
+	}
+}
 
 /*------------------------------------------------*/
 /*-------------------[PAGINATION]-----------------*/

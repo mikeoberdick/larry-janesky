@@ -11124,6 +11124,43 @@ h4 {
 .postTitle a {
   color: #1453a5; }
 
+.commentCountContainer {
+  color: #9e7d0b; }
+  .commentCountContainer i {
+    margin-left: 5px; }
+
+.blogModalContentContainer {
+  position: relative;
+  padding-left: 65px !important;
+  padding-right: 100px !important; }
+  .blogModalContentContainer .postDate {
+    position: absolute;
+    border-radius: 40px;
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    background-size: contain !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    left: -40px; }
+    .blogModalContentContainer .postDate .month, .blogModalContentContainer .postDate .day {
+      color: #fff;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+    .blogModalContentContainer .postDate .day {
+      font-size: 25px;
+      font-weight: bold; }
+
 #thinkDailyArchiveHeader {
   min-height: 350px;
   display: -webkit-box;
@@ -11314,28 +11351,6 @@ h4 {
   margin: 50px auto;
   text-align: center; }
 
-@media (min-width: 768px) {
-  #publicSpeaking .modal .modal-xl {
-    width: 50%;
-    max-width: 1200px; } }
-
-#publicSpeaking .modal .modal-xl .modal-body {
-  padding: 0; }
-  #publicSpeaking .modal .modal-xl .modal-body .close {
-    position: absolute;
-    right: 15px;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    z-index: 2; }
-  #publicSpeaking .modal .modal-xl .modal-body #videoContainer {
-    padding-left: 0;
-    padding-right: 0; }
-  #publicSpeaking .modal .modal-xl .modal-body #contentContainer {
-    padding: 25px;
-    padding-top: 0; }
-
 #publicSpeaking #sidebarVideos .sidebarVid {
   background-size: cover;
   background-repeat: no-repeat;
@@ -11371,8 +11386,37 @@ h4 {
     max-width: 100%; }
 
 /*------------------------------------------------*/
-/*--------------------[SIDEBAR]-------------------*/
+/*--------------------[MODALS]--------------------*/
 /*------------------------------------------------*/
+@media (min-width: 768px) {
+  .modal .modal-xl {
+    width: 50%;
+    max-width: 1200px; } }
+
+.modal .modal-xl .modal-body {
+  padding: 0; }
+  .modal .modal-xl .modal-body .close {
+    position: absolute;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    z-index: 2; }
+  .modal .modal-xl .modal-body .modalHeaderContainer {
+    padding-left: 0;
+    padding-right: 0; }
+  .modal .modal-xl .modal-body .modalContentContainer {
+    padding: 25px;
+    padding-top: 0; }
+
+#thinkDaily .modalContentContainer h2 {
+  color: #1453a5;
+  font-family: 'LexiaDaMa', serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 30px auto; }
+
 /*------------------------------------------------*/
 /*-------------------[PAGINATION]-----------------*/
 /*------------------------------------------------*/

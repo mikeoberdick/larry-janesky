@@ -61,8 +61,12 @@ get_header(); ?>
 <main id = "main" class = "site-main">
   <div id = "postContainer" class="container">
 
-    <?php $postCount = 1; //SETUP COUNT FOR STYLING ODD/EVEN POSTS ?>
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <?php
+  //Need to make sure comments are being pulled in for this query
+  global $withcomments; $withcomments = true;
+
+  $postCount = 1; //SETUP COUNT FOR STYLING ODD/EVEN POSTS
+  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <?php if ( $postCount % 2 == 0 ): ?>
@@ -75,12 +79,48 @@ get_header(); ?>
           <span class = "month"><?php echo get_the_date('M'); ?></span>
           <span class = "day"><?php echo get_the_date('j'); ?></span>
         </div><!-- .postDate -->
-          <h5 class = "postTitle"><a href = "<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h5>
+          <h5 class = "postTitle"><a href = "#" data-toggle="modal" data-target="#postModal-<?php echo $postCount; ?>"><?php echo the_title(); ?></a></h5>
           <p><?php echo get_the_excerpt(); ?></p>
           <hr class = "postSep"> 
-          [COMMENT COUNT]
+          <div class = "commentCountContainer">
+              <?php comments_number( '0', '1', '%' ); ?><i class="fa fa-comment-o" aria-hidden="true"></i>
+          </div>
         </div><!-- .postCard -->  
     </article><!-- #post-## -->
+
+<!-- POST MODAL -->
+<div class="modal fade" id = "postModal-<?php echo $postCount; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                <div class="container-fluid modalHeaderContainer mb-3">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog_header.png" alt="Blog Single Post Header"></img>
+                </div><!-- .container-fluid -->
+                  <div class="container modalContentContainer blogModalContentContainer">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h2><?php the_title(); ?></h2>
+                        <p><?php the_content(); ?></p>
+                        <div class = "mb-5">
+                          <div id="commentNumber">
+                            <span>
+                              <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+                            </span>
+                          </div>
+                          <?php comments_template(); ?>
+                        </div>
+                      </div><!-- .col-md-12 -->
+                    </div><!--  .row -->
+                    <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
+                      <span class = "month"><?php echo get_the_date('M'); ?></span>
+                      <span class = "day"><?php echo get_the_date('j'); ?></span>
+                    </div><!-- .postDate -->
+                  </div><!-- #modalPostBodyContainer -->
+            </div><!--  .modal-body -->
+        </div><!--  .modal-content -->
+    </div><!--  .modal-dialog -->
+  </div><!--  $postModal-## -->
 
 <?php
  $postCount++;

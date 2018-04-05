@@ -18,7 +18,7 @@ jQuery('.vid').hover(function toggleControls() {
       this.setAttribute("controls", "controls")
    }})
 
-//Archive Dropdown Functionality
+//Archive dropdown functionality to send to correct page
 jQuery(document).ready(function() {
 	jQuery('#archiveDropdown').on('change', function(){
 	    var month = jQuery('#month').val();
@@ -26,3 +26,10 @@ jQuery(document).ready(function() {
 	    jQuery('#archiveFormSubmit').attr('href', '/' + year + '/' + month);
 	});
 });
+
+//Post Slider in Modal
+  jQuery('.postLauncher').click( function() {
+      jQuery('.carousel-item').removeClass('active');
+      var count = jQuery(this).data("count");
+    jQuery('.carousel-item').eq(count).addClass('active');
+  });

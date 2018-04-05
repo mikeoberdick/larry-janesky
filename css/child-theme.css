@@ -10801,15 +10801,15 @@ h4 {
       color: #3d3d35;
       font-style: normal; }
 
-.home #thinkDaily {
+.home #hpThinkDaily {
   padding-top: 100px;
   padding-bottom: 200px; }
-  .home #thinkDaily .postSliderArrowTop, .home #thinkDaily .postSliderArrowBottom {
+  .home #hpThinkDaily .postSliderArrowTop, .home #hpThinkDaily .postSliderArrowBottom {
     display: block;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     margin: auto; }
-  .home #thinkDaily .slick-slide {
+  .home #hpThinkDaily .slick-slide {
     position: relative;
     width: 450px !important;
     -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
@@ -10819,15 +10819,16 @@ h4 {
     padding-left: 65px;
     background: white;
     margin-left: 40px; }
-    .home #thinkDaily .slick-slide h5 {
+    .home #hpThinkDaily .slick-slide h5 {
       font-family: 'LexiaDaMa';
-      color: #1453a5;
       font-weight: bold; }
-    .home #thinkDaily .slick-slide a {
-      color: #9e7d0b; }
-      .home #thinkDaily .slick-slide a:hover {
-        text-decoration: none; }
-    .home #thinkDaily .slick-slide .postDate {
+      .home #hpThinkDaily .slick-slide h5 a {
+        color: #1453a5; }
+        .home #hpThinkDaily .slick-slide h5 a:hover {
+          text-decoration: none; }
+    .home #hpThinkDaily .slick-slide .read-more-link {
+      display: none; }
+    .home #hpThinkDaily .slick-slide .postDate {
       position: absolute;
       border-radius: 40px;
       width: 80px;
@@ -10848,10 +10849,10 @@ h4 {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      .home #thinkDaily .slick-slide .postDate .month, .home #thinkDaily .slick-slide .postDate .day {
+      .home #hpThinkDaily .slick-slide .postDate .month, .home #hpThinkDaily .slick-slide .postDate .day {
         color: #fff;
         text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
-      .home #thinkDaily .slick-slide .postDate .day {
+      .home #hpThinkDaily .slick-slide .postDate .day {
         font-size: 25px;
         font-weight: bold; }
 
@@ -10902,7 +10903,12 @@ h4 {
         mix-blend-mode: multiply; }
 
 .home #businessTimeline {
-  margin-top: 150px; }
+  margin-top: 150px;
+  background-color: #fff; }
+  .home #businessTimeline .timeline {
+    background-color: #fff; }
+  .home #businessTimeline ol, .home #businessTimeline ul {
+    list-style: none; }
 
 #family #familyHeader {
   margin: 150px 0 50px; }
@@ -11132,7 +11138,7 @@ h4 {
 .blogModalContentContainer {
   position: relative;
   padding-left: 65px !important;
-  padding-right: 100px !important; }
+  padding-right: 125px !important; }
   .blogModalContentContainer .postDate {
     position: absolute;
     border-radius: 40px;
@@ -11160,6 +11166,49 @@ h4 {
     .blogModalContentContainer .postDate .day {
       font-size: 25px;
       font-weight: bold; }
+
+.carousel-control-next, .carousel-control-prev {
+  opacity: 1;
+  width: 14px;
+  height: 28px; }
+
+.carousel-control-next {
+  right: 20px;
+  top: 500px; }
+
+.carousel-control-prev {
+  left: 20px;
+  top: 500px; }
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  height: 28px;
+  width: 14px; }
+
+.carousel-control-prev-icon {
+  background: url(/wp-content/themes/wp-understrap/img/slider/arrow_left.png); }
+
+.carousel-control-next-icon {
+  background: url(/wp-content/themes/wp-understrap/img/slider/arrow_right.png); }
+
+.wpfai-list {
+  position: absolute;
+  right: -65px;
+  top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .wpfai-list li {
+    margin: 0 !important;
+    margin-bottom: 10px !important; }
+    .wpfai-list li a {
+      color: #b3b2b2 !important; }
 
 #thinkDailyArchiveHeader {
   min-height: 350px;
@@ -11389,13 +11438,13 @@ h4 {
 /*--------------------[MODALS]--------------------*/
 /*------------------------------------------------*/
 @media (min-width: 768px) {
-  .modal .modal-xl {
+  .modal .modal-lg {
     width: 50%;
     max-width: 1200px; } }
 
-.modal .modal-xl .modal-body {
+.modal .modal-lg .modal-body {
   padding: 0; }
-  .modal .modal-xl .modal-body .close {
+  .modal .modal-lg .modal-body .close {
     position: absolute;
     right: 15px;
     font-size: 2rem;
@@ -11403,10 +11452,10 @@ h4 {
     line-height: 1;
     color: #fff;
     z-index: 2; }
-  .modal .modal-xl .modal-body .modalHeaderContainer {
+  .modal .modal-lg .modal-body .modalHeaderContainer {
     padding-left: 0;
     padding-right: 0; }
-  .modal .modal-xl .modal-body .modalContentContainer {
+  .modal .modal-lg .modal-body .modalContentContainer {
     padding: 25px;
     padding-top: 0; }
 

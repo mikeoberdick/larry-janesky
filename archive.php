@@ -65,11 +65,11 @@ get_header(); ?>
   //Need to make sure comments are being pulled in for this query
   global $withcomments; $withcomments = true;
 
-  $postCount = 1; //SETUP COUNT FOR STYLING ODD/EVEN POSTS
+  $postCount = 0; //SETUP COUNT FOR STYLING ODD/EVEN POSTS
   if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-    <?php if ( $postCount % 2 == 0 ): ?>
+    <?php if ( $postCount % 2 != 0 ): ?>
       <div class = "col-md-6 even">
     <?php else : ?>
       <div class = "col-md-6 offset-md-6 odd">
@@ -79,7 +79,7 @@ get_header(); ?>
           <span class = "month"><?php echo get_the_date('M'); ?></span>
           <span class = "day"><?php echo get_the_date('j'); ?></span>
         </div><!-- .postDate -->
-          <h5 class = "postTitle"><a href = "#" data-toggle="modal" data-target="#postModal-<?php echo $postCount; ?>"><?php echo the_title(); ?></a></h5>
+          <h5 class = "postTitle"><a class = "postLauncher" href = "#" data-toggle="modal" data-target="#postModal" data-count="<?php echo $postCount; ?>"><?php the_title(); ?></a></h5>
           <p><?php echo get_the_excerpt(); ?></p>
           <hr class = "postSep"> 
           <div class = "commentCountContainer">
@@ -88,15 +88,36 @@ get_header(); ?>
         </div><!-- .postCard -->  
     </article><!-- #post-## -->
 
-<!-- POST MODAL -->
-<div class="modal fade" id = "postModal-<?php echo $postCount; ?>" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
-                <div class="container-fluid modalHeaderContainer mb-3">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog_header.png" alt="Blog Single Post Header"></img>
-                </div><!-- .container-fluid -->
+<?php
+ $postCount++;
+  endwhile;
+  endif; ?>
+
+  </div><!-- #postContainer -->
+<div id="postNavContainer">
+   <?php understrap_pagination(); ?>
+</div>
+
+  <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+        <div id="postModalCarousel" class="carousel slide" data-interval="false">
+  <div class="carousel-inner">
+
+
+<?php 
+
+    $postCount = 0; //SETUP COUNT FOR STYLING ODD/EVEN POSTS>
+    if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+
+    <div class="carousel-item">
+      <div class="container-fluid modalHeaderContainer mb-3">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog_header.png" alt="Blog Single Post Header"></img>
+      </div><!-- .container-fluid -->
+
                   <div class="container modalContentContainer blogModalContentContainer">
                     <div class="row">
                       <div class="col-md-12">
@@ -113,25 +134,32 @@ get_header(); ?>
                       </div><!-- .col-md-12 -->
                     </div><!--  .row -->
                     <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
-                      <span class = "month"><?php echo get_the_date('M'); ?></span>
-                      <span class = "day"><?php echo get_the_date('j'); ?></span>
+                      <span class = "month"><?php the_date('M'); ?></span>
+                      <span class = "day"><?php the_date('j'); ?></span>
                     </div><!-- .postDate -->
                   </div><!-- #modalPostBodyContainer -->
-            </div><!--  .modal-body -->
-        </div><!--  .modal-content -->
-    </div><!--  .modal-dialog -->
-  </div><!--  $postModal-## -->
+
+    </div><!-- .carousel-item -->
 
 <?php
- $postCount++;
-  endwhile;
-  endif; ?>
-
-  </div><!-- #postContainer -->
+$postCount++; endwhile; endif;
+?>
+    
+  </div><!-- .carousel-inner -->
+  <a class="carousel-control-prev" href="#postModalCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#postModalCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      </div>
+    </div>
+  </div>
+</div><!-- .modal -->
 </main>
-
-<!-- The pagination component -->
-<?php understrap_pagination(); ?>
 
 <div class="container blogSignup">
   <img src= "<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_logo.png" alt="Think Daily by Larry Janesky">

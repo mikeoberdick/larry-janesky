@@ -21,6 +21,7 @@ function d4tw_enqueue_addons () {
     wp_enqueue_style( 'Lightbox', get_stylesheet_directory_uri() . '/swipe-box/src/css/swipebox.min.css' );
     wp_enqueue_style( 'Slick Slider', get_stylesheet_directory_uri() . '/css/slick.css' );
     wp_enqueue_style( 'Slick Slider Theme', get_stylesheet_directory_uri() . '/css/slick-theme.css' );
+    wp_enqueue_style( 'Timeline', get_stylesheet_directory_uri() . '/css/timeline.css' );
 
 }
 add_action('wp_enqueue_scripts', 'd4tw_enqueue_addons');

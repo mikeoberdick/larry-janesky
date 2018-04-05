@@ -138,7 +138,6 @@ h4 {
 }
 
 
-
 /*------------------------------------------------*/
 /*-------------------[MENU]-----------------------*/
 /*------------------------------------------------*/
@@ -401,7 +400,7 @@ h4 {
     }
 }
 
-#thinkDaily {
+#hpThinkDaily {
 	padding-top: 100px;
 	padding-bottom: 200px;
 
@@ -428,16 +427,19 @@ h4 {
 
 	    h5 {
 	    	font-family: 'LexiaDaMa';
-		    color: #1453a5;
 		    font-weight: bold;
+
+		    a {
+		    	color: #1453a5;
+	    		
+	    		&:hover {
+	    			text-decoration: none;
+	    		}
+		    }
 	    }
 
-	    a {
-	    	color: $light-gold;
-
-	    	&:hover {
-	    		text-decoration: none;
-	    	}
+	    .read-more-link {
+	    	display: none;
 	    }
 
 	    .postDate {
@@ -527,6 +529,15 @@ h4 {
 
 #businessTimeline {
 	margin-top: 150px;
+	background-color: #fff;
+
+	.timeline {
+		background-color: #fff;
+	}
+
+	ol, ul {
+		list-style: none;
+	}
 }
 
 }
@@ -832,7 +843,7 @@ h4 {
 .blogModalContentContainer {
 	position: relative;
 	padding-left: 65px !important;
-	padding-right: 100px !important;
+	padding-right: 125px !important;
 
 	.postDate {
 			position: absolute;
@@ -857,6 +868,53 @@ h4 {
 			    	font-weight: bold;
 			    }
 	    }
+}
+
+.carousel-control-next, .carousel-control-prev {
+		opacity: 1;
+		width: 14px;
+		height: 28px;
+	}
+
+.carousel-control-next {
+	right: 20px;
+	top: 500px;
+}
+
+.carousel-control-prev {
+	left: 20px;
+	top: 500px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+	height: 28px;
+	width: 14px;
+}
+
+.carousel-control-prev-icon {
+	background: url(/wp-content/themes/wp-understrap/img/slider/arrow_left.png);
+}
+
+.carousel-control-next-icon {
+	background: url(/wp-content/themes/wp-understrap/img/slider/arrow_right.png);
+}
+
+.wpfai-list {
+	position: absolute;
+    right: -65px;
+    top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    li {
+    	margin: 0 !important;
+    	margin-bottom: 10px !important;
+
+    	a {
+    		color: #b3b2b2 !important;
+    	}
+    }
 }
 
 ////////////////////////////////////////////////////
@@ -1117,7 +1175,7 @@ h4 {
 /*------------------------------------------------*/
 
 .modal {
-	.modal-xl {
+	.modal-lg {
 			@include media-breakpoint-up(md) {
   			width: 50%;
 			max-width:1200px;

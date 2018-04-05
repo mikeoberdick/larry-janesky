@@ -86,7 +86,7 @@
 				<div class="col-sm-12 col-md-3 bookAward">2010<br>NEW ENGLAND<br>book festival</div>
 				<div class="col-sm-12 col-md-3 bookAward">2010 Winner<br>Small Business<br>Book Awards</div>
 				<div class="col-sm-12 col-md-3 bookAward">2011<br>National Indie<br>Excellence Award</div>
-				<div class="col-sm-12 col-md-3 buyBook"><a href = '#'><button role = 'button' class = 'btn btn-primary'>Buy</button></a></div>
+				<div class="col-sm-12 col-md-3 buyBook"><a href = 'https://shop.thehighestcallingbook.com/'><button role = 'button' class = 'btn btn-primary'>Buy</button></a></div>
 			</div><!-- .row -->
 		</div><!-- .col-md-7 -->
 
@@ -127,7 +127,7 @@
 </div><!-- #dealerNetwork -->
 
 <!-- THINK DAILY BLOG SECTION -->
-<div id = "thinkDaily" class="container-fluid" style = "background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_bg.jpg);">
+<div id = "hpThinkDaily" class="container-fluid" style = "background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_bg.jpg);">
 	<div class="container">
 		<div class="row">
 			
@@ -137,8 +137,8 @@
 				<p>Think Daily, and Think Daily for Businesspeople are daily messages from Larry meant to motivate, educate, inspire, and question - but most of all, to invite you to THINK about the issues that are important to you each day.</p>
 				<a href = '<?php echo bloginfo('url'); ?>/think-daily'><button role = 'button' class = 'btn btn-primary btn-lg mb-5'>View All Think Daily Messages</button></a>
 				<div>
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/app_store.png);" class = "mr-3" alt="Grab the app on the App Store">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/play_store.png);" alt="Grab the app on the Google Play Store">
+					<a href="https://itunes.apple.com/us/app/think-daily/id351702459?mt=8" alt = "App Store" title = "Grab the app on the App Store"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/app_store.png);" class = "mr-3"></a>
+					<a href="#" alt = "Google Play Store" title="Grab the app on the Google Play Store"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/play_store.png);"></a>
 				</div>
 			</div><!-- .col-md-6 -->
 
@@ -157,13 +157,12 @@
 
 							<div class = "hpPost">
 								<div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
-					        		<span class = "month"><?php echo get_the_date('M'); ?></span>
-					        		<span class = "day"><?php echo get_the_date('j'); ?></span>
+					        		<span class = "month"><?php the_date('M'); ?></span>
+					        		<span class = "day"><?php the_date('j'); ?></span>
 				        		</div><!-- .postDate -->
-				        		<h5><?php echo the_title(); ?></h5>
-				        		<p><?php echo get_the_excerpt(); ?></p>
-							</div><!-- .hpPost -->
-				        		
+				        		<h5 class = "postTitle"><a href = "#" data-toggle="modal" data-target="#postModal-<?php echo $postCount; ?>"><?php the_title(); ?></a></h5>
+				        		<p><?php echo the_excerpt(); ?></p>
+							</div><!-- .hpPost -->	
 							<?php endforeach;
 				        	wp_reset_postdata(); ?>
       					
@@ -220,12 +219,125 @@
 		</div><!-- 	.row -->
 	</div><!-- 	.container -->
 	<div class="container-fluid">
-		<div class = "text-center">
-			[TIMELINE ITEMS]
-		</div>
-		<div class = "text-center">
-			[TIMELINE]
-		</div>
+
+
+
+
+
+<section class="cd-horizontal-timeline">
+
+
+<div class="events-content">
+<ol>
+<li class="selected" data-date="16/01/2014">
+<h2>Horizontal Timeline</h2>
+<em>January 16th, 2014</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="28/02/2014">
+<h2>Event title here</h2>
+<em>February 28th, 2014</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="20/04/2014">
+<h2>Event title here</h2>
+<em>March 20th, 2014</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="20/05/2014">
+<h2>Event title here</h2>
+<em>May 20th, 2014</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="09/07/2014">
+<h2>Event title here</h2>
+<em>July 9th, 2014</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="30/08/2014">
+<h2>Event title here</h2>
+<em>August 30th, 2014</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="15/09/2014">
+<h2>Event title here</h2>
+<em>September 15th, 2014</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="01/11/2014">
+<h2>Event title here</h2>
+<em>November 1st, 2014</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="10/12/2014">
+<h2>Event title here</h2>
+<em>December 10th, 2014</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="19/01/2015">
+<h2>Event title here</h2>
+<em>January 19th, 2015</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+<li data-date="03/03/2015">
+<h2>Event title here</h2>
+<em>March 3rd, 2015</em>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+</p>
+</li>
+</ol>
+</div> 
+
+<div class="timeline">
+<div class="events-wrapper">
+<div class="events">
+<ol>
+<li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
+<li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
+<li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
+<li><a href="#0" data-date="20/05/2014">20 May</a></li>
+<li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
+<li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
+<li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
+<li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
+<li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
+<li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
+<li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
+</ol>
+<span class="filling-line" aria-hidden="true"></span>
+</div> 
+</div> 
+<ul class="cd-timeline-navigation">
+<li><a href="#0" class="prev inactive">Prev</a></li>
+<li><a href="#0" class="next">Next</a></li>
+</ul> 
+</div> 
+
+
+</section>
+		
+
 	</div><!-- 	.container-fluid -->
 </div><!-- 	#businessTimeline -->
 </div><!-- #homepage -->

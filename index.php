@@ -53,7 +53,7 @@ get_header(); ?>
       );
       
       //Need to make sure comments are being pulled in for this query
-        global $withcomments; $withcomments = true;
+      global $withcomments; $withcomments = true;
 
       $featuredPostQuery = new WP_Query($args);
 
@@ -66,7 +66,7 @@ get_header(); ?>
             <span class = "month"><?php echo get_the_date('M'); ?></span>
             <span class = "day"><?php echo get_the_date('j'); ?></span>
           </div><!-- .postDate -->
-           <h5 class = "postTitle"><a href = "#" data-toggle="modal" data-target="#postModal-featured"><?php echo the_title(); ?></a></h5>
+           <h5 class = "postTitle"><a class = "postLauncher" href = "#" data-toggle="modal" data-target="#postModal" data-count="0"><?php the_title(); ?></a></h5>
             <p><?php echo get_the_excerpt(); ?></p>
             <hr class = "postSep">
             <div class = "commentCountContainer">
@@ -75,40 +75,6 @@ get_header(); ?>
           </div><!-- .postCard -->  
           </article><!-- #post-featured -->
     </div><!-- #postContainer -->
-
-<!-- POST MODAL -->
-<div class="modal fade" id = "postModal-featured" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
-                <div class="container-fluid modalHeaderContainer mb-3">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog_header.png" alt="Blog Single Post Header"></img>
-                </div><!-- .container-fluid -->
-                  <div class="container modalContentContainer blogModalContentContainer">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <h2><?php the_title(); ?></h2>
-                        <p><?php the_content(); ?></p>
-                        <div class = "mb-5">
-                          <div id="commentNumber">
-                            <span>
-                              <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
-                            </span>
-                          </div>
-                          <?php comments_template(); ?>  
-                        </div>
-                      </div><!-- .col-md-12 -->
-                    </div><!--  .row -->
-                    <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
-                      <span class = "month"><?php echo get_the_date('M'); ?></span>
-                      <span class = "day"><?php echo get_the_date('j'); ?></span>
-                    </div><!-- .postDate -->
-                  </div><!-- #modalPostBodyContainer -->
-            </div><!--  .modal-body -->
-        </div><!--  .modal-content -->
-    </div><!--  .modal-dialog -->
-  </div><!--  $postModal-## -->
 
 <?php endwhile; endif; ?>
 <?php wp_reset_postdata(); ?>
@@ -125,7 +91,7 @@ get_header(); ?>
         'offset' => '1'
       );
 
-      $remainingPostQuery = new WP_Query($args);
+    $remainingPostQuery = new WP_Query($args);
 
     $postCount = 1; //SETUP COUNT FOR STYLING ODD/EVEN POSTS>
     if ( $remainingPostQuery->have_posts() ) : while ( $remainingPostQuery->have_posts() ) : $remainingPostQuery->the_post(); ?>
@@ -138,27 +104,47 @@ get_header(); ?>
         <?php endif; ?>
         <div class="postCard">
           <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
-          <span class = "month"><?php echo get_the_date('M'); ?></span>
-          <span class = "day"><?php echo get_the_date('j'); ?></span>
+          <span class = "month"><?php the_date('M'); ?></span>
+          <span class = "day"><?php the_date('j'); ?></span>
         </div><!-- .postDate -->
-          <h5 class = "postTitle"><a href = "#" data-toggle="modal" data-target="#postModal-<?php echo $postCount; ?>"><?php echo the_title(); ?></a></h5>
-          <p><?php echo get_the_excerpt(); ?></p>
+          <h5 class = "postTitle"><a class = "postLauncher" href = "#" data-toggle="modal" data-target="#postModal" data-count="<?php echo $postCount; ?>"><?php the_title(); ?></a></h5>
+          <p><?php the_excerpt(); ?></p>
           <hr class = "postSep">
           <div class = "commentCountContainer">
             <?php comments_number( '0', '1', '%' ); ?><i class="fa fa-comment-o" aria-hidden="true"></i>
           </div>
         </div><!-- .postCard -->  
     </article><!-- #post-## -->
+  <?php
+$postCount++; endwhile; endif;
+?>
 
-<!-- POST MODAL -->
-<div class="modal fade" id = "postModal-<?php echo $postCount; ?>" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
-                <div class="container-fluid modalHeaderContainer mb-3">
-                   <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog_header.png" alt="Blog Single Post Header"></img>
-                </div><!-- .container-fluid -->
+</div><!-- #postContainer -->
+
+<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+        <div id="postModalCarousel" class="carousel slide" data-interval="false">
+  <div class="carousel-inner">
+
+
+<?php 
+      $args = array(
+        'posts_per_page' => '5'
+      );
+
+    $postsForModal = new WP_Query($args);
+
+    $postCount = 1; //SETUP COUNT FOR STYLING ODD/EVEN POSTS>
+    if ( $postsForModal->have_posts() ) : while ( $postsForModal->have_posts() ) : $postsForModal->the_post(); ?>
+
+
+    <div class="carousel-item">
+      <div class="container-fluid modalHeaderContainer mb-3">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog_header.png" alt="Blog Single Post Header"></img>
+      </div><!-- .container-fluid -->
 
                   <div class="container modalContentContainer blogModalContentContainer">
                     <div class="row">
@@ -176,19 +162,32 @@ get_header(); ?>
                       </div><!-- .col-md-12 -->
                     </div><!--  .row -->
                     <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
-                      <span class = "month"><?php echo get_the_date('M'); ?></span>
-                      <span class = "day"><?php echo get_the_date('j'); ?></span>
+                      <span class = "month"><?php the_date('M'); ?></span>
+                      <span class = "day"><?php the_date('j'); ?></span>
                     </div><!-- .postDate -->
                   </div><!-- #modalPostBodyContainer -->
-            </div><!--  .modal-body -->
-        </div><!--  .modal-content -->
-    </div><!--  .modal-dialog -->
-  </div><!--  $postModal-## -->
+
+    </div><!-- .carousel-item -->
 
 <?php
 $postCount++; endwhile; endif;
 ?>
-  </div><!-- #postContainer -->
+    
+  </div><!-- .carousel-inner -->
+  <a class="carousel-control-prev" href="#postModalCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#postModalCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      </div>
+    </div>
+  </div>
+</div><!-- .modal -->
+
   <div id="archiveLink"> 
        <a href = '<?php echo bloginfo('url'); ?>/archive'>View Full Think Daily Archive</a>
   </div>

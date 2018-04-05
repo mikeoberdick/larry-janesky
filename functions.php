@@ -75,11 +75,4 @@ require get_stylesheet_directory() . '/inc/woocommerce.php';
  * @link https://codex.wordpress.org/Template_Tags
  */
 require get_stylesheet_directory() . '/inc/template-tags.php';
-
-function wpd_testimonials_query( $query ){
-    if( $query->is_archive()
-        && $query->is_main_query() ){
-            $query->set( 'posts_per_page', 10 );
-    }
-}
-add_action( 'pre_get_posts', 'wpd_testimonials_query' );
+/*

@@ -112,7 +112,6 @@ get_header(); ?>
     $postCount = 0; //SETUP COUNT FOR STYLING ODD/EVEN POSTS>
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-
     <div class="carousel-item">
       <div class="container-fluid modalHeaderContainer mb-3">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog_header.png" alt="Blog Single Post Header"></img>

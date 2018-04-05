@@ -62,7 +62,7 @@ get_header(); ?>
   <div id = "postContainer" class="container">
     <?php
         $args = array(
-          'posts_per_page' => '10'
+          'posts_per_page' => '2'
           );
         
         //Need to make sure comments are being pulled in for this query
@@ -105,7 +105,7 @@ get_header(); ?>
 
 <?php
 $postCount++; endwhile;
-wp_reset_postdata(); ?>
+$archiveQuery->rewind_posts(); ?>
 
   </div><!-- #postContainer -->
 <div id="postNavContainer">
@@ -129,10 +129,10 @@ $wp_query = $temp_query;
 
 <?php
 
-    $postsForModal = new WP_Query();
+    //$postsForModal = new WP_Query();
 
     $postCount = 0; //SETUP COUNT FOR STYLING ODD/EVEN POSTS>
-    if ( $postsForModal->have_posts() ) : while ( $postsForModal->have_posts() ) : $postsForModal->the_post(); ?>
+    if ( $archiveQuery->have_posts() ) : while ( $archiveQuery->have_posts() ) : $archiveQuery->the_post(); ?>
 
 
     <div class="carousel-item">

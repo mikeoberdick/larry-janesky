@@ -147,27 +147,106 @@
 				<div id = "hpPostCarousel">
       				<div class="hpPostSlider">
 					
-					<?php
-						global $post;
-						$args = array( 'posts_per_page' => '10' );
-						$postsList = get_posts( $args );
+<?php 
+   // the query
+   $hpQuery = new WP_Query( array(
+      'posts_per_page' => 10,
+      'nopaging' => 'true'
+   )); 
 
-							foreach( $postsList as $post ) :
-								setup_postdata( $post ); ?>
+$postCount = 0;
+if ( $hpQuery->have_posts() ) : ?>
+  <?php while ( $hpQuery->have_posts() ) : $hpQuery->the_post(); ?>
+
 
 							<div class = "hpPost">
 								<div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
 					        		<span class = "month"><?php the_date('M'); ?></span>
 					        		<span class = "day"><?php the_date('j'); ?></span>
 				        		</div><!-- .postDate -->
-				        		<h5 class = "postTitle"><a href = "#" data-toggle="modal" data-target="#postModal-<?php echo $postCount; ?>"><?php the_title(); ?></a></h5>
+				        		<h5 class = "postTitle"><a class = "postLauncher" href = "#" data-toggle="modal" data-target="#postModal" data-count="<?php echo $postCount; ?>"><?php the_title(); ?></a></h5>
 				        		<p><?php echo the_excerpt(); ?></p>
 							</div><!-- .hpPost -->	
-							<?php endforeach;
-				        	wp_reset_postdata(); ?>
+
+
+  <?php $postCount++; endwhile; endif;?>
+  <?php wp_reset_postdata(); ?>
       					
 					</div><!-- .hpPostSlider -->
       			</div><!-- .hpPostCarousel -->
+
+
+<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+        <div id="postModalCarousel" class="carousel slide" data-interval="false">
+  <div class="carousel-inner">
+
+
+<?php 
+      $args = array(
+        'posts_per_page' => '10'
+      );
+
+    $postsForModal = new WP_Query($args);
+
+    $postCount = 1; //SETUP COUNT FOR STYLING ODD/EVEN POSTS>
+    if ( $postsForModal->have_posts() ) : while ( $postsForModal->have_posts() ) : $postsForModal->the_post(); ?>
+
+
+    <div class="carousel-item">
+      <div class="container-fluid modalHeaderContainer mb-3">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog_header.png" alt="Blog Single Post Header"></img>
+      </div><!-- .container-fluid -->
+
+                  <div class="container modalContentContainer blogModalContentContainer">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h2><?php the_title(); ?></h2>
+                        <p><?php the_content(); ?></p>
+                        <div class = "mb-5">
+                          <div id="commentNumber">
+                            <span>
+                              <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+                            </span>
+                          </div>
+                          <?php comments_template(); ?>
+                        </div>
+                      </div><!-- .col-md-12 -->
+                    </div><!--  .row -->
+                    <div class = "postDate" style = "background: #9e7d0b url('<?php the_post_thumbnail_url(); ?>');">
+                      <span class = "month"><?php the_date('M'); ?></span>
+                      <span class = "day"><?php the_date('j'); ?></span>
+                    </div><!-- .postDate -->
+                  </div><!-- #modalPostBodyContainer -->
+
+    </div><!-- .carousel-item -->
+
+<?php
+$postCount++; endwhile; endif;
+?>
+    
+  </div><!-- .carousel-inner -->
+  <a class="carousel-control-prev" href="#postModalCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#postModalCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      </div>
+    </div>
+  </div>
+</div><!-- .modal -->
+
+
+
+
+
 			</div><!-- .col-md-6 -->
 		</div><!-- .row -->
 	</div><!-- .container -->

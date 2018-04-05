@@ -18,9 +18,9 @@ get_header(); ?>
     <div id = "thinkDaily">
       <div id = "thinkDailyBlogHeader" class="container-fluid" style = "background:url('<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_bg.jpg');">
         <div class = "container">
-        	<div class="row">
-        		<div id = "blogHeaderLeft" class="col-md-6">
-        			<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_logo.png" alt="Think Daily by Larry Janesky">
+          <div class="row">
+            <div id = "blogHeaderLeft" class="col-md-6">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/think_daily_logo.png" alt="Think Daily by Larry Janesky">
               <p>Think Daily, and Think Daily for Businesspeople are daily messages from Larry meant to motivate, educate, inspire, and question - but most of all, to invite you to THINK about the issues that are important to you each day.  Sign up today.</p>
             </div><!-- .col.md-6 -->
             <div class="col-md-4 offset-md-1">

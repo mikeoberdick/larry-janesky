@@ -1,12 +1,12 @@
-jQuery(document).ready(function($){
-	var timelines = $('.cd-horizontal-timeline'),
+jQuery(document).ready(function(jQuery){
+	var timelines = jQuery('.cd-horizontal-timeline'),
 		eventsMinDistance = 60;
 
 	(timelines.length > 0) && initTimeline(timelines);
 
 	function initTimeline(timelines) {
 		timelines.each(function(){
-			var timeline = $(this),
+			var timeline = jQuery(this),
 				timelineComponents = {};
 			//cache timeline components 
 			timelineComponents['timelineWrapper'] = timeline.find('.events-wrapper');
@@ -39,10 +39,10 @@ jQuery(document).ready(function($){
 			timelineComponents['eventsWrapper'].on('click', 'a', function(event){
 				event.preventDefault();
 				timelineComponents['timelineEvents'].removeClass('selected');
-				$(this).addClass('selected');
-				updateOlderEvents($(this));
-				updateFilling($(this), timelineComponents['fillingLine'], timelineTotWidth);
-				updateVisibleContent($(this), timelineComponents['eventsContent']);
+				jQuery(this).addClass('selected');
+				updateOlderEvents(jQuery(this));
+				updateFilling(jQuery(this), timelineComponents['fillingLine'], timelineTotWidth);
+				updateVisibleContent(jQuery(this), timelineComponents['eventsContent']);
 			});
 
 			//on swipe, show next/prev event content
@@ -56,7 +56,7 @@ jQuery(document).ready(function($){
 			});
 
 			//keyboard navigation
-			$(document).keyup(function(event){
+			jQuery(document).keyup(function(event){
 				if(event.which=='37' && elementInViewport(timeline.get(0)) ) {
 					showNewContent(timelineComponents, timelineTotWidth, 'prev');
 				} else if( event.which=='39' && elementInViewport(timeline.get(0))) {
@@ -205,7 +205,7 @@ jQuery(document).ready(function($){
 	function parseDate(events) {
 		var dateArrays = [];
 		events.each(function(){
-			var singleDate = $(this),
+			var singleDate = jQuery(this),
 				dateComp = singleDate.data('date').split('T');
 			if( dateComp.length > 1 ) { //both DD/MM/YEAR and time are provided
 				var dayComp = dateComp[0].split('/'),

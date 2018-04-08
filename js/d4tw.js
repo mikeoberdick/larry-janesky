@@ -10,14 +10,6 @@ jQuery('ul.navbar-nav li.dropdown').hover(function() {
 	jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
 
-//Toggle Video Carousel Controls on Hover or active status
-jQuery('.vid').hover(function toggleControls() {
-    if (this.hasAttribute("controls")) {
-       this.removeAttribute("controls")
-    } else {
-      this.setAttribute("controls", "controls")
-   }})
-
 //Archive dropdown functionality to send to correct page
 jQuery(document).ready(function() {
 	jQuery('#archiveDropdown').on('change', function(){
@@ -33,3 +25,15 @@ jQuery(document).ready(function() {
       var count = jQuery(this).data("count");
     jQuery('.carousel-item').eq(count).addClass('active');
   });
+
+  // Video Play Button Overlay
+
+jQuery('.video').parent().click(function () {
+    if(jQuery(this).children(".video").get(0).paused){
+        jQuery(this).children(".video").get(0).play();
+        jQuery(this).children(".playpause").fadeOut();
+    }else{
+       jQuery(this).children(".video").get(0).pause();
+        jQuery(this).children(".playpause").fadeIn();
+    }
+});

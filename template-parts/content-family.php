@@ -2,8 +2,8 @@
 
 <div class="container">
 	<div class="row">
-		<div id = "familyHeader" class="col-sm-12 text-center">
-			<h2 style = "font-family: 'LexiaDaMa';">My Family</h2>
+		<div id = "familyHeader" class="col-sm-12 pageHeader">
+			<h2>My Family</h2>
 			<h4>Me, my wife, and my 3 Kids</h4>
 		</div><!-- .col-sm-12 -->
 	</div><!-- .row -->

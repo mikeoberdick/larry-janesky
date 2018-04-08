@@ -10489,7 +10489,7 @@ html {
       font-size: 18px; } }
 
 h1, h2, h3, h4, h5 {
-  color: #7d6816;
+  color: #917412;
   font-family: "nunito", sans-serif; }
 
 h1 {
@@ -10528,45 +10528,36 @@ h3 {
 body {
   color: #232e33;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300; }
-
-h2 {
-  font-family: 'Roboto', sans-serif;
-  color: #232e33;
-  font-size: 30px;
-  font-weight: 700; }
-
-h4 {
-  font-family: LexiaDaMa;
-  color: #9e7d0b;
-  font-style: italic;
-  font-size: 18px; }
 
 /*------------------------------------------------*/
 /*--------------------[LINKS]---------------------*/
 /*------------------------------------------------*/
 .current_page_item a {
-  color: #7d6816; }
+  color: #917412; }
+
+a:hover {
+  text-decoration: none; }
 
 /*------------------------------------------------*/
 /*-------------------[BUTTONS]--------------------*/
 /*------------------------------------------------*/
 .btn-primary {
-  border: 1px solid #9e7d0b;
-  border-radius: 21px;
-  color: #9e7d0b;
-  font-family: 'LexiaDaMa', sans-serif;
-  padding: 6px 30px;
-  font-size: 20px;
+  border: 1.4px solid #917412;
+  border-radius: 25px;
+  color: #917412;
+  font-family: "LexiaMaDa", sans-serif;
   display: inline-block;
   font-weight: 300;
-  margin-top: 20px;
+  margin-top: 30px;
   text-decoration: none;
-  background-color: inherit; }
+  background-color: inherit;
+  font-size: 16px;
+  padding: 8px 20px; }
   .btn-primary:hover {
     color: #232e33;
-    border: 1px solid #9e7d0b;
+    border: 1px solid #917412;
     text-decoration: none;
     background-color: inherit; }
 
@@ -10586,14 +10577,18 @@ h4 {
   margin-top: 15px; }
   .wrapper-navbar nav a {
     text-transform: uppercase;
-    color: #232e33; }
+    color: #232e33;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Gotham", sans-serif; }
 
 .wrapper-navbar .navbar-brand {
   position: absolute; }
   .wrapper-navbar .navbar-brand h5 {
     font-family: 'Gotham Bold', sans-serif;
     text-transform: uppercase;
-    color: #232e33; }
+    color: #232e33;
+    font-size: 26px; }
 
 .home nav a, .page-id-37 nav a, .single-speeches nav a {
   color: #fff; }
@@ -10605,13 +10600,41 @@ h4 {
 /*-------------------[MENU]-----------------------*/
 /*------------------------------------------------*/
 .mobileToggle {
-  color: #7d6816; }
+  color: #917412; }
 
 /*------------------------------------------------*/
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
 .wrapper {
-  padding-top: 0; }
+  padding: 0; }
+
+.pageHeader {
+  text-align: center; }
+  .pageHeader h2 {
+    font-family: "Lexia Black", "LexiaDaMa", sans-serif;
+    color: #232e33;
+    font-size: 35px; }
+  .pageHeader h4 {
+    font-size: 25px;
+    color: #917412;
+    font-family: "LexiaMaDa", sans-serif; }
+
+.home h2 {
+  font-family: "Roboto", sans-serif;
+  color: #232e33;
+  font-size: 30px;
+  font-weight: bold; }
+
+.home h4 {
+  font-family: "LexiaMaDa", sans-serif;
+  color: #917412;
+  font-style: italic;
+  font-size: 18px; }
+
+.home p {
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  color: #232e33; }
 
 .home .heroSection {
   min-height: 100vh;
@@ -10633,7 +10656,9 @@ h4 {
     text-align: center; }
     .home .heroSection .textContainer h1 {
       color: white;
-      font-size: 8vw; }
+      font-size: 8vw;
+      font-family: "LexiaMaDa", sans-serif;
+      font-weight: bold; }
 
 .home #aboutLarry {
   margin: 80px 0px 0px;
@@ -10689,7 +10714,9 @@ h4 {
           -webkit-transition: width .5s;
           transition: width .5s; }
         .home #expertCommunicator #communicatorRightSection .bx-wrapper .bx-viewport .bxslider .active-slide video {
-          width: 100%; }
+          width: 100%;
+          margin-top: 15px;
+          margin-bottom: 15px; }
         .home #expertCommunicator #communicatorRightSection .bx-wrapper .bx-viewport .bxslider .vid {
           width: 75%;
           height: 75%;
@@ -10698,15 +10725,17 @@ h4 {
 
 .home #highestCalling {
   margin-bottom: 100px;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif; }
   .home #highestCalling .container {
-    border-top: 15px solid #7d6816;
+    border-top: 15px solid #917412;
     -webkit-box-shadow: 4px 5px 12px 1px #b8b8b8;
     box-shadow: 4px 5px 12px 1px #b8b8b8;
     padding-bottom: 75px; }
   .home #highestCalling img {
     position: absolute;
     top: -100px; }
+  .home #highestCalling #bookLeftSection {
+    margin-left: 40px; }
   .home #highestCalling #bookRightSection {
     padding-top: 30px; }
     .home #highestCalling #bookRightSection .bookAward {
@@ -10716,7 +10745,7 @@ h4 {
       background: url(../img/laurel.png) no-repeat;
       font-size: 10px;
       background-position: center center;
-      color: #7d6816; }
+      color: #917412; }
     .home #highestCalling #bookRightSection .buyBook {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -10728,78 +10757,81 @@ h4 {
         margin-top: 0; }
 
 .home #dealerNetwork {
-  margin-top: 200px;
+  margin-top: 250px;
   min-height: 800px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: -115px; }
-  .home #dealerNetwork #dealerNetworkCarousel {
-    margin-top: 50px;
-    border-top: solid 1px #e9ecef;
-    border-bottom: solid 1px #e9ecef;
-    padding: 50px 0; }
-    .home #dealerNetwork #dealerNetworkCarousel:before {
-      content: "";
-      z-index: 2;
-      display: block;
+  .home #dealerNetwork #dealerNetworkRight {
+    padding-top: 200px; }
+    .home #dealerNetwork #dealerNetworkRight #dealerNetworkCarousel {
+      margin-top: 50px;
+      border-top: solid 1px #d7d7d7;
+      border-bottom: solid 1px #d7d7d7;
+      padding: 50px 0;
+      position: relative; }
+      .home #dealerNetwork #dealerNetworkRight #dealerNetworkCarousel:before {
+        content: "";
+        z-index: 2;
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 150px;
+        height: 100%;
+        margin: auto;
+        background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
+        background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
+      .home #dealerNetwork #dealerNetworkRight #dealerNetworkCarousel:after {
+        content: "";
+        z-index: 2;
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-image: -webkit-gradient(linear, right top, left top, from(white), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
+        background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
+      .home #dealerNetwork #dealerNetworkRight #dealerNetworkCarousel .slick-track {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .home #dealerNetwork #dealerNetworkRight #dealerNetworkCarousel .slick-track .slick-slide {
+          width: 200px;
+          padding-left: 25px;
+          padding-right: 25px; }
+    .home #dealerNetwork #dealerNetworkRight .sliderArrowLeft, .home #dealerNetwork #dealerNetworkRight .sliderArrowRight {
       position: absolute;
-      width: 150px;
-      height: 150px;
-      top: 0;
-      bottom: 0;
+      z-index: 3;
+      color: #917412;
       margin: auto;
-      background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
-    .home #dealerNetwork #dealerNetworkCarousel:after {
-      content: "";
-      z-index: 2;
-      display: block;
-      position: absolute;
-      width: 150px;
-      height: 150px;
       top: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      background-image: -webkit-gradient(linear, right top, left top, from(white), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
-    .home #dealerNetwork #dealerNetworkCarousel .slick-track {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .home #dealerNetwork #dealerNetworkCarousel .slick-track .slick-slide {
-        width: 200px;
-        padding-left: 25px;
-        padding-right: 25px; }
-  .home #dealerNetwork .sliderArrowLeft, .home #dealerNetwork .sliderArrowRight {
-    position: absolute;
-    z-index: 3;
-    color: #9e7d0b;
-    margin: auto;
-    top: 0;
-    bottom: 0; }
-  .home #dealerNetwork .sliderArrowLeft {
-    left: 30%; }
-  .home #dealerNetwork .sliderArrowRight {
-    right: 30%; }
-  .home #dealerNetwork #carouselCaption {
-    text-align: center;
-    display: inline-block;
-    background-color: white;
-    position: relative;
-    top: -50px;
-    padding-left: 25px;
-    padding-right: 25px; }
-    .home #dealerNetwork #carouselCaption h2 {
-      margin-top: 5px;
-      font-size: 75px;
-      color: #3d3d35; }
-    .home #dealerNetwork #carouselCaption h4 {
-      color: #3d3d35;
-      font-style: normal; }
+      bottom: 0; }
+    .home #dealerNetwork #dealerNetworkRight .sliderArrowLeft {
+      left: 30%; }
+    .home #dealerNetwork #dealerNetworkRight .sliderArrowRight {
+      right: 30%; }
+    .home #dealerNetwork #dealerNetworkRight #carouselCaption {
+      text-align: center;
+      display: inline-block;
+      background-color: white;
+      position: relative;
+      top: -50px;
+      padding-left: 25px;
+      padding-right: 25px; }
+      .home #dealerNetwork #dealerNetworkRight #carouselCaption h2 {
+        font-size: 80px;
+        color: #3b3933;
+        font-family: "Good Dog", sans-serif;
+        font-weight: normal; }
+      .home #dealerNetwork #dealerNetworkRight #carouselCaption h4 {
+        color: #3b3933;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-style: normal; }
 
 .home #hpThinkDaily {
   padding-top: 100px;
@@ -10919,7 +10951,9 @@ h4 {
   -webkit-transition: -webkit-filter 1s;
   transition: -webkit-filter 1s;
   transition: filter 1s;
-  transition: filter 1s, -webkit-filter 1s; }
+  transition: filter 1s, -webkit-filter 1s;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3); }
   #family .card-img:hover {
     -webkit-filter: inherit;
     filter: inherit; }
@@ -10940,13 +10974,20 @@ h4 {
     padding-top: 100px; }
   @media (min-width: 768px) {
     #liberty #libertyHeader p {
-      width: 50%;
+      width: 75%;
       margin: auto; } }
 
 #liberty .libertyCompany {
   margin-bottom: 100px; }
   #liberty .libertyCompany h2 {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #232e33; }
+  #liberty .libertyCompany p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px; }
   #liberty .libertyCompany .libertyLogo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11004,7 +11045,7 @@ h4 {
         padding: 5px 20px; }
     #thinkDaily #thinkDailyBlogHeader #blogBlogSignup .privacy {
       color: #5d5d5d;
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 300;
       margin-top: 20px;
       font-size: 10px; }
@@ -11029,7 +11070,7 @@ h4 {
     top: 0;
     bottom: 0;
     left: 50%;
-    border-left: 1px solid #9e7d0b;
+    border-left: 1px solid #917412;
     -webkit-transform: translate(-50%);
             transform: translate(-50%); }
   #featuredPostContainer #featuredPostCard {
@@ -11125,13 +11166,13 @@ h4 {
     margin-bottom: -150px; }
 
 .postSep {
-  background: #9e7d0b; }
+  background: #917412; }
 
 .postTitle a {
   color: #1453a5; }
 
 .commentCountContainer {
-  color: #9e7d0b; }
+  color: #917412; }
   .commentCountContainer i {
     margin-left: 5px; }
 
@@ -11240,9 +11281,9 @@ h4 {
         -ms-flex-align: center;
             align-items: center; }
     #archiveDropdowns #archiveDropdown select {
-      border: 1px solid #9e7d0b;
+      border: 1px solid #917412;
       border-radius: 20px;
-      color: #9e7d0b;
+      color: #917412;
       font-family: LexiaDaMa,sans-serif;
       -webkit-appearance: none;
       height: 50px;
@@ -11263,7 +11304,7 @@ h4 {
 #monthSelectContainer:after {
   content: '\f078';
   font: normal normal normal 17px/1 FontAwesome;
-  color: #9e7d0b;
+  color: #917412;
   right: 11px;
   top: 0px;
   left: -60px;
@@ -11275,7 +11316,7 @@ h4 {
 #yearSelectContainer:after {
   content: '\f078';
   font: normal normal normal 17px/1 FontAwesome;
-  color: #9e7d0b;
+  color: #917412;
   right: 11px;
   top: 0px;
   left: -50px;
@@ -11296,7 +11337,7 @@ h4 {
     top: 0;
     bottom: 0;
     left: 50%;
-    border-left: 1px solid #9e7d0b;
+    border-left: 1px solid #917412;
     -webkit-transform: translate(-50%);
             transform: translate(-50%); }
   #postContainer .postCard {
@@ -11369,7 +11410,7 @@ h4 {
     font-weight: 300;
     color: #fff; }
   #publicSpeaking .contentContainer h5 {
-    color: #9e7d0b;
+    color: #917412;
     font-size: 14px;
     font-family: 'LexiaDaMa', sans-serif; }
   #publicSpeaking .contentContainer button {
@@ -11428,11 +11469,41 @@ h4 {
     color: #fff;
     text-align: center; }
 
+.videoWrapper {
+  display: table;
+  width: auto;
+  position: relative; }
+
+.playpause {
+  background: url("/wp-content/themes/wp-understrap/img/play_btn.png") no-repeat;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: contain;
+  background-position: center; }
+
 #videoContainer {
   padding-left: 0;
   padding-right: 0; }
   #videoContainer video {
     max-width: 100%; }
+
+.speechContentContainer h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #232e33; }
+
+.speechContentContainer h4 {
+  font-family: "LexiaMaDa", sans-serif;
+  color: #917412;
+  font-size: 18px;
+  font-style: italic; }
 
 /*------------------------------------------------*/
 /*--------------------[MODALS]--------------------*/
@@ -11458,6 +11529,16 @@ h4 {
   .modal .modal-lg .modal-body .modalContentContainer {
     padding: 25px;
     padding-top: 0; }
+    .modal .modal-lg .modal-body .modalContentContainer h2 {
+      font-family: "Roboto", sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      color: #232e33; }
+    .modal .modal-lg .modal-body .modalContentContainer h4 {
+      font-family: "LexiaMaDa", sans-serif;
+      color: #917412;
+      font-size: 18px;
+      font-style: italic; }
 
 #thinkDaily .modalContentContainer h2 {
   color: #1453a5;
@@ -11465,6 +11546,69 @@ h4 {
   font-size: 30px;
   font-weight: 700;
   margin: 30px auto; }
+
+#work {
+  padding-top: 150px; }
+  #work #workContainer {
+    padding-left: 0;
+    padding-right: 0; }
+    #work #workContainer .row {
+      margin-left: 0;
+      margin-right: 0; }
+    #work #workContainer .nav-tabs {
+      border: 0; }
+      #work #workContainer .nav-tabs .nav-link {
+        border-radius: 0;
+        border: 0;
+        border-left: 3px solid transparent;
+        opacity: .5;
+        margin-bottom: 15px; }
+        #work #workContainer .nav-tabs .nav-link.active {
+          opacity: 1; }
+        #work #workContainer .nav-tabs .nav-link:nth-of-type(1).active {
+          border-color: blue; }
+        #work #workContainer .nav-tabs .nav-link:nth-of-type(2).active {
+          border-color: #f48fb1; }
+        #work #workContainer .nav-tabs .nav-link:nth-of-type(3).active {
+          border-color: blue; }
+        #work #workContainer .nav-tabs .nav-link:nth-of-type(4).active {
+          border-color: blue; }
+        #work #workContainer .nav-tabs .nav-link:nth-of-type(5).active {
+          border-color: blue; }
+        #work #workContainer .nav-tabs .nav-link:nth-of-type(6).active {
+          border-color: blue; }
+        #work #workContainer .nav-tabs .nav-link:nth-of-type(7).active {
+          border-color: blue; }
+        #work #workContainer .nav-tabs .nav-link:nth-of-type(8) {
+          margin-bottom: 0; }
+          #work #workContainer .nav-tabs .nav-link:nth-of-type(8).active {
+            border-color: blue; }
+    #work #workContainer .workSection {
+      margin-left: 0;
+      margin-right: 0;
+      font-family: "Roboto", sans-serif;
+      color: #fff;
+      font-size: 16px;
+      font-weight: normal; }
+      #work #workContainer .workSection .workLeft h2 {
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold; }
+      #work #workContainer .workSection .workLeft h4 {
+        color: #fff;
+        font-family: "LexiaMaDa", sans-serif;
+        font-size: 17px;
+        font-style: italic; }
+      #work #workContainer .workSection .workRight .btn-primary {
+        border-color: #fff;
+        color: #fff; }
+      #work #workContainer .workSection .workRight p {
+        font-weight: normal; }
+  #work .workContent {
+    margin-top: -150px;
+    padding-top: 150px;
+    padding-left: 25px; }
 
 /*------------------------------------------------*/
 /*-------------------[PAGINATION]-----------------*/
@@ -11478,19 +11622,17 @@ h4 {
     border-radius: 5px; }
     #speechNavigation button a {
       color: #fff; }
-      #speechNavigation button a:hover {
-        text-decoration: none; }
 
 /*------------------------------------------------*/
 /*--------------------[COMMENTS]------------------*/
 /*------------------------------------------------*/
 #commentNumber {
-  color: #9e7d0b;
+  color: #917412;
   padding-bottom: 10px;
-  border-bottom: solid 1px #9e7d0b;
+  border-bottom: solid 1px #917412;
   margin-bottom: 20px; }
   #commentNumber span {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500; }
 
 #comments h3 {
@@ -11501,15 +11643,16 @@ h4 {
   margin-bottom: 0px;
   float: left;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 30px;
-  color: #9e7d0b; }
+  color: #917412;
+  font-size: 16px; }
 
 #comments .comment {
-  border-bottom: solid 1px #9e7d0b;
+  border-bottom: solid 1px #e0d8bd;
   margin-bottom: 20px; }
   #comments .comment .commentmetadata {
-    color: #9e7d0b; }
+    color: #917412; }
 
 #commentform #comment {
   width: 100%;
@@ -11522,10 +11665,12 @@ h4 {
   margin-bottom: 25px;
   font-size: 16px;
   line-height: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   border: 1px solid #bababb;
-  border-radius: 15px; }
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0px 1px 4px 0 rgba(28, 28, 29, 0.33);
+          box-shadow: inset 0px 1px 4px 0 rgba(28, 28, 29, 0.33); }
 
 #commentform #submit {
   padding: 8px 25px;
@@ -11621,14 +11766,16 @@ h4 {
       color: #444;
       font-size: 14px;
       height: 50px;
-      border-radius: 30px; }
+      border-radius: 30px;
+      -webkit-box-shadow: inset 0px 1px 4px 0 rgba(28, 28, 29, 0.33);
+              box-shadow: inset 0px 1px 4px 0 rgba(28, 28, 29, 0.33); }
     .blogSignup form #email {
       min-width: 50%; }
     .blogSignup form button {
       margin-top: 0; }
   .blogSignup .privacy {
-    color: #5d5d5d;
-    font-family: 'Roboto', sans-serif;
+    color: #232e33;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     margin-top: 20px;
     font-size: 10px; }
@@ -11636,6 +11783,9 @@ h4 {
 /*------------------------------------------------*/
 /*---------------------[FOOTER]-------------------*/
 /*------------------------------------------------*/
+.page-id-141 #wrapper-footer {
+  margin-top: 0; }
+
 #wrapper-footer {
   margin-top: 50px;
   background-color: #232e33;
@@ -11647,35 +11797,48 @@ h4 {
   -webkit-box-shadow: inset 0 20px 20px -10px #111;
           box-shadow: inset 0 20px 20px -10px #111; }
   #wrapper-footer h5 {
+    font-size: 26px;
+    font-family: "Gotham", sans-serif;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold; }
   #wrapper-footer #footerWidgets {
     padding-top: 50px; }
   #wrapper-footer .widgettitle {
-    padding-bottom: 5px;
-    border-bottom: solid 1px #7d6816;
+    font-family: "Gotham", sans-serif;
+    font-size: 16px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #917412;
     font-weight: bold;
     text-transform: uppercase;
-    color: #7d6816; }
+    color: #917412;
+    margin-bottom: 15px; }
   #wrapper-footer .menu {
     padding-left: 25px;
     list-style: none; }
     #wrapper-footer .menu li {
       margin-bottom: 5px; }
       #wrapper-footer .menu li a {
+        font-family: "LexiaMaDa", sans-serif;
+        font-size: 16px;
         color: #fff;
-        font-weight: bold; }
+        font-weight: bold;
+        margin-bottom: 15px; }
         #wrapper-footer .menu li a:hover {
           text-decoration: none; }
     #wrapper-footer .menu .sub-menu {
       padding-left: 25px;
       list-style: none;
-      margin: 15px 0; }
+      margin: 15px 0;
+      padding-top: 25px;
+      padding-bottom: 25px; }
       #wrapper-footer .menu .sub-menu li {
         margin-bottom: 0; }
         #wrapper-footer .menu .sub-menu li a {
-          font-weight: normal; }
+          font-family: "Roboto", sans-serif;
+          font-size: 15px;
+          font-weight: normal;
+          margin-bottom: 5px; }
 
 /*------------------------------------------------*/
 /*--------------[RESPONSIVE/UTILITIES]------------*/

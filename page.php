@@ -37,6 +37,10 @@ get_header();
 					get_template_part( 'template-parts/content', 'liberty' );
 			}
 
+			elseif( is_page( 'companies' )) {
+					get_template_part( 'template-parts/content', 'companies' );
+			}
+
 			else {
 			   get_template_part( 'loop-templates/content', 'page' );
 			}

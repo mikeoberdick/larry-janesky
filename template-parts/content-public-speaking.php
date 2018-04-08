@@ -46,12 +46,13 @@
 
             <!-- VIDEO MODAL -->
             <div class="modal fade primaryModal" id = "video-<?php echo $postCount; ?>" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
-                            <div class="container-fluid modalHeaderContainer">
-                                <video controls src="<?php echo $video; ?>" class = "w-100"></video>
+                            <div class="container-fluid modalHeaderContainer videoWrapper">
+                                <video src="<?php echo $video; ?>" class = "w-100 video"></video>
+                                <div class="playpause"></div>
                             </div><!-- .container-fluid -->
                               <div class="container modalContentContainer mt-3">
                                 <div class="row">
@@ -162,7 +163,7 @@
 
             <!-- MODAL -->
             <div class="modal fade" id = "video-<?php echo $postCount; ?>" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"><span aria-hidden="true">&times;</span></button>

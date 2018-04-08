@@ -1,5 +1,5 @@
 <div id = "liberty">
-  <div id = "libertyHeader" class="container-fluid" style = "background:url('<?php echo get_stylesheet_directory_uri(); ?>/img/freedom_bg.jpg');">
+  <div id = "libertyHeader" class="container-fluid pageHeader" style = "background:url('<?php echo get_stylesheet_directory_uri(); ?>/img/freedom_bg.jpg');">
     <div class = "container">
     	<div class="row">
     		<div class="col-sm-12 text-center">

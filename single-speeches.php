@@ -21,11 +21,12 @@ get_header(); ?>
             $video = get_field('speech_video');
             $content = get_field('speech_content');
             ?>
-				<div id = "videoContainer" class="container-fluid">
-					<video controls src="<?php echo $video; ?>"></video>
+				<div id = "videoContainer" class="container-fluid videoWrapper">
+					<video src="<?php echo $video; ?>" class = "video"></video>
+					<div class="playpause"></div>
 				</div><!-- .container-fluid -->
                                 
-				<div class="container">
+				<div class="container speechContentContainer">
 					<div class="col-sm-12">
 		                <h2><?php echo $title ?></h2>
 		                <h4><?php echo $subtitle ?></h4>

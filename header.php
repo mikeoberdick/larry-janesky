@@ -7,8 +7,8 @@
  * @package understrap
  */
 
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -40,7 +40,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="navbar navbar-expand-md">
 
-			<div class="container">
+			<div class="container-fluid">
 
 				<a rel = "home" class="navbar-brand" data-itemprop="url" title="<?php echo esc_attr( get_bloginfo( 'name') ); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<h5><?php echo esc_attr( get_bloginfo( 'name') ); ?></h5>

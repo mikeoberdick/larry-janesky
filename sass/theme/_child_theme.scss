@@ -577,20 +577,163 @@ p {
 	}
 }
 
-#businessTimeline {
-	margin-top: 150px;
-	background-color: #fff;
-
-	.timeline {
+	#businessTimeline {
+		margin-top: 150px;
 		background-color: #fff;
+
+		#timelineHeader {
+			margin-bottom: 125px;
+		}
 	}
 
-	ol, ul {
-		list-style: none;
-	}
-}
+	.timelineSlider {
 
-}
+		margin-bottom: 75px;
+
+		&:before, &:after {
+			content: "";
+		    z-index: 2;
+		    display: block;
+		    position: absolute;
+		    top: 0;
+		    width: 450px;
+		    height: 100%;
+		  }
+		
+		&:before {
+			background-image: -webkit-gradient(linear,left top,right top,from(white),color-stop(rgba(255,255,255,.75)),color-stop(rgba(255,255,255,.5)),color-stop(rgba(255,255,255,.25)),to(rgba(255,255,255,0)));
+		    background-image: linear-gradient(to right,#fff,rgba(255,255,255,.75),rgba(255,255,255,.5),rgba(255,255,255,.25),rgba(255,255,255,0));
+		}
+
+		&:after {
+		    right: 0;
+		    background-image: -webkit-linear-gradient(right, #fff, rgba(255,255,255,.75), rgba(255,255,255,.5), rgba(255,255,255,.25), rgba(255,255,255,0));
+		    background-image: -o-linear-gradient(right, #fff, rgba(255,255,255,.75), rgba(255,255,255,.5), rgba(255,255,255,.25), rgba(255,255,255,0));
+		    background-image: linear-gradient(to left, #fff, rgba(255,255,255,.75), rgba(255,255,255,.5), rgba(255,255,255,.25), rgba(255,255,255,0));
+		}
+
+
+		.slick-center {
+			width: 800px !important;
+			margin: auto 75px;
+		}
+
+		.timelineSliderArrowLeft, .timelineSliderArrowRight {
+	    		position: absolute;
+			    z-index: 3;
+			    color: $light-gold;
+			    margin: auto;
+			    top: 0;
+			    bottom: 0;
+	    	}
+
+	    	.timelineSliderArrowLeft{
+	    		left: 22%;
+	    	}
+
+	    	.timelineSliderArrowRight {
+	    		right: 23%;
+	    	}
+
+		.slick-track {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.timelineSliderNav {
+
+		&:before {
+			content: '';
+		    position: absolute;
+		    top: 50%;
+		    left: 0;
+		    background: $light-gold;
+		    height: 1px;
+		    width: 100%;
+		    transform: translateY(-50%);
+		}
+
+		.slick-list {
+			display: flex;
+			padding-top: 25px;
+
+			.is-active {
+				span {
+					display: block;
+				    height: 35px;
+				    width: 35px;
+				    border-radius: 30px;
+				    border: solid 1px $light-gold;
+				    position: absolute;
+				    top: -7px;
+
+				    i {
+				    	color: $light-gold;
+				    	margin-top: 8px;
+				    }
+				}
+				color: $light-gold;
+			}
+		
+			.slick-slide {
+				text-align: center;
+			    display: flex;
+			    justify-content: center;
+			}
+		}
+	}
+
+	#timelineSliderNavTopDates {
+    		display: flex;
+    		margin-left: 10%;
+    		position: relative;
+    		top: 20px;
+
+    		span {
+    			margin-right: 25%;
+    			position: relative;
+    			padding-top: 5px;
+
+    			&:before {
+    				content: '';
+				    display: block;
+				    height: 20px;
+				    width: 1px;
+				    position: absolute;
+				    bottom: -15px;
+				    background: black;
+				    left: 18px;
+    			}
+    		}
+		}
+
+	#timelineSliderNavBottomDates {
+    		display: flex;
+    		margin-left: 25%;
+    		position: relative;
+    		top: -50px;
+
+    		span {
+    			margin-right: 32%;
+    			position: relative;
+    			padding-top: 5px;
+
+    			&:before {
+    				content: '';
+				    display: block;
+				    height: 20px;
+				    width: 1px;
+				    position: absolute;
+				    top: -15px;
+				    background: black;
+				    left: 18px;
+    			}
+    		}
+		}
+
+}/* END OF HOMEPAGE */
+
 
 ////////////////////////////////////////////////////
 // FAMILY

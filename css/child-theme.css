@@ -10937,11 +10937,129 @@ a:hover {
 .home #businessTimeline {
   margin-top: 150px;
   background-color: #fff; }
-  .home #businessTimeline .timeline {
-    background-color: #fff; }
-  .home #businessTimeline ol, .home #businessTimeline ul {
-    list-style: none; }
+  .home #businessTimeline #timelineHeader {
+    margin-bottom: 125px; }
 
+.home .timelineSlider {
+  margin-bottom: 75px; }
+  .home .timelineSlider:before, .home .timelineSlider:after {
+    content: "";
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 450px;
+    height: 100%; }
+  .home .timelineSlider:before {
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
+  .home .timelineSlider:after {
+    right: 0;
+    background-image: -webkit-gradient(linear, right top, left top, from(#fff), color-stop(rgba(255, 255, 255, 0.75)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to left, #fff, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)); }
+  .home .timelineSlider .slick-center {
+    width: 800px !important;
+    margin: auto 75px; }
+  .home .timelineSlider .timelineSliderArrowLeft, .home .timelineSlider .timelineSliderArrowRight {
+    position: absolute;
+    z-index: 3;
+    color: #917412;
+    margin: auto;
+    top: 0;
+    bottom: 0; }
+  .home .timelineSlider .timelineSliderArrowLeft {
+    left: 22%; }
+  .home .timelineSlider .timelineSliderArrowRight {
+    right: 23%; }
+  .home .timelineSlider .slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.home .timelineSliderNav:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #917412;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+.home .timelineSliderNav .slick-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 25px; }
+  .home .timelineSliderNav .slick-list .is-active {
+    color: #917412; }
+    .home .timelineSliderNav .slick-list .is-active span {
+      display: block;
+      height: 35px;
+      width: 35px;
+      border-radius: 30px;
+      border: solid 1px #917412;
+      position: absolute;
+      top: -7px; }
+      .home .timelineSliderNav .slick-list .is-active span i {
+        color: #917412;
+        margin-top: 8px; }
+  .home .timelineSliderNav .slick-list .slick-slide {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.home #timelineSliderNavTopDates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10%;
+  position: relative;
+  top: 20px; }
+  .home #timelineSliderNavTopDates span {
+    margin-right: 25%;
+    position: relative;
+    padding-top: 5px; }
+    .home #timelineSliderNavTopDates span:before {
+      content: '';
+      display: block;
+      height: 20px;
+      width: 1px;
+      position: absolute;
+      bottom: -15px;
+      background: black;
+      left: 18px; }
+
+.home #timelineSliderNavBottomDates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 25%;
+  position: relative;
+  top: -50px; }
+  .home #timelineSliderNavBottomDates span {
+    margin-right: 32%;
+    position: relative;
+    padding-top: 5px; }
+    .home #timelineSliderNavBottomDates span:before {
+      content: '';
+      display: block;
+      height: 20px;
+      width: 1px;
+      position: absolute;
+      top: -15px;
+      background: black;
+      left: 18px; }
+
+/* END OF HOMEPAGE */
 #family #familyHeader {
   margin: 150px 0 50px; }
 

@@ -90,6 +90,12 @@ a {
 	justify-content: center;
 }
 
+.dropdown-menu {
+			a {
+				color: $brand-secondary !important;
+			}
+		}
+
 .wrapper-navbar {
 	nav {
 		position: absolute;
@@ -1170,6 +1176,10 @@ p {
 }
 
 #monthSelectContainer {
+	select {
+		width: 165px;
+	}
+
 	&:after {
     	content: '\f078';
 	    font: normal normal normal 17px/1 FontAwesome;

@@ -10569,6 +10569,9 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.dropdown-menu a {
+  color: #232e33 !important; }
+
 .wrapper-navbar nav {
   position: absolute;
   width: 100%;
@@ -11418,6 +11421,9 @@ a:hover {
       cursor: pointer; }
       #archiveDropdowns #archiveDropdown #archiveFormSubmit:hover {
         text-decoration: none; }
+
+#monthSelectContainer select {
+  width: 165px; }
 
 #monthSelectContainer:after {
   content: '\f078';

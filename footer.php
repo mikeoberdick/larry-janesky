@@ -63,8 +63,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php } ?>
 
-<!-- HOMEPAGE VIDEO CAROUSEL (CONDITIONAL) -->
 <?php if ( is_page('homepage') )  { ?>
+
+<!-- HOMEPAGE VIDEO CAROUSEL -->
+
 	<script>
   		jQuery(document).ready(function(){
     	jQuery('.bxslider').bxSlider({
@@ -87,6 +89,8 @@ $container = get_theme_mod( 'understrap_container_type' );
     	});
   		});
   	</script>
+
+<!-- HOMEPAGE LOGO CAROUSEL -->
 
   	<script>
 		jQuery(document).ready(function(){
@@ -120,6 +124,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 		});
 	</script>
 
+<!-- HOMEPAGE POST CAROUSEL -->
+
 	<script>
 		jQuery(document).ready(function(){
   			jQuery('.hpPostSlider').slick({
@@ -133,6 +139,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 		  });
 		});
 	</script>
+
+<!-- HOMEPAGE TIMELINE FUNCTIONALITY -->
 
 	<script>
 	jQuery(document).ready(function(){

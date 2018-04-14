@@ -300,6 +300,11 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 	</div><!-- 	.container -->
 	<div class="container-fluid">
 
+<!-- BUSINESS TIMELINE -->
+<div id = "businessTimeline">
+	
+	<div class="container-fluid">
+
 
 <div class="timelineSlider">
 	<div>
@@ -308,7 +313,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>1</h4>
+				<h4>January 1978</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -321,7 +326,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>2</h4>
+				<h4>April 1979</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -334,7 +339,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>3</h4>
+				<h4>February 1982</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -347,7 +352,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>4</h4>
+				<h4>September 1986</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -360,7 +365,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>5</h4>
+				<h4>August 1989</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -373,7 +378,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>6</h4>
+				<h4>July 1991</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -386,7 +391,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>7</h4>
+				<h4>March 1993</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -399,7 +404,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>8</h4>
+				<h4>December 1997</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -412,7 +417,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>9</h4>
+				<h4>August 2001</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -425,7 +430,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>10</h4>
+				<h4>January 2002</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -438,7 +443,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>11</h4>
+				<h4>March 2005</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -451,7 +456,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>12</h4>
+				<h4>April 2006</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -464,7 +469,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>13</h4>
+				<h4>January 2008</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -477,7 +482,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>14</h4>
+				<h4>July 2011</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -490,7 +495,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>15</h4>
+				<h4>September 2012</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -503,7 +508,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>16</h4>
+				<h4>June 2014</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -516,7 +521,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>17</h4>
+				<h4>August 2016</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -529,7 +534,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>18</h4>
+				<h4>October 2016</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -542,7 +547,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>19</h4>
+				<h4>February 2017</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -555,7 +560,7 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 				<img src="http://via.placeholder.com/350x150" alt="">
 			</div>
 			<div class="col-md-6">
-				<h4>20</h4>
+				<h4>April 2018</h4>
 				<h4>Subtitle</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum, maxime placeat enim voluptatibus eos! Labore, et, illo!</p>
 			</div>
@@ -563,40 +568,12 @@ $postCount++; endwhile; endif; wp_reset_postdata();
 	</div>
 </div><!-- .timelineSlider -->
 
-<div id="timelineSliderNavTopDates">
-	<span>1998</span>
-	<span>2004</span>
-	<span>2012</span>
+<div class="timelineContainer">
+  <div class="timelineSliderNav"></div>
 </div>
 
-<div class="timelineSliderNav">
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-	<div><span><i class="fa fa-circle" aria-hidden="true"></i></span></div>
-</div>
-
-<div id="timelineSliderNavBottomDates">
-	<span>2002</span>
-	<span>2008</span>
-	<span>2017</span>
-</div>
+	</div><!-- 	.container-fluid -->
+</div><!-- 	#businessTimeline -->
 
 	</div><!-- 	.container-fluid -->
 </div><!-- 	#businessTimeline -->

@@ -142,18 +142,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <!-- HOMEPAGE TIMELINE FUNCTIONALITY -->
 
-	<script>
-	jQuery(document).ready(function(){
+<script>
 
-		jQuery('.timelineSlider').slick({
+	jQuery('.timelineSlider').slick({
     slidesToShow: 3,
     centerMode: true,
     centerPadding: '100px',
     variableWidth: true,
  	slidesToScroll: 1,
- 	prevArrow: '<img class = "timelineSliderArrowLeft" src = "<?php echo get_stylesheet_directory_uri(); ?>/img/slider/arrow_left.png">',
- 	nextArrow: '<img class = "timelineSliderArrowRight" src = "<?php echo get_stylesheet_directory_uri(); ?>/img/slider/arrow_right.png">',
- 	arrows: true,
  	fade: false,
  	infinite: true,
 	useTransform: true,
@@ -161,13 +157,60 @@ $container = get_theme_mod( 'understrap_container_type' );
  	cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
  });
 
+//Timeline Dates
+var dates = ["01/01/1978", "04/01/1979", "02/01/1982", "09/01/1986", "08/01/1989", "07/01/1991", "03/01/1993", "12/01/1997", "08/01/2001", "01/01/2002", "03/01/2005", "04/01/2006", "01/01/2008", "07/01/2011", "09/01/2012", "06/01/2014", "08/01/2016", "10/01/2016", "02/01/2017", "04/01/2018"];
+
+//Main function. Draw your circles.
+function makeCircles() {
+  
+//Set day, month and year variables for the math
+    var first = dates[0];
+    var last = dates[dates.length - 1];
+
+    var firstMonth = parseInt(first.split('/')[0]);
+    var firstDay = parseInt(first.split('/')[1]);
+    var firstYear = parseInt(first.split('/')[2]);
+
+
+    var lastMonth = parseInt(last.split('/')[0]);
+    var lastDay = parseInt(last.split('/')[1]);
+    var lastYear = parseInt(last.split('/')[2]);
+  
+//Integer representation of the last day
+    var lastInt = ( ((lastYear - firstYear) * 365) + (lastMonth - firstMonth) * 30) + (lastDay - firstDay);
+
+//Draw first date circle
+  jQuery(".timelineSliderNav").append('<span style="left: ' + 0 + '%;"><i class="fa fa-circle" aria-hidden="true"></i></span>');
+ 
+//Loop through middle dates
+  for (i = 1; i < dates.length - 1; i++) {
+    var thisMonth = parseInt(dates[i].split('/')[0]);
+    var thisDay = parseInt(dates[i].split('/')[1]);
+    var thisYear = parseInt(dates[i].split('/')[2]);
+    
+    //Integer representation of the date
+    var thisInt =  ( ((thisYear - firstYear) * 365) + (thisMonth - firstMonth) * 30) + (thisDay - firstDay);
+    
+    //Integer relative to the first and last dates
+      var relativeInt = thisInt / lastInt;
+
+    //Draw the date circle
+      jQuery(".timelineSliderNav").append('<span style="left: ' + relativeInt * 100 + '%;"><i class="fa fa-circle" aria-hidden="true"></i></span>');
+  }
+  
+  //Draw the last date circle
+  jQuery(".timelineSliderNav").append('<span style="left: ' + 99 + '%;"><i class="fa fa-circle" aria-hidden="true"></i></span>');
+}
+
+makeCircles();
+
  jQuery('.timelineSliderNav')
  	.on('init', function(event, slick) {
  		jQuery('.timelineSliderNav .slick-slide.slick-current').addClass('is-active');
  	})
  	.slick({
  		slidesToShow: 20,
- 		slidesToScroll: 10,
+	 	variableWidth: true,
  		dots: false,
  		focusOnSelect: false,
  		infinite: false,
@@ -206,10 +249,7 @@ $container = get_theme_mod( 'understrap_container_type' );
  	jQuery('.timelineSlider').slick('slickGoTo', goToSingleSlide);
  });
 
-
-
-	});
-	</script>
+</script>
 <?php } ?>
 
 </body>

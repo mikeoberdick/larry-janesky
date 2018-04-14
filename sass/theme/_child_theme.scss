@@ -583,9 +583,11 @@ p {
 	}
 }
 
+
+
 	#businessTimeline {
-		margin-top: 150px;
 		background-color: #fff;
+		padding-top: 50px;
 
 		#timelineHeader {
 			margin-bottom: 125px;
@@ -593,7 +595,6 @@ p {
 	}
 
 	.timelineSlider {
-
 		margin-bottom: 75px;
 
 		&:before, &:after {
@@ -617,8 +618,7 @@ p {
 		    background-image: -o-linear-gradient(right, #fff, rgba(255,255,255,.75), rgba(255,255,255,.5), rgba(255,255,255,.25), rgba(255,255,255,0));
 		    background-image: linear-gradient(to left, #fff, rgba(255,255,255,.75), rgba(255,255,255,.5), rgba(255,255,255,.25), rgba(255,255,255,0));
 		}
-
-
+		
 		.slick-center {
 			width: 800px !important;
 			margin: auto 75px;
@@ -627,7 +627,7 @@ p {
 		.timelineSliderArrowLeft, .timelineSliderArrowRight {
 	    		position: absolute;
 			    z-index: 3;
-			    color: $light-gold;
+			    color: #917412;
 			    margin: auto;
 			    top: 0;
 			    bottom: 0;
@@ -645,24 +645,16 @@ p {
 			display: flex;
 			align-items: center;
 		}
+}
+
+.timelineContainer {
+	
+	.slick-track {
+		width: 100% !important;
 	}
-
-	.timelineSliderNav {
-
-		&:before {
-			content: '';
-		    position: absolute;
-		    top: 50%;
-		    left: 0;
-		    background: $light-gold;
-		    height: 1px;
-		    width: 100%;
-		    transform: translateY(-50%);
-		}
-
+	
 		.slick-list {
-			display: flex;
-			padding-top: 25px;
+			overflow: visible;
 
 			.is-active {
 				span {
@@ -670,73 +662,30 @@ p {
 				    height: 35px;
 				    width: 35px;
 				    border-radius: 30px;
-				    border: solid 1px $light-gold;
+				    border: solid 1px #917412;
 				    position: absolute;
-				    top: -7px;
+				    top: -10px;
 
 				    i {
-				    	color: $light-gold;
+				    	color: #917412;
 				    	margin-top: 8px;
 				    }
 				}
-				color: $light-gold;
-			}
-		
-			.slick-slide {
-				text-align: center;
-			    display: flex;
-			    justify-content: center;
+				color: #917412;
 			}
 		}
+
+		.timelineSliderNav {
+			height: 2px;
+			background: #917412;
+
+			span {
+			position: absolute;
+			top: -10px;
+			cursor: pointer;
+			}
 	}
-
-	#timelineSliderNavTopDates {
-    		display: flex;
-    		margin-left: 10%;
-    		position: relative;
-    		top: 20px;
-
-    		span {
-    			margin-right: 25%;
-    			position: relative;
-    			padding-top: 5px;
-
-    			&:before {
-    				content: '';
-				    display: block;
-				    height: 20px;
-				    width: 1px;
-				    position: absolute;
-				    bottom: -15px;
-				    background: black;
-				    left: 18px;
-    			}
-    		}
-		}
-
-	#timelineSliderNavBottomDates {
-    		display: flex;
-    		margin-left: 25%;
-    		position: relative;
-    		top: -50px;
-
-    		span {
-    			margin-right: 32%;
-    			position: relative;
-    			padding-top: 5px;
-
-    			&:before {
-    				content: '';
-				    display: block;
-				    height: 20px;
-				    width: 1px;
-				    position: absolute;
-				    top: -15px;
-				    background: black;
-				    left: 18px;
-    			}
-    		}
-		}
+}
 
 }/* END OF HOMEPAGE */
 

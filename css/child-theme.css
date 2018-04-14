@@ -10938,8 +10938,8 @@ a:hover {
         mix-blend-mode: multiply; }
 
 .home #businessTimeline {
-  margin-top: 150px;
-  background-color: #fff; }
+  background-color: #fff;
+  padding-top: 50px; }
   .home #businessTimeline #timelineHeader {
     margin-bottom: 125px; }
 
@@ -10982,85 +10982,32 @@ a:hover {
         -ms-flex-align: center;
             align-items: center; }
 
-.home .timelineSliderNav:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  background: #917412;
-  height: 1px;
-  width: 100%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+.home .timelineContainer .slick-track {
+  width: 100% !important; }
 
-.home .timelineSliderNav .slick-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 25px; }
-  .home .timelineSliderNav .slick-list .is-active {
+.home .timelineContainer .slick-list {
+  overflow: visible; }
+  .home .timelineContainer .slick-list .is-active {
     color: #917412; }
-    .home .timelineSliderNav .slick-list .is-active span {
+    .home .timelineContainer .slick-list .is-active span {
       display: block;
       height: 35px;
       width: 35px;
       border-radius: 30px;
       border: solid 1px #917412;
       position: absolute;
-      top: -7px; }
-      .home .timelineSliderNav .slick-list .is-active span i {
+      top: -10px; }
+      .home .timelineContainer .slick-list .is-active span i {
         color: #917412;
         margin-top: 8px; }
-  .home .timelineSliderNav .slick-list .slick-slide {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
 
-.home #timelineSliderNavTopDates {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 10%;
-  position: relative;
-  top: 20px; }
-  .home #timelineSliderNavTopDates span {
-    margin-right: 25%;
-    position: relative;
-    padding-top: 5px; }
-    .home #timelineSliderNavTopDates span:before {
-      content: '';
-      display: block;
-      height: 20px;
-      width: 1px;
-      position: absolute;
-      bottom: -15px;
-      background: black;
-      left: 18px; }
-
-.home #timelineSliderNavBottomDates {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 25%;
-  position: relative;
-  top: -50px; }
-  .home #timelineSliderNavBottomDates span {
-    margin-right: 32%;
-    position: relative;
-    padding-top: 5px; }
-    .home #timelineSliderNavBottomDates span:before {
-      content: '';
-      display: block;
-      height: 20px;
-      width: 1px;
-      position: absolute;
-      top: -15px;
-      background: black;
-      left: 18px; }
+.home .timelineContainer .timelineSliderNav {
+  height: 2px;
+  background: #917412; }
+  .home .timelineContainer .timelineSliderNav span {
+    position: absolute;
+    top: -10px;
+    cursor: pointer; }
 
 /* END OF HOMEPAGE */
 #family #familyHeader {
